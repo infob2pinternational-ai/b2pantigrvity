@@ -8,23 +8,16 @@ const Hero = () => {
             id="home"
             className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-[#050914]"
         >
-            {/* Cinematic Media Background (Image / Video) */}
+            {/* Lightweight animated background */}
             <div className="absolute inset-0 w-full h-full z-0 bg-[#050914]">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="absolute inset-0 w-full h-full object-cover opacity-90"
-                    poster="/led-van-advertising.png"
-                >
-                    <source src="/mobile-led-advertising-van.mp4" type="video/mp4" />
-                </video>
-
-                {/* Lighter Dark Overlay for better brightness while keeping text readable */}
-                <div className="absolute inset-0 bg-[#050914]/40 mix-blend-multiply"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-[#050914]/20 to-[#050914]/40"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#17305f_0%,#08111f_40%,#050914_75%)]"></div>
+                <div className="hero-orb hero-orb-primary"></div>
+                <div className="hero-orb hero-orb-secondary"></div>
+                <div className="hero-orb hero-orb-accent"></div>
+                <div className="absolute inset-0 bg-[#050914]/50 mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-[#050914]/15 to-[#050914]/30"></div>
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.14),transparent_55%)]"></div>
             </div>
 
             <div className="container mx-auto px-4 sm:px-6 relative z-10 w-full max-w-7xl h-full flex items-center mt-12 lg:mt-0">
