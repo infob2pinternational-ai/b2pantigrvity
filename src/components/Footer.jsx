@@ -1,18 +1,23 @@
 import React from 'react';
 import { Facebook, Instagram, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="pt-20 pb-10 bg-white border-t border-slate-100">
+        <footer className="pt-20 pb-10 bg-white border-t border-slate-100 mt-auto">
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
 
                     <div className="md:col-span-2">
-                        <a href="#" className="text-2xl font-black text-slate-900 tracking-wide block mb-6">
-                            B2P <span className="text-brand-primary font-normal text-xl">INTERNATIONAL</span>
-                        </a>
+                        <Link to="/" className="flex items-center mb-5">
+                            <img
+                                src="/B2P_logo_trimmed.png"
+                                alt="B2P International - LED Van Advertising and Mobile LED Marketing Agency"
+                                className="h-20 md:h-24 w-auto object-contain drop-shadow-sm"
+                            />
+                        </Link>
                         <p className="text-slate-600 max-w-sm leading-relaxed">
-                            Elevating brands through strategic marketing, dynamic events, and innovative digital solutions globally.
+                            Our company specializes in LED Van Advertising, mobile LED marketing, and large LED wall displays designed to help brands capture attention in crowded markets. With advanced LED technology and strategic campaign planning, we deliver advertising solutions that drive real results.
                         </p>
                     </div>
 
@@ -22,10 +27,11 @@ const Footer = () => {
                             <span className="absolute -bottom-2 left-0 w-1/2 h-0.5 bg-brand-primary rounded-full"></span>
                         </h3>
                         <ul className="space-y-4">
-                            <li><a href="#home" className="text-slate-600 hover:text-brand-primary transition-colors">Home</a></li>
-                            <li><a href="#about" className="text-slate-600 hover:text-brand-primary transition-colors">About Us</a></li>
-                            <li><a href="#services" className="text-slate-600 hover:text-brand-primary transition-colors">Services</a></li>
-                            <li><a href="#gallery" className="text-slate-600 hover:text-brand-primary transition-colors">Gallery</a></li>
+                            <li><Link to="/" className="text-slate-600 hover:text-brand-primary transition-colors">Home</Link></li>
+                            <li><Link to="/about" className="text-slate-600 hover:text-brand-primary transition-colors">About Us</Link></li>
+                            <li><Link to="/services" className="text-slate-600 hover:text-brand-primary transition-colors">Services</Link></li>
+                            <li><Link to="/gallery" className="text-slate-600 hover:text-brand-primary transition-colors">Gallery</Link></li>
+                            <li><Link to="/blog" className="text-slate-600 hover:text-brand-primary transition-colors">Blog</Link></li>
                         </ul>
                     </div>
 
