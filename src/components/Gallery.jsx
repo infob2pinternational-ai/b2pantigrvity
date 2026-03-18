@@ -6,9 +6,9 @@ import van3 from '../assets/images/van3.jpg';
 
 const Gallery = () => {
     const images = [
-        { id: 1, src: van1, alt: "LED Van Campaign 1" },
-        { id: 2, src: van2, alt: "LED Van Campaign 2" },
-        { id: 3, src: van3, alt: "LED Van Campaign 3" }
+        { id: 1, src: van1, alt: "B2P International LED advertising van campaign in Thrissur Kerala" },
+        { id: 2, src: van2, alt: "Mobile LED advertising van by B2P International during a Kerala brand campaign" },
+        { id: 3, src: van3, alt: "B2P International LED van advertising display for outdoor promotion in Kerala" }
     ];
 
     return (
