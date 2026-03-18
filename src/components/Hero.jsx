@@ -42,7 +42,7 @@ const Hero = () => {
                                 Your Brand Impossible to Ignore
                             </span>
                         </h1>
-                        <p className="text-lg sm:text-xl text-slate-400 mb-10 max-w-lg font-light leading-relaxed">
+                        <p className="text-lg sm:text-xl text-slate-400 mb-10 max-w-2xl font-light leading-relaxed">
                             Our LED Van Advertising services deliver powerful mobile marketing that captures attention wherever your audience is. With high-resolution LED screens mounted on moving advertising vans, your brand message reaches thousands of people across busy streets, commercial areas, and major events. For businesses looking for{" "}
                             <Link to="/services" className="font-semibold text-white underline decoration-brand-primary/70 underline-offset-4 transition-colors hover:text-brand-primary">
                                 LED Van Advertising in Thrissur
@@ -59,6 +59,13 @@ const Hero = () => {
                                 <span className="relative z-10 group-hover:text-white transition-colors duration-300">Start Project</span>
                                 <ArrowRight size={20} className="relative z-10 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
                             </a>
+                            <Link
+                                to="/led-van-advertising"
+                                className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-8 py-4 font-black text-white backdrop-blur-md transition-all hover:border-brand-primary hover:bg-white/10"
+                            >
+                                View LED Van Advertising Service
+                                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
+                            </Link>
                         </div>
                     </div>
 

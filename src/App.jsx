@@ -14,6 +14,7 @@ import FloatButtons from './components/FloatButtons';
 import WhyChooseUs from './components/WhyChooseUs';
 import LocalSEO from './components/LocalSEO';
 import LedVanAdvertising from './components/LedVanAdvertising';
+import HomeSeo from './components/HomeSeo';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -25,6 +26,7 @@ const ScrollToTop = () => {
 
 const Home = () => (
   <>
+    <HomeSeo />
     <Hero />
     <TrustBar />
     <WhyChooseUs />

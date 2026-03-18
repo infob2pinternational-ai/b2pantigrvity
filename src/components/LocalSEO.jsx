@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Megaphone, SearchCheck } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const seoPoints = [
     'LED van advertising in Thrissur for store launches, exhibitions, and local promotions.',
@@ -38,6 +39,14 @@ const LocalSEO = () => {
                             <p className="mt-5 text-sm sm:text-base md:text-lg text-slate-400 leading-relaxed font-light">
                                 Our campaigns are built for measurable local reach, stronger recall, and better visibility in high-footfall areas such as shopping districts, residential corridors, event venues, and commercial centers.
                             </p>
+                            <div className="mt-8">
+                                <Link
+                                    to="/led-van-advertising"
+                                    className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-black text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-primary hover:text-white"
+                                >
+                                    Explore LED Van Advertising in Thrissur
+                                </Link>
+                            </div>
                         </div>
 
                         <div className="grid gap-4">

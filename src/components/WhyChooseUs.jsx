@@ -45,8 +45,11 @@ const WhyChooseUs = () => {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-black text-slate-900 mb-6"
                     >
-                        Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">LED Van Advertising?</span>
+                        Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">LED Van Advertising in Thrissur?</span>
                     </motion.h2>
+                    <p className="mx-auto max-w-3xl text-base sm:text-lg leading-relaxed text-slate-600">
+                        Businesses across Thrissur and Kerala use our mobile LED campaigns to reach local shoppers, event audiences, launch crowds, and high-footfall city routes with stronger recall than static outdoor placements.
+                    </p>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
