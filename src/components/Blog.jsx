@@ -130,14 +130,14 @@ const Blog = () => {
         <section id="blog" className="py-24 bg-slate-50 relative overflow-hidden">
             <div className="container mx-auto px-6 max-w-7xl relative z-10">
                 <div className="text-center mb-16 max-w-2xl mx-auto">
-                    <motion.h2
+                    <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight"
                     >
                         Our <span className="text-brand-primary">Blog</span>
-                    </motion.h2>
+                    </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}

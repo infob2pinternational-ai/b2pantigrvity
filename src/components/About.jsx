@@ -109,7 +109,7 @@ const About = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">Who We <span className="text-brand-primary">Are</span></h2>
+                        <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">Who We <span className="text-brand-primary">Are</span></h1>
                         <div className="text-lg text-slate-600 space-y-4 leading-relaxed">
                             <p>
                                 We are a leading provider of LED Van Advertising and LED Wall Display solutions based in Thrissur, serving businesses throughout Kerala. We specialize in helping brands reach thousands of people through high-impact outdoor advertising and digital mobile campaigns. Our expertise lies in providing the best LED advertising near you, utilizing mobile vans, digital billboards, and event display services designed to maximize brand visibility.

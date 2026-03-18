@@ -15,14 +15,14 @@ const Gallery = () => {
         <section id="gallery" className="py-24 bg-white relative">
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="text-center mb-16 max-w-2xl mx-auto">
-                    <motion.h2
+                    <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-black text-slate-900 mb-6"
                     >
                         Our <span className="text-brand-primary">Gallery</span>
-                    </motion.h2>
+                    </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}

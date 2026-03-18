@@ -48,6 +48,10 @@ const Navbar = () => {
                     <button
                         className="md:hidden flex flex-col gap-1.5 z-50 relative"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        type="button"
+                        aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                        aria-expanded={mobileMenuOpen}
+                        aria-controls="mobile-navigation-menu"
                     >
                         <span className={`w-6 h-0.5 transition-all ${scrolled || location.pathname !== '/' ? 'bg-slate-900' : 'bg-white'} ${mobileMenuOpen ? 'rotate-45 translate-y-2 !bg-slate-900' : ''}`}></span>
                         <span className={`w-6 h-0.5 transition-all ${scrolled || location.pathname !== '/' ? 'bg-slate-900' : 'bg-white'} ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
@@ -57,7 +61,10 @@ const Navbar = () => {
             </nav>
 
             {/* Mobile Menu */}
-            <div className={`fixed inset-0 bg-slate-50 z-40 flex flex-col justify-center items-center gap-6 px-6 text-center transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div
+                id="mobile-navigation-menu"
+                className={`fixed inset-0 bg-slate-50 z-40 flex flex-col justify-center items-center gap-6 px-6 text-center transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+            >
                 <Link to="/" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/' ? 'text-brand-primary' : 'text-slate-900'}`}>Home</Link>
                 <Link to="/about" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/about' ? 'text-brand-primary' : 'text-slate-900'}`}>About Us</Link>
                 <Link to="/services" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/services' ? 'text-brand-primary' : 'text-slate-900'}`}>Services</Link>

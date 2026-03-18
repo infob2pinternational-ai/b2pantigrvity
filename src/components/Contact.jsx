@@ -197,6 +197,9 @@ const Contact = () => {
                             </div>
 
                             <div className="relative group">
+                                <label htmlFor="service" className="mb-2 block text-sm font-semibold text-slate-700">
+                                    Select a Service
+                                </label>
                                 <select id="service" name="service" required defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-xl text-slate-600 focus:outline-none focus:border-brand-primary focus:bg-white transition-colors appearance-none">
                                     <option value="" disabled>Select a Service</option>
                                     <option value="led">LED Van Services</option>

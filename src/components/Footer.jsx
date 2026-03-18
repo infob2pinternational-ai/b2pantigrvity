@@ -41,14 +41,14 @@ const Footer = () => {
                             <span className="absolute -bottom-2 left-0 w-1/2 h-0.5 bg-brand-primary rounded-full"></span>
                         </h3>
                         <div className="flex gap-4">
-                            <a href="https://www.facebook.com/b2pinternational" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-brand-primary hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm border border-slate-100">
-                                <Facebook size={18} />
+                            <a href="https://www.facebook.com/b2pinternational" target="_blank" rel="noreferrer" aria-label="Visit B2P International on Facebook" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-brand-primary hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm border border-slate-100">
+                                <Facebook size={18} aria-hidden="true" />
                             </a>
-                            <a href="https://www.instagram.com/b2p_international/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-brand-secondary hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm border border-slate-100">
-                                <Instagram size={18} />
+                            <a href="https://www.instagram.com/b2p_international/" target="_blank" rel="noreferrer" aria-label="Visit B2P International on Instagram" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-brand-secondary hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm border border-slate-100">
+                                <Instagram size={18} aria-hidden="true" />
                             </a>
-                            <a href="https://www.b2pinternational.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-brand-primary hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm border border-slate-100">
-                                <Globe size={18} />
+                            <a href="https://www.b2pinternational.com" target="_blank" rel="noreferrer" aria-label="Visit the B2P International website" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:bg-brand-primary hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm border border-slate-100">
+                                <Globe size={18} aria-hidden="true" />
                             </a>
                         </div>
                     </div>

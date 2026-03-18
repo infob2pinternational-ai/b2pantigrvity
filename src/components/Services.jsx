@@ -100,7 +100,7 @@ const Services = () => {
                         <span className="text-sm font-bold tracking-widest text-slate-300 uppercase">Our LED Advertising Solutions</span>
                     </motion.div>
 
-                    <motion.h2
+                    <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -108,7 +108,7 @@ const Services = () => {
                         className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight"
                     >
                         LED Van Advertising <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Services</span>
-                    </motion.h2>
+                    </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
