@@ -15,6 +15,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import LocalSEO from './components/LocalSEO';
 import LedVanAdvertising from './components/LedVanAdvertising';
 import HomeSeo from './components/HomeSeo';
+import NotFound from './components/NotFound';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -56,6 +57,7 @@ function App() {
             <Route path="/gallery" element={<PageWrapper><Gallery /></PageWrapper>} />
             <Route path="/blog" element={<PageWrapper><Blog /></PageWrapper>} />
             <Route path="/led-van-advertising" element={<LedVanAdvertising />} />
+            <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
           </Routes>
         </main>
 
