@@ -1,6 +1,33 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Printer, Megaphone, Radio, Calendar, Zap, Truck, MessageCircle, Bot, Globe, ArrowRight } from 'lucide-react';
+import Seo from './Seo';
+import {
+    buildBreadcrumbSchema,
+    buildFaqSchema,
+    buildServiceSchema,
+    buildWebPageSchema,
+    localBusinessSchema,
+} from '../lib/seo';
+
+const SERVICES_TITLE = 'LED Van Advertising Services in Thrissur & Kerala | B2P International';
+const SERVICES_DESCRIPTION =
+    'Explore B2P International services including LED van advertising, mobile campaigns, event promotions, LED walls, and local brand visibility support across Thrissur and Kerala.';
+
+const serviceFaqs = [
+    {
+        question: 'Where do you provide LED van services?',
+        answer: 'We provide mobile advertising and LED van services throughout Thrissur, Kochi, and all major parts of Kerala.',
+    },
+    {
+        question: 'What businesses use your LED advertising services?',
+        answer: 'Our LED advertising campaigns are used by retail stores, hypermarkets, real estate brands, jewelry businesses, exhibitions, launch events, and corporate promotions that need stronger local visibility.',
+    },
+    {
+        question: 'Can you plan local campaigns in Thrissur?',
+        answer: 'Yes. We help brands plan local LED van routes, timing, campaign messaging, and audience-focused promotions for Thrissur and nearby Kerala markets.',
+    },
+];
 
 const Services = () => {
     const phoneNumber = "919876543210"; // Placeholder WhatsApp number, replace with actual number
@@ -79,6 +106,32 @@ const Services = () => {
     ];
 
     return (
+        <>
+        <Seo
+            title={SERVICES_TITLE}
+            description={SERVICES_DESCRIPTION}
+            keywords="LED van advertising services Thrissur, mobile LED advertising Kerala, LED wall display Thrissur, event promotion Kerala, outdoor branding services Kerala"
+            path="/services"
+            schema={[
+                localBusinessSchema,
+                buildWebPageSchema({
+                    name: SERVICES_TITLE,
+                    description: SERVICES_DESCRIPTION,
+                    path: '/services',
+                    type: 'CollectionPage',
+                }),
+                buildServiceSchema({
+                    name: 'LED Van Advertising Services in Thrissur and Kerala',
+                    description: SERVICES_DESCRIPTION,
+                    path: '/services',
+                }),
+                buildBreadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Services', path: '/services' },
+                ]),
+                buildFaqSchema(serviceFaqs),
+            ]}
+        />
         <section id="services" className="py-32 bg-[#0B0F19] relative overflow-hidden">
             {/* Ultra Premium Dark Background Elements */}
             <div className="absolute inset-0 bg-noise-dots opacity-20 mix-blend-color-dodge pointer-events-none"></div>
@@ -213,6 +266,7 @@ const Services = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

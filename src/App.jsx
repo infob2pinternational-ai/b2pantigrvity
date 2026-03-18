@@ -3,19 +3,24 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import HomeSeo from './components/HomeSeo';
+import TrustBar from './components/TrustBar';
+import SocialProof from './components/SocialProof';
+import FloatButtons from './components/FloatButtons';
+import WhyChooseUs from './components/WhyChooseUs';
+import LocalSEO from './components/LocalSEO';
 
-const TrustBar = lazy(() => import('./components/TrustBar'));
 const About = lazy(() => import('./components/About'));
 const Services = lazy(() => import('./components/Services'));
-const SocialProof = lazy(() => import('./components/SocialProof'));
 const Gallery = lazy(() => import('./components/Gallery'));
 const Blog = lazy(() => import('./components/Blog'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
-const FloatButtons = lazy(() => import('./components/FloatButtons'));
-const WhyChooseUs = lazy(() => import('./components/WhyChooseUs'));
-const LocalSEO = lazy(() => import('./components/LocalSEO'));
 const LedVanAdvertising = lazy(() => import('./components/LedVanAdvertising'));
+const Locations = lazy(() => import('./components/Locations'));
+const ThrissurLocation = lazy(() => import('./components/ThrissurLocation'));
+const KochiLocation = lazy(() => import('./components/KochiLocation'));
+const KozhikodeLocation = lazy(() => import('./components/KozhikodeLocation'));
+const TrivandrumLocation = lazy(() => import('./components/TrivandrumLocation'));
 const NotFound = lazy(() => import('./components/NotFound'));
 
 const ScrollToTop = () => {
@@ -66,26 +71,10 @@ const Home = () => (
   <>
     <HomeSeo />
     <Hero />
-    <DeferredSection height="min-h-[180px]">
-      <Suspense fallback={<LoadingBlock height="min-h-[180px]" />}>
-        <TrustBar />
-      </Suspense>
-    </DeferredSection>
-    <DeferredSection height="min-h-[520px]">
-      <Suspense fallback={<LoadingBlock height="min-h-[520px]" />}>
-        <WhyChooseUs />
-      </Suspense>
-    </DeferredSection>
-    <DeferredSection height="min-h-[620px]">
-      <Suspense fallback={<LoadingBlock height="min-h-[620px]" />}>
-        <SocialProof />
-      </Suspense>
-    </DeferredSection>
-    <DeferredSection height="min-h-[520px]">
-      <Suspense fallback={<LoadingBlock height="min-h-[520px]" />}>
-        <LocalSEO />
-      </Suspense>
-    </DeferredSection>
+    <TrustBar />
+    <WhyChooseUs />
+    <SocialProof />
+    <LocalSEO />
   </>
 );
 
@@ -116,6 +105,11 @@ function App() {
             <Route path="/gallery" element={<RouteElement><PageWrapper><Gallery /></PageWrapper></RouteElement>} />
             <Route path="/blog" element={<RouteElement><PageWrapper><Blog /></PageWrapper></RouteElement>} />
             <Route path="/led-van-advertising" element={<RouteElement><LedVanAdvertising /></RouteElement>} />
+            <Route path="/locations" element={<RouteElement><PageWrapper><Locations /></PageWrapper></RouteElement>} />
+            <Route path="/locations/thrissur" element={<RouteElement><PageWrapper><ThrissurLocation /></PageWrapper></RouteElement>} />
+            <Route path="/locations/kochi" element={<RouteElement><PageWrapper><KochiLocation /></PageWrapper></RouteElement>} />
+            <Route path="/locations/kozhikode" element={<RouteElement><PageWrapper><KozhikodeLocation /></PageWrapper></RouteElement>} />
+            <Route path="/locations/trivandrum" element={<RouteElement><PageWrapper><TrivandrumLocation /></PageWrapper></RouteElement>} />
             <Route path="*" element={<RouteElement><PageWrapper><NotFound /></PageWrapper></RouteElement>} />
           </Routes>
         </main>
@@ -130,9 +124,7 @@ function App() {
             <Footer />
           </Suspense>
         </DeferredSection>
-        <Suspense fallback={null}>
-          <FloatButtons />
-        </Suspense>
+        <FloatButtons />
       </div>
     </BrowserRouter>
   );

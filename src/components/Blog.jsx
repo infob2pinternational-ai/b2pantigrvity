@@ -1,6 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight } from 'lucide-react';
+import Seo from './Seo';
+import {
+    buildBlogPostingSchema,
+    buildBreadcrumbSchema,
+    buildItemListSchema,
+    buildWebPageSchema,
+    websiteSchema,
+    localBusinessSchema,
+} from '../lib/seo';
+
+const BLOG_TITLE = 'LED Van Advertising Blog | B2P International Thrissur';
+const BLOG_DESCRIPTION =
+    'Read B2P International blog updates on LED van advertising, local marketing trends, AI growth, and campaign strategy for Thrissur, Kerala, and beyond.';
+
+const toIsoDate = (value) => {
+    const parsedDate = new Date(value);
+    return Number.isNaN(parsedDate.getTime()) ? null : parsedDate.toISOString();
+};
 
 const Blog = () => {
     // Placeholder blog data
@@ -127,6 +145,45 @@ const Blog = () => {
     ];
 
     return (
+        <>
+        <Seo
+            title={BLOG_TITLE}
+            description={BLOG_DESCRIPTION}
+            keywords="LED van advertising blog, local marketing blog Thrissur, mobile advertising Kerala, B2P International blog"
+            path="/blog"
+            schema={[
+                localBusinessSchema,
+                buildWebPageSchema({
+                    name: BLOG_TITLE,
+                    description: BLOG_DESCRIPTION,
+                    path: '/blog',
+                    type: 'CollectionPage',
+                }),
+                buildBreadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Blog', path: '/blog' },
+                ]),
+                buildItemListSchema({
+                    name: 'B2P International blog topics',
+                    items: blogPosts.map((post) => ({
+                        name: post.title,
+                        path: '/blog',
+                    })),
+                }),
+                websiteSchema,
+                ...blogPosts.map((post) =>
+                    buildBlogPostingSchema({
+                        headline: post.title,
+                        description: post.excerpt,
+                        image: post.image,
+                        datePublished: toIsoDate(post.date),
+                        author: post.author,
+                        path: '/blog',
+                        keywords: [post.category, 'LED van advertising', 'Thrissur', 'Kerala'],
+                    })
+                ),
+            ]}
+        />
         <section id="blog" className="py-24 bg-slate-50 relative overflow-hidden">
             <div className="container mx-auto px-6 max-w-7xl relative z-10">
                 <div className="text-center mb-16 max-w-2xl mx-auto">
@@ -205,6 +262,7 @@ const Blog = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

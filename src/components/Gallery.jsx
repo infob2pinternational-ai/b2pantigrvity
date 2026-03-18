@@ -3,6 +3,12 @@ import { motion } from 'framer-motion';
 import van1 from '../assets/images/van1.jpg';
 import van2 from '../assets/images/van2.jpg';
 import van3 from '../assets/images/van3.jpg';
+import Seo from './Seo';
+import { buildBreadcrumbSchema, buildWebPageSchema, localBusinessSchema } from '../lib/seo';
+
+const GALLERY_TITLE = 'LED Van Advertising Gallery | Campaign Photos in Thrissur & Kerala';
+const GALLERY_DESCRIPTION =
+    'View B2P International LED van advertising gallery featuring campaign visuals from Thrissur and Kerala roadshows, launches, and outdoor branding activations.';
 
 const Gallery = () => {
     const images = [
@@ -12,6 +18,26 @@ const Gallery = () => {
     ];
 
     return (
+        <>
+        <Seo
+            title={GALLERY_TITLE}
+            description={GALLERY_DESCRIPTION}
+            keywords="LED van advertising gallery, Thrissur campaign photos, Kerala mobile advertising gallery, B2P International work"
+            path="/gallery"
+            schema={[
+                localBusinessSchema,
+                buildWebPageSchema({
+                    name: GALLERY_TITLE,
+                    description: GALLERY_DESCRIPTION,
+                    path: '/gallery',
+                    type: 'CollectionPage',
+                }),
+                buildBreadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Gallery', path: '/gallery' },
+                ]),
+            ]}
+        />
         <section id="gallery" className="py-24 bg-white relative">
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="text-center mb-16 max-w-2xl mx-auto">
@@ -62,6 +88,7 @@ const Gallery = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

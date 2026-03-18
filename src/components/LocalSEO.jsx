@@ -40,12 +40,20 @@ const LocalSEO = () => {
                                 Our campaigns are built for measurable local reach, stronger recall, and better visibility in high-footfall areas such as shopping districts, residential corridors, event venues, and commercial centers.
                             </p>
                             <div className="mt-8">
-                                <Link
-                                    to="/led-van-advertising"
-                                    className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-black text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-primary hover:text-white"
-                                >
-                                    Explore LED Van Advertising in Thrissur
-                                </Link>
+                                <div className="flex flex-col gap-3 sm:flex-row">
+                                    <Link
+                                        to="/led-van-advertising"
+                                        className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-black text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-primary hover:text-white"
+                                    >
+                                        Explore LED Van Advertising
+                                    </Link>
+                                    <Link
+                                        to="/locations/thrissur"
+                                        className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-black text-white transition-all duration-300 hover:border-brand-primary hover:bg-white/10"
+                                    >
+                                        Thrissur Location Page
+                                    </Link>
+                                </div>
                             </div>
                         </div>
 
@@ -71,6 +79,33 @@ const LocalSEO = () => {
                                             {point}
                                         </p>
                                     ))}
+                                </div>
+                            </div>
+
+                            <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                                <div className="flex items-center gap-3 text-white">
+                                    <MapPin size={22} className="text-brand-secondary" />
+                                    <p className="text-lg font-bold">Location pages for indexing</p>
+                                </div>
+                                <p className="mt-3 text-sm leading-relaxed text-slate-400">
+                                    We now support a dedicated Thrissur landing page and a broader service-area hub to
+                                    strengthen local search relevance and internal linking for Google indexing.
+                                </p>
+                                <div className="mt-4 flex flex-col gap-3">
+                                    <Link
+                                        to="/locations"
+                                        className="inline-flex items-center justify-between rounded-2xl border border-white/10 bg-[#0d1526] px-4 py-3 text-sm font-bold text-slate-200 transition-colors hover:border-brand-primary"
+                                    >
+                                        Service Areas in Kerala
+                                        <span className="text-brand-primary">/locations</span>
+                                    </Link>
+                                    <Link
+                                        to="/locations/thrissur"
+                                        className="inline-flex items-center justify-between rounded-2xl border border-white/10 bg-[#0d1526] px-4 py-3 text-sm font-bold text-slate-200 transition-colors hover:border-brand-primary"
+                                    >
+                                        Thrissur Location Page
+                                        <span className="text-brand-primary">/locations/thrissur</span>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

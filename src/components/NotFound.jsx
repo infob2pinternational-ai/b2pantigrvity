@@ -1,20 +1,15 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Seo from './Seo';
 
 const NotFound = () => {
-    useEffect(() => {
-        document.title = '404 | Page Not Found | B2P International';
-
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-            metaDescription.setAttribute(
-                'content',
-                'The page you requested could not be found. Return to the B2P International homepage to explore LED van advertising services in Thrissur and Kerala.'
-            );
-        }
-    }, []);
-
     return (
+        <>
+        <Seo
+            title="404 | Page Not Found | B2P International"
+            description="The page you requested could not be found. Return to the B2P International homepage to explore LED van advertising services in Thrissur and Kerala."
+            robots="noindex,nofollow"
+            keywords={null}
+        />
         <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-[#050914] px-6 py-24 text-white">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.22),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.14),transparent_30%)]" />
             <div className="relative z-10 mx-auto max-w-3xl rounded-[2rem] border border-white/10 bg-white/5 p-10 text-center shadow-2xl backdrop-blur-xl">
@@ -41,6 +36,7 @@ const NotFound = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

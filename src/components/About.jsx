@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Target, Eye, Lightbulb, Users, Award, ShieldCheck, Globe, Briefcase } from 'lucide-react';
+import Seo from './Seo';
+import { buildBreadcrumbSchema, buildWebPageSchema, localBusinessSchema } from '../lib/seo';
+
+const ABOUT_TITLE = 'About B2P International | LED Van Advertising Company in Thrissur';
+const ABOUT_DESCRIPTION =
+    'Learn about B2P International, a Thrissur-based LED van advertising company serving Kerala with mobile LED campaigns, outdoor brand visibility, and event promotion support.';
 
 const About = () => {
     const [counts, setCounts] = useState({ projects: 0, clients: 0, years: 0 });
 
     useEffect(() => {
-        // Set SEO Meta Tags for the About Page
-        document.title = "About Our LED Van Advertising Company | Mobile LED Advertising Experts";
-        
-        // Update or create meta description
-        let metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-            metaDescription.setAttribute("content", "Learn about our company providing LED Van Advertising, mobile LED advertising vans, and LED wall display services for events, promotions, and brand campaigns.");
-        }
-
         let currentProjects = 0;
         let currentClients = 0;
         let currentYears = 0;
@@ -45,10 +42,6 @@ const About = () => {
 
         return () => {
             clearInterval(interval);
-            // Revert meta description back to default when leaving About page
-            if (metaDescription) {
-                metaDescription.setAttribute("content", "Promote your brand with high-impact LED Van Advertising services. Our mobile LED advertising vans and giant LED walls help businesses reach thousands across cities, events, and promotions.");
-            }
         };
     }, []);
 
@@ -94,6 +87,26 @@ const About = () => {
     ];
 
     return (
+        <>
+        <Seo
+            title={ABOUT_TITLE}
+            description={ABOUT_DESCRIPTION}
+            keywords="about B2P International, LED van advertising company Thrissur, mobile advertising company Kerala, outdoor advertising experts Thrissur"
+            path="/about"
+            schema={[
+                localBusinessSchema,
+                buildWebPageSchema({
+                    name: ABOUT_TITLE,
+                    description: ABOUT_DESCRIPTION,
+                    path: '/about',
+                    type: 'AboutPage',
+                }),
+                buildBreadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'About', path: '/about' },
+                ]),
+            ]}
+        />
         <section id="about" className="py-24 bg-white relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
@@ -400,6 +413,7 @@ const About = () => {
 
             </div>
         </section>
+        </>
     );
 };
 

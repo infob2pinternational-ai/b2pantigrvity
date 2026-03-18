@@ -4,13 +4,15 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 import WhyChooseUs from './WhyChooseUs';
 import LocalSEO from './LocalSEO';
 import TrustBar from './TrustBar';
+import Seo from './Seo';
+import { buildBreadcrumbSchema, buildServiceSchema, buildWebPageSchema, localBusinessSchema } from '../lib/seo';
+
+const LED_SERVICE_TITLE = 'Mobile LED Van Advertising in Thrissur, Kerala | B2P International';
+const LED_SERVICE_DESCRIPTION =
+    'Book mobile LED van advertising in Thrissur and Kerala for launches, exhibitions, roadshows, retail promotions, and on-road brand visibility campaigns.';
 
 const LedVanAdvertising = () => {
     const [heroImageLoaded, setHeroImageLoaded] = useState(false);
-
-    useEffect(() => {
-        document.title = "Mobile LED Van Advertising Services for Events & Promotions";
-    }, []);
 
     useEffect(() => {
         const heroImage = new Image();
@@ -19,6 +21,31 @@ const LedVanAdvertising = () => {
     }, []);
 
     return (
+        <>
+        <Seo
+            title={LED_SERVICE_TITLE}
+            description={LED_SERVICE_DESCRIPTION}
+            keywords="mobile LED van advertising Thrissur, LED van advertising Kerala, roadshow advertising Thrissur, event promotion LED van Kerala"
+            path="/led-van-advertising"
+            schema={[
+                localBusinessSchema,
+                buildWebPageSchema({
+                    name: LED_SERVICE_TITLE,
+                    description: LED_SERVICE_DESCRIPTION,
+                    path: '/led-van-advertising',
+                    type: 'WebPage',
+                }),
+                buildServiceSchema({
+                    name: 'Mobile LED Van Advertising in Thrissur and Kerala',
+                    description: LED_SERVICE_DESCRIPTION,
+                    path: '/led-van-advertising',
+                }),
+                buildBreadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'LED Van Advertising', path: '/led-van-advertising' },
+                ]),
+            ]}
+        />
         <div className="bg-slate-50 min-h-screen">
             {/* Hero Section for Service Page */}
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-[#050914] overflow-hidden min-h-[80vh] flex flex-col justify-center">
@@ -91,6 +118,7 @@ const LedVanAdvertising = () => {
             
             <LocalSEO />
         </div>
+        </>
     );
 };
 
