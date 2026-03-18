@@ -116,7 +116,7 @@ const Services = () => {
                         transition={{ delay: 0.2 }}
                         className="text-xl text-slate-400 font-light"
                     >
-                        Our LED Van Advertising solutions provide one of the most effective outdoor marketing strategies for modern brands. Unlike static billboards, LED advertising vans move through high-traffic areas, ensuring your advertisement reaches a wider audience.
+                        Our LED Van Advertising solutions provide one of the most effective outdoor marketing strategies for modern brands. Unlike static billboards, LED advertising vans move through high-traffic areas, ensuring your advertisement reaches a wider audience in Thrissur, Kochi, and across Kerala.
                     </motion.p>
                 </div>
 
@@ -170,6 +170,46 @@ const Services = () => {
                             </div>
                         </motion.div>
                     ))}
+                </div>
+
+                <div className="mt-24 max-w-4xl mx-auto">
+                    <motion.div
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="rounded-[2rem] border border-white/10 bg-[#131B2C]/90 p-8 md:p-12 backdrop-blur-2xl"
+                    >
+                        <h3 className="text-3xl md:text-4xl font-black text-white mb-4 tracking-tight">
+                            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Questions</span>
+                        </h3>
+                        <p className="text-slate-400 text-base md:text-lg mb-8">
+                            A few quick answers about our LED van advertising coverage and campaign planning.
+                        </p>
+
+                        <div className="space-y-6">
+                            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                                <h4 className="text-xl font-bold text-white mb-3">Where do you provide LED van services?</h4>
+                                <p className="text-slate-300 leading-relaxed">
+                                    We provide mobile advertising and LED van services throughout Thrissur, Kochi, and all major parts of Kerala.
+                                </p>
+                            </div>
+
+                            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                                <h4 className="text-xl font-bold text-white mb-3">What businesses use your LED advertising services?</h4>
+                                <p className="text-slate-300 leading-relaxed">
+                                    Our LED advertising campaigns are used by retail stores, hypermarkets, real estate brands, jewelry businesses, exhibitions, launch events, and corporate promotions that need stronger local visibility.
+                                </p>
+                            </div>
+
+                            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                                <h4 className="text-xl font-bold text-white mb-3">Can you plan local campaigns in Thrissur?</h4>
+                                <p className="text-slate-300 leading-relaxed">
+                                    Yes. We help brands plan local LED van routes, timing, campaign messaging, and audience-focused promotions for Thrissur and nearby Kerala markets.
+                                </p>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
