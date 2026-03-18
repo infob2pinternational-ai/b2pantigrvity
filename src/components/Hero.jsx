@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -42,7 +43,11 @@ const Hero = () => {
                             </span>
                         </h1>
                         <p className="text-lg sm:text-xl text-slate-400 mb-10 max-w-lg font-light leading-relaxed">
-                            Our LED Van Advertising services deliver powerful mobile marketing that captures attention wherever your audience is. With high-resolution LED screens mounted on moving advertising vans, your brand message reaches thousands of people across busy streets, commercial areas, and major events. From product launches to corporate campaigns, our mobile LED advertising solutions maximize visibility and engagement.
+                            Our LED Van Advertising services deliver powerful mobile marketing that captures attention wherever your audience is. With high-resolution LED screens mounted on moving advertising vans, your brand message reaches thousands of people across busy streets, commercial areas, and major events. For businesses looking for{" "}
+                            <Link to="/services" className="font-semibold text-white underline decoration-brand-primary/70 underline-offset-4 transition-colors hover:text-brand-primary">
+                                LED Van Advertising in Thrissur
+                            </Link>{" "}
+                            and across Kerala, our mobile LED advertising solutions maximize visibility and engagement.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-start gap-5">
