@@ -323,7 +323,7 @@ const About = () => {
                         <div className="hidden lg:flex relative w-full h-64 rounded-[2.5rem] bg-gradient-to-br from-brand-primary/5 to-slate-100 border border-slate-200/50 overflow-hidden items-center justify-center shadow-inner group">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
                             <div className="absolute bottom-0 left-0 w-32 h-32 bg-brand-secondary/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
-                            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
+                            <div className="absolute inset-0 bg-noise-cubes opacity-30"></div>
 
                             <div className="h-32 w-32 bg-white/40 backdrop-blur-3xl rounded-3xl border border-white/50 shadow-2xl flex items-center justify-center transform rotate-12 group-hover:rotate-0 transition-all duration-500 hover:scale-110">
                                 <span className="text-5xl font-black text-brand-primary drop-shadow-sm">B2P</span>

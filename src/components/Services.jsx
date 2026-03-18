@@ -81,7 +81,7 @@ const Services = () => {
     return (
         <section id="services" className="py-32 bg-[#0B0F19] relative overflow-hidden">
             {/* Ultra Premium Dark Background Elements */}
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 mix-blend-color-dodge pointer-events-none"></div>
+            <div className="absolute inset-0 bg-noise-dots opacity-20 mix-blend-color-dodge pointer-events-none"></div>
 
             {/* Animated Mesh Gradient Orbs */}
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-primary/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 animate-pulse pointer-events-none"></div>

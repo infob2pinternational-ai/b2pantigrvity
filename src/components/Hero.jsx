@@ -17,7 +17,7 @@ const Hero = () => {
                 <div className="hero-orb hero-orb-accent"></div>
                 <div className="absolute inset-0 bg-[#050914]/50 mix-blend-multiply"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-[#050914]/15 to-[#050914]/30"></div>
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-noise-dots opacity-20 mix-blend-overlay"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.14),transparent_55%)]"></div>
             </div>
 

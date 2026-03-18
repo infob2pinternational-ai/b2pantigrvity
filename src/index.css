@@ -72,6 +72,27 @@ body {
   }
 }
 
+.bg-noise-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-noise-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 0.8px, transparent 0.8px);
+  background-size: 18px 18px;
+}
+
+.bg-noise-cubes {
+  background-image:
+    linear-gradient(30deg, rgba(37, 99, 235, 0.08) 12%, transparent 12.5%, transparent 87%, rgba(37, 99, 235, 0.08) 87.5%, rgba(37, 99, 235, 0.08)),
+    linear-gradient(150deg, rgba(124, 58, 237, 0.08) 12%, transparent 12.5%, transparent 87%, rgba(124, 58, 237, 0.08) 87.5%, rgba(124, 58, 237, 0.08)),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 2%, transparent 2.5%, transparent 97%, rgba(15, 23, 42, 0.04) 97.5%, rgba(15, 23, 42, 0.04));
+  background-size: 28px 48px;
+  background-position: 0 0, 0 0, 14px 24px;
+}
+
 /* Base custom utilities */
 @layer utilities {
   .text-gradient {

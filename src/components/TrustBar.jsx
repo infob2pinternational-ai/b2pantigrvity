@@ -26,7 +26,7 @@ const TrustBar = () => {
     return (
         <section className="py-20 bg-slate-900 border-y border-slate-800 relative z-10 overflow-hidden" id="trust">
             {/* Subtle Texture */}
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+            <div className="absolute inset-0 bg-noise-dots opacity-15"></div>
 
             <div className="container mx-auto px-6 max-w-7xl relative z-10">
                 <p className="text-center text-sm font-bold tracking-[0.2em] text-slate-400 uppercase mb-12 flex items-center justify-center gap-4">
