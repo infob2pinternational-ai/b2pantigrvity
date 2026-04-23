@@ -1,0 +1,60 @@
+﻿
+> react-app@0.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32mÔ£ô[39m 28 modules transformed.
+node.exe : 
+[31mÔ£ù[39m Build 
+failed in 1.32s
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: ([31mÔ£ù[39m   
+  Build failed in 1    
+.32s:String) [], R    
+emoteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+[31merror during 
+build:
+[31mCould not resolve 
+"../assets/images/van1.
+jpg" from "src/componen
+ts/Gallery.jsx"[31m
+file: [36mD:/neww/reac
+t-app/src/components/Ga
+llery.jsx[31m
+    at getRollupError (
+file:///D:/neww/react-a
+pp/node_modules/rollup/
+dist/es/shared/parseAst
+.js:402:41)
+    at error (file:///D
+:/neww/react-app/node_m
+odules/rollup/dist/es/s
+hared/parseAst.js:398:4
+2)
+    at ModuleLoader.han
+dleInvalidResolvedId (f
+ile:///D:/neww/react-ap
+p/node_modules/rollup/d
+ist/es/shared/node-entr
+y.js:21710:24)
+    at file:///D:/neww/
+react-app/node_modules/
+rollup/dist/es/shared/n
+ode-entry.js:21670:26[
+39m
