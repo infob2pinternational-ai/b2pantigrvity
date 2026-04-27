@@ -16,6 +16,8 @@ const Blog = lazy(() => import('./components/Blog'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 const LedVanAdvertising = lazy(() => import('./components/LedVanAdvertising'));
+const Lookwalker = lazy(() => import('./components/Lookwalker'));
+const LedWall = lazy(() => import('./components/LedWall'));
 const Locations = lazy(() => import('./components/Locations'));
 const ThrissurLocation = lazy(() => import('./components/ThrissurLocation'));
 const KochiLocation = lazy(() => import('./components/KochiLocation'));
@@ -105,6 +107,8 @@ function App() {
             <Route path="/gallery" element={<RouteElement><PageWrapper><Gallery /></PageWrapper></RouteElement>} />
             <Route path="/blog" element={<RouteElement><PageWrapper><Blog /></PageWrapper></RouteElement>} />
             <Route path="/led-van-advertising" element={<RouteElement><LedVanAdvertising /></RouteElement>} />
+            <Route path="/lookwalker" element={<RouteElement><Lookwalker /></RouteElement>} />
+            <Route path="/led-wall" element={<RouteElement><LedWall /></RouteElement>} />
             <Route path="/locations" element={<RouteElement><PageWrapper><Locations /></PageWrapper></RouteElement>} />
             <Route path="/locations/thrissur" element={<RouteElement><PageWrapper><ThrissurLocation /></PageWrapper></RouteElement>} />
             <Route path="/locations/kochi" element={<RouteElement><PageWrapper><KochiLocation /></PageWrapper></RouteElement>} />

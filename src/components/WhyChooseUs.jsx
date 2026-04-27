@@ -6,22 +6,22 @@ const WhyChooseUs = () => {
     const reasons = [
         {
             title: "Maximum Visibility",
-            desc: "Your advertisement travels through high-traffic areas, reaching thousands of potential customers daily.",
+            desc: "Your advertisement travels through the highest-traffic routes in Thrissur and across Kerala — busy junctions, shopping streets, residential corridors, and commercial zones. Our LED vans operate during morning and evening peak hours when footfall and vehicle traffic are at their highest. Whether it is Swaraj Round in Thrissur or MG Road in Kochi, your brand reaches thousands of eyes every single day.",
             icon: <Eye size={32} className="text-brand-primary" />
         },
         {
             title: "High-Impact Visuals",
-            desc: "Bright LED screens ensure your message stands out both day and night.",
+            desc: "Our LED screens deliver bright, high-resolution video and image content that is fully visible even in direct sunlight. Unlike printed banners that fade and tear, our digital displays play crisp video advertisements with audio capability for added impact. Your content looks as sharp at 8am as it does at 8pm — day or night, rain or shine.",
             icon: <ImageIcon size={32} className="text-brand-secondary" />
         },
         {
             title: "Flexible Advertising",
-            desc: "Perfect for political campaigns, brand promotions, product launches, and corporate events.",
+            desc: "LED van advertising adapts to any campaign type and any budget. Use it for Onam sales campaigns, election outreach, store openings, FMCG product launches, real estate promotions, or corporate events. You choose the areas, the routes, and the schedule — we handle the rest. Single-day bookings and multi-week campaigns are both welcome.",
             icon: <Briefcase size={32} className="text-brand-primary" />
         },
         {
             title: "Targeted Marketing",
-            desc: "Reach specific locations where your audience is most active.",
+            desc: "Unlike hoardings that stay in one place, our LED mobile vans go exactly where your audience is. We plan custom routes based on your target demographic — whether that is a specific taluk, a residential layout, a market area, or a commercial district. Hyperlocal targeting means zero wasted impressions and maximum return on your advertising spend.",
             icon: <MapPin size={32} className="text-brand-secondary" />
         }
     ];
