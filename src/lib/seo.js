@@ -72,7 +72,7 @@ export const localBusinessSchema = {
     'B2P International provides LED van advertising in Thrissur and across Kerala for launches, roadshows, local promotions, and outdoor brand visibility.',
   address: BUSINESS_DETAILS.address,
   geo: BUSINESS_DETAILS.geo,
-  areaServed: ['Thrissur', 'Kochi', 'Kozhikode', 'Trivandrum', 'Kerala'].map(toAreaServedEntity),
+  areaServed: ['Thrissur', 'Kochi', 'Kozhikode', 'Trivandrum', 'Palakkad', 'Ernakulam', 'Malappuram', 'Kannur', 'Kottayam', 'Kerala'].map(toAreaServedEntity),
   sameAs: BUSINESS_DETAILS.sameAs,
   contactPoint: [
     {
