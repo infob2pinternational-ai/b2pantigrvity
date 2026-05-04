@@ -27,7 +27,7 @@ const Contact = () => {
 
         try {
             if (!isSupabaseConfigured || !supabase) {
-                setBtnText("Add Supabase Key");
+                setBtnText("Service Unavailable");
                 setBtnColor("bg-amber-500");
                 return;
             }
@@ -220,11 +220,7 @@ const Contact = () => {
                                 {btnText}
                             </button>
 
-                            {!isSupabaseConfigured && (
-                                <p className="text-sm text-amber-600">
-                                    Add `VITE_SUPABASE_ANON_KEY` to your `.env` file to activate Supabase form submissions.
-                                </p>
-                            )}
+
                         </form>
                     </motion.div>
 
