@@ -196,14 +196,15 @@ const Lookwalker = () => {
             {/* What is a Lookwalker Section */}
             <section className="py-20 bg-white border-b border-slate-100">
                 <div className="container mx-auto px-6 max-w-7xl">
-                    <div className="max-w-4xl mx-auto text-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
+                            className="order-2 lg:order-1"
                         >
                             <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">What is a Lookwalker?</h2>
-                            <div className="text-lg text-slate-600 leading-relaxed space-y-6 text-left md:text-center">
+                            <div className="text-lg text-slate-600 leading-relaxed space-y-6 text-left">
                                 <p>
                                     A lookwalker (also called an iWalker, walking billboard, or human billboard) is a wearable LED advertising board carried by a trained brand promoter. The promoter walks through busy, high-footfall areas displaying your brand's visuals, videos, or promotional content on a bright LED screen visible from a distance.
                                 </p>
@@ -213,6 +214,22 @@ const Lookwalker = () => {
                                 <p>
                                     Unlike hoardings or billboards that stay in one place, a lookwalker moves with your audience. It creates direct, eye-level interaction between your brand and potential customers — delivering one of the highest brand recall rates of any outdoor advertising format.
                                 </p>
+                            </div>
+                        </motion.div>
+                        
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="order-1 lg:order-2 relative"
+                        >
+                            <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 bg-slate-50">
+                                <img 
+                                    src="/lookwalker-demo.jpg" 
+                                    alt="Lookwalker advertising unit demonstration" 
+                                    className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" 
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent pointer-events-none"></div>
                             </div>
                         </motion.div>
                     </div>
