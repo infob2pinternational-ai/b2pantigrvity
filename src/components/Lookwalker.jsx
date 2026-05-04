@@ -37,7 +37,7 @@ const Lookwalker = () => {
 
     useEffect(() => {
         const heroImage = new Image();
-        heroImage.src = "/led-van-advertising.png";
+        heroImage.src = "/lookwalker-hero.jpg";
         heroImage.onload = () => setHeroImageLoaded(true);
     }, []);
 
@@ -134,7 +134,7 @@ const Lookwalker = () => {
                 <div className="absolute inset-0 w-full h-full z-0 opacity-40">
                     <div className="absolute inset-0 bg-[#08111f]"></div>
                     <img
-                        src="/led-van-advertising.png"
+                        src="/lookwalker-hero.jpg"
                         alt="Lookwalker advertising campaign"
                         className={`w-full h-full object-cover transition-opacity duration-500 ${heroImageLoaded ? 'opacity-100' : 'opacity-0'}`}
                         loading="eager"
