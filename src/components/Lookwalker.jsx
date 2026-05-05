@@ -282,8 +282,109 @@ const Lookwalker = () => {
                 </div>
             </section>
 
-            {/* Use Cases Section */}
+            {/* Campaign Gallery Section */}
             <section className="py-20 bg-slate-50 border-b border-slate-200">
+                <div className="container mx-auto px-6 max-w-7xl">
+                    <div className="text-center mb-12">
+                        <motion.h2 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-3xl md:text-4xl font-black text-slate-900 mb-6"
+                        >
+                            Our Lookwalker Campaigns
+                        </motion.h2>
+                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                            See how our lookwalker advertising units perform in crowded spaces, malls, and public events across Kerala.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
+                        >
+                            <div className="aspect-[4/5] relative overflow-hidden">
+                                <img 
+                                    src="/lookwalker-gallery-1.png" 
+                                    alt="Lookwalker on the street" 
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                    <div className="p-6">
+                                        <h3 className="text-white font-bold text-xl">Street Campaigns</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
+                        >
+                            <div className="aspect-[4/5] relative overflow-hidden">
+                                <img 
+                                    src="/lookwalker-gallery-2.png" 
+                                    alt="Lookwalker in shopping mall" 
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                    <div className="p-6">
+                                        <h3 className="text-white font-bold text-xl">Mall Activations</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
+                        >
+                            <div className="aspect-[4/5] relative overflow-hidden">
+                                <img 
+                                    src="/lookwalker-gallery-3.jpg" 
+                                    alt="Lookwalker at public event" 
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                    <div className="p-6">
+                                        <h3 className="text-white font-bold text-xl">Event Promotions</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.4 }}
+                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
+                        >
+                            <div className="aspect-[4/5] relative overflow-hidden">
+                                <img 
+                                    src="/lookwalker-gallery-4.jpg" 
+                                    alt="Lookwalker team campaign" 
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                    <div className="p-6">
+                                        <h3 className="text-white font-bold text-xl">Team Deployment</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Use Cases Section */}
+            <section className="py-20 bg-white border-b border-slate-200">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <motion.div 
@@ -338,7 +439,7 @@ const Lookwalker = () => {
             </section>
 
             {/* Coverage Area Section */}
-            <section className="py-20 bg-white border-b border-slate-100">
+            <section className="py-20 bg-slate-50 border-b border-slate-100">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="max-w-4xl mx-auto text-center">
                         <motion.div
@@ -356,7 +457,7 @@ const Lookwalker = () => {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-20 bg-slate-50 border-b border-slate-200">
+            <section className="py-20 bg-white border-b border-slate-200">
                 <div className="container mx-auto px-6 max-w-3xl">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-black text-slate-900">Frequently Asked Questions</h2>
