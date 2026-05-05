@@ -178,15 +178,15 @@ const LedVanAdvertising = () => {
                             Experience the visual impact of our high-resolution LED advertising vans on the streets of Kerala.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 gap-12 max-w-6xl mx-auto">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="md:col-span-2 rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
+                            className="rounded-3xl overflow-hidden shadow-xl border border-slate-200 group"
                         >
-                            <div className="aspect-video relative overflow-hidden bg-slate-100">
+                            <div className="aspect-video md:aspect-[21/9] relative overflow-hidden bg-slate-100">
                                 <img 
                                     src="/led-van-gallery-1.png" 
                                     alt="LED Van displaying ad" 
@@ -204,9 +204,9 @@ const LedVanAdvertising = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
+                            className="rounded-3xl overflow-hidden shadow-xl border border-slate-200 group"
                         >
-                            <div className="aspect-video relative overflow-hidden bg-slate-100">
+                            <div className="aspect-video md:aspect-[21/9] relative overflow-hidden bg-slate-100">
                                 <img 
                                     src="/led-van-gallery-2.png" 
                                     alt="LED Van advertising at night" 
@@ -224,9 +224,9 @@ const LedVanAdvertising = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.3 }}
-                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
+                            className="rounded-3xl overflow-hidden shadow-xl border border-slate-200 group"
                         >
-                            <div className="aspect-video relative overflow-hidden bg-slate-100">
+                            <div className="aspect-video md:aspect-[21/9] relative overflow-hidden bg-slate-100">
                                 <img 
                                     src="/led-van-gallery-3.png" 
                                     alt="LED Van on city street" 
