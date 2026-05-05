@@ -186,7 +186,7 @@ const LedVanAdvertising = () => {
                             transition={{ delay: 0.1 }}
                             className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
                         >
-                            <div className="aspect-[4/5] relative overflow-hidden">
+                            <div className="aspect-video relative overflow-hidden bg-slate-100">
                                 <img 
                                     src="/led-van-gallery-1.png" 
                                     alt="LED Van displaying ad" 
@@ -206,7 +206,7 @@ const LedVanAdvertising = () => {
                             transition={{ delay: 0.2 }}
                             className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
                         >
-                            <div className="aspect-[4/5] relative overflow-hidden">
+                            <div className="aspect-video relative overflow-hidden bg-slate-100">
                                 <img 
                                     src="/led-van-gallery-2.png" 
                                     alt="LED Van advertising at night" 
@@ -226,7 +226,7 @@ const LedVanAdvertising = () => {
                             transition={{ delay: 0.3 }}
                             className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
                         >
-                            <div className="aspect-[4/5] relative overflow-hidden">
+                            <div className="aspect-video relative overflow-hidden bg-slate-100">
                                 <img 
                                     src="/led-van-gallery-3.png" 
                                     alt="LED Van on city street" 
