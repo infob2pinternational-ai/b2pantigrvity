@@ -146,22 +146,22 @@ const LedWall = () => {
         <div className="bg-slate-50 min-h-screen">
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-[#050914] overflow-hidden min-h-[80vh] flex flex-col justify-center">
-                <div className="absolute inset-0 w-full h-full z-0 opacity-40">
-                    <div className="absolute inset-0 bg-[#08111f]"></div>
+                <div className="absolute inset-0 w-full h-full z-0">
+                    <div className="absolute inset-0 bg-[#050914]"></div>
                     {bgImages.map((src, index) => (
                         <img
                             key={index}
                             src={src}
                             alt={`LED Wall Rental in Kerala ${index + 1}`}
-                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${heroImageLoaded && currentBgIndex === index ? 'opacity-100' : 'opacity-0'}`}
+                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${heroImageLoaded && currentBgIndex === index ? 'opacity-60' : 'opacity-0'}`}
                             loading={index === 0 ? "eager" : "lazy"}
                             fetchPriority={index === 0 ? "high" : "auto"}
                             decoding="async"
                             onLoad={index === 0 ? () => setHeroImageLoaded(true) : undefined}
                         />
                     ))}
-                    <div className="absolute inset-0 bg-[#050914]/80 mix-blend-multiply"></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-transparent to-[#050914]/80"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-transparent to-[#050914]/60"></div>
+                    <div className="absolute inset-0 bg-[#050914]/40 mix-blend-overlay"></div>
                 </div>
                 
                 <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center flex flex-col items-center">
