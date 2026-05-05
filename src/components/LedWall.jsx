@@ -37,7 +37,7 @@ const LedWall = () => {
 
     useEffect(() => {
         const heroImage = new Image();
-        heroImage.src = "/led-van-advertising.png";
+        heroImage.src = "/led-wall-image2.webp";
         heroImage.onload = () => setHeroImageLoaded(true);
     }, []);
 
@@ -134,7 +134,7 @@ const LedWall = () => {
                 <div className="absolute inset-0 w-full h-full z-0 opacity-40">
                     <div className="absolute inset-0 bg-[#08111f]"></div>
                     <img
-                        src="/led-van-advertising.png"
+                        src="/led-wall-image2.webp"
                         alt="LED Wall Rental in Kerala"
                         className={`w-full h-full object-cover transition-opacity duration-500 ${heroImageLoaded ? 'opacity-100' : 'opacity-0'}`}
                         loading="eager"
@@ -315,8 +315,71 @@ const LedWall = () => {
                 </div>
             </section>
 
-            {/* Use Cases Section */}
+            {/* Event Gallery Section */}
             <section className="py-20 bg-slate-50 border-b border-slate-200">
+                <div className="container mx-auto px-6 max-w-7xl">
+                    <div className="text-center mb-12">
+                        <motion.h2 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-3xl md:text-4xl font-black text-slate-900 mb-6"
+                        >
+                            Our Recent LED Wall Setups
+                        </motion.h2>
+                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                            Take a look at some of our recent LED wall installations for corporate events and outdoor stage shows across Kerala.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
+                        >
+                            <div className="aspect-[4/3] relative overflow-hidden">
+                                <img 
+                                    src="/led-wall-image1.jfif" 
+                                    alt="Outdoor Stage LED Wall Setup in Kerala" 
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                    <div className="p-6">
+                                        <h3 className="text-white font-bold text-xl">Outdoor Stage Show</h3>
+                                        <p className="text-slate-200 text-sm">High-brightness P4 LED Wall configuration</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
+                        >
+                            <div className="aspect-[4/3] relative overflow-hidden">
+                                <img 
+                                    src="/led-wall-image2.webp" 
+                                    alt="Corporate Event LED Video Wall in Kerala" 
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                    <div className="p-6">
+                                        <h3 className="text-white font-bold text-xl">Corporate Event</h3>
+                                        <p className="text-slate-200 text-sm">Ultra-sharp P3 Indoor LED Wall</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Use Cases Section */}
+            <section className="py-20 bg-white border-b border-slate-200">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <motion.div 
@@ -371,7 +434,7 @@ const LedWall = () => {
             </section>
 
             {/* Coverage Area Section */}
-            <section className="py-20 bg-white border-b border-slate-100">
+            <section className="py-20 bg-slate-50 border-b border-slate-100">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="max-w-4xl mx-auto text-center">
                         <motion.div
@@ -389,7 +452,7 @@ const LedWall = () => {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-20 bg-slate-50 border-b border-slate-200">
+            <section className="py-20 bg-white border-b border-slate-200">
                 <div className="container mx-auto px-6 max-w-3xl">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-black text-slate-900">Frequently Asked Questions</h2>
