@@ -24,6 +24,71 @@ const Blog = () => {
     // Placeholder blog data
     const blogPosts = [
         {
+            id: 5,
+            title: "Lookwalker Advertising: The Ultimate Eye-Level Marketing Strategy",
+            excerpt: "Lookwalker advertising brings your brand directly into the crowd. Discover why this mobile, wearable LED billboard is revolutionizing local marketing in crowded spaces.",
+            author: "B2P Marketing Team",
+            date: "April 20, 2026",
+            category: "Marketing Trends",
+            image: "/lookwalker-demo.jpg",
+            content: `
+                <p class="mb-4">In busy streets, shopping malls, and festival grounds, traditional static billboards often fade into the background. To truly capture attention in high-footfall areas, your marketing needs to move with the crowd. This is where <strong>Lookwalker Advertising</strong> steps in.</p>
+                
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">What is a Lookwalker?</h4>
+                <p class="mb-6">A Lookwalker, also known as a walking billboard, is a lightweight, wearable backlit or LED display carried by a brand promoter. Unlike static signs, Lookwalkers navigate directly through crowds, interacting with potential customers at eye level.</p>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-4 mt-8">Key Benefits of Lookwalker Campaigns</h4>
+                <div class="space-y-4 mb-8">
+                    <div>
+                        <strong class="text-slate-900 block mb-1">1. 100% Eye-Level Visibility</strong>
+                        <p>Because the ad is positioned slightly above the crowd but right at eye level, it creates an immediate visual impact that cannot be ignored.</p>
+                    </div>
+                    <div>
+                        <strong class="text-slate-900 block mb-1">2. Hyper-Local Reach in Pedestrian Zones</strong>
+                        <p>Vehicles can't enter malls, beaches, or narrow market streets, but Lookwalkers can. They are perfect for targeting highly specific zones like the Thrissur Pooram grounds or Fort Kochi.</p>
+                    </div>
+                    <div>
+                        <strong class="text-slate-900 block mb-1">3. Human Interaction</strong>
+                        <p>A Lookwalker isn't just a sign; it's carried by a promoter who can hand out flyers, give product demos, and answer customer queries on the spot.</p>
+                    </div>
+                </div>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">Perfect for Product Launches</h4>
+                <p>Whether you're opening a new showroom, launching a special offer, or running a political campaign, a team of Lookwalkers walking in synchronization creates an unforgettable spectacle.</p>
+            `
+        },
+        {
+            id: 4,
+            title: "Elevate Your Events with High-Resolution LED Walls",
+            excerpt: "From corporate conferences to massive outdoor concerts, LED video walls are the modern standard for event displays. Here's why you need one for your next big event in Kerala.",
+            author: "B2P Event Solutions",
+            date: "April 05, 2026",
+            category: "Event Tech",
+            image: "/led-wall-image2.webp",
+            content: `
+                <p class="mb-4">Gone are the days of dim, blurry projectors and uninspiring backdrop flex banners. In 2026, the standard for any professional event—be it a wedding, corporate conference, or political rally—is a high-resolution <strong>LED Video Wall</strong>.</p>
+                
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">Indoor P3 vs Outdoor P4 LED Walls</h4>
+                <p class="mb-6">Choosing the right LED wall is crucial for your event's success. <strong>Indoor P3 walls</strong> offer a tight pixel pitch (3mm), meaning the image remains razor-sharp even when the audience is sitting just a few meters away. They are the go-to choice for corporate events, hotel ballrooms, and weddings.</p>
+                <p class="mb-6"><strong>Outdoor P4 walls</strong>, on the other hand, are built for brightness. Designed to cut through direct sunlight, they ensure your live feed or presentation is visible to crowds of thousands at open-air concerts or political rallies.</p>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-4 mt-8">Why LED Walls Are Unbeatable</h4>
+                <div class="space-y-4 mb-8">
+                    <div>
+                        <strong class="text-slate-900 block mb-1">Seamless Modularity</strong>
+                        <p>LED walls are built from smaller panels. This means we can configure them to any size or shape your venue requires—from a standard 16:9 screen to massive ultra-wide panoramic backdrops.</p>
+                    </div>
+                    <div>
+                        <strong class="text-slate-900 block mb-1">Reliability</strong>
+                        <p>Unlike projectors, LED walls do not cast shadows when someone walks in front of them, and they don't require the room to be pitch-dark to look good.</p>
+                    </div>
+                </div>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">Conclusion</h4>
+                <p>If you want to leave a lasting impression and guarantee that every person in the room (or field) has a front-row view, an LED wall is your best investment. Reach out to B2P International to book the perfect screen for your Kerala event.</p>
+            `
+        },
+        {
             id: 1,
             title: "Why Digital LED Van Advertising is the Future of Local Marketing in Kerala",
             excerpt: "In a world where digital ads are often skipped, businesses are looking for ways to capture attention in the real world. Enter Digital LED Van Advertising—the mobile powerhouse.",
