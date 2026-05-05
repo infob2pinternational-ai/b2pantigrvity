@@ -19,8 +19,8 @@ const Hero = () => {
                 }}
             ></div>
 
-            {/* Overlay and animated elements */}
-            <div className="absolute inset-0 w-full h-full z-0 bg-[#050914]/40">
+            {/* Animated elements (No dark overlay) */}
+            <div className="absolute inset-0 w-full h-full z-0">
                 <div className="hero-orb hero-orb-primary"></div>
                 <div className="hero-orb hero-orb-secondary"></div>
                 <div className="hero-orb hero-orb-accent"></div>
