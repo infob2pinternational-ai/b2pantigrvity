@@ -178,7 +178,7 @@ const LedVanAdvertising = () => {
                             Experience the visual impact of our high-resolution LED advertising vans on the streets of Kerala.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -235,26 +235,6 @@ const LedVanAdvertising = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                                     <div className="p-6">
                                         <h3 className="text-white font-bold text-xl">City Wide Reach</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.4 }}
-                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
-                        >
-                            <div className="aspect-[4/5] relative overflow-hidden">
-                                <img 
-                                    src="/led-van-gallery-4.png" 
-                                    alt="Premium LED Van fleet" 
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                                    <div className="p-6">
-                                        <h3 className="text-white font-bold text-xl">Premium Fleet</h3>
                                     </div>
                                 </div>
                             </div>
