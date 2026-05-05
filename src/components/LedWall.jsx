@@ -331,7 +331,7 @@ const LedWall = () => {
                             Take a look at some of our recent LED wall installations for corporate events and outdoor stage shows across Kerala.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -348,7 +348,7 @@ const LedWall = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                                     <div className="p-6">
                                         <h3 className="text-white font-bold text-xl">Outdoor Stage Show</h3>
-                                        <p className="text-slate-200 text-sm">High-brightness P4 LED Wall configuration</p>
+                                        <p className="text-slate-200 text-sm">High-brightness P4 LED Wall</p>
                                     </div>
                                 </div>
                             </div>
@@ -370,6 +370,27 @@ const LedWall = () => {
                                     <div className="p-6">
                                         <h3 className="text-white font-bold text-xl">Corporate Event</h3>
                                         <p className="text-slate-200 text-sm">Ultra-sharp P3 Indoor LED Wall</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
+                        >
+                            <div className="aspect-[4/3] relative overflow-hidden">
+                                <img 
+                                    src="/led-wall-image3.webp" 
+                                    alt="Live Stage Performance LED Wall in Kerala" 
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                    <div className="p-6">
+                                        <h3 className="text-white font-bold text-xl">Live Performances</h3>
+                                        <p className="text-slate-200 text-sm">High-refresh rate display panels</p>
                                     </div>
                                 </div>
                             </div>
