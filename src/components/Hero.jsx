@@ -9,9 +9,9 @@ const Hero = () => {
             id="home"
             className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-[#050914]"
         >
-            {/* Background Image with 70% Opacity */}
+            {/* Background Image with 85% Opacity */}
             <div 
-                className="absolute inset-0 w-full h-full z-0 opacity-70"
+                className="absolute inset-0 w-full h-full z-0 opacity-[0.85]"
                 style={{ 
                     backgroundImage: `url('/led-van-hero-bg.png')`, 
                     backgroundSize: 'cover', 
