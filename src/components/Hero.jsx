@@ -14,14 +14,14 @@ const Hero = () => {
                 className="absolute inset-0 w-full h-full z-0 opacity-70"
                 style={{ 
                     backgroundImage: `url('/led-van-hero-bg.png')`, 
-                    backgroundSize: '130%', 
-                    backgroundPosition: '100% center',
+                    backgroundSize: 'cover', 
+                    backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat'
                 }}
             ></div>
 
-            {/* Dark gradient on the left side so text is readable without clashing with the van's text */}
-            <div className="absolute inset-0 w-full h-full z-0 bg-gradient-to-r from-[#050914] via-[#050914]/80 to-transparent">
+            {/* Animated elements (No dark overlay) */}
+            <div className="absolute inset-0 w-full h-full z-0">
                 <div className="hero-orb hero-orb-primary"></div>
                 <div className="hero-orb hero-orb-secondary"></div>
                 <div className="hero-orb hero-orb-accent"></div>
