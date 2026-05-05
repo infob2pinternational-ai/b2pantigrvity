@@ -73,19 +73,19 @@ const LedVanAdvertising = () => {
             {/* Hero Section for Service Page */}
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-[#050914] overflow-hidden min-h-[80vh] flex flex-col justify-center">
                 {/* Background Image/Video */}
-                <div className="absolute inset-0 w-full h-full z-0 opacity-40">
-                    <div className="absolute inset-0 bg-[#08111f]"></div>
+                <div className="absolute inset-0 w-full h-full z-0">
+                    <div className="absolute inset-0 bg-[#050914]"></div>
                     <img
                         src="/led-van-advertising.png"
                         alt="LED van advertising campaign in city street"
-                        className={`w-full h-full object-cover transition-opacity duration-500 ${heroImageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${heroImageLoaded ? 'opacity-[0.65]' : 'opacity-0'}`}
                         loading="eager"
                         fetchPriority="high"
                         decoding="async"
                         onLoad={() => setHeroImageLoaded(true)}
                     />
-                    <div className="absolute inset-0 bg-[#050914]/80 mix-blend-multiply"></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-transparent to-[#050914]/80"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-transparent to-[#050914]/60"></div>
+                    <div className="absolute inset-0 bg-[#050914]/40 mix-blend-overlay"></div>
                 </div>
                 
                 <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center flex flex-col items-center">
@@ -162,8 +162,109 @@ const LedVanAdvertising = () => {
                 </div>
             </section>
 
-            {/* SECTION 2: Use Cases */}
+            {/* Campaign Gallery Section */}
             <section className="py-20 bg-slate-50 border-b border-slate-200">
+                <div className="container mx-auto px-6 max-w-7xl">
+                    <div className="text-center mb-12">
+                        <motion.h2 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-3xl md:text-4xl font-black text-slate-900 mb-6"
+                        >
+                            Our LED Van Fleet
+                        </motion.h2>
+                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                            Experience the visual impact of our high-resolution LED advertising vans on the streets of Kerala.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
+                        >
+                            <div className="aspect-[4/5] relative overflow-hidden">
+                                <img 
+                                    src="/led-van-gallery-1.png" 
+                                    alt="LED Van displaying ad" 
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                    <div className="p-6">
+                                        <h3 className="text-white font-bold text-xl">High Brightness Displays</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
+                        >
+                            <div className="aspect-[4/5] relative overflow-hidden">
+                                <img 
+                                    src="/led-van-gallery-2.png" 
+                                    alt="LED Van advertising at night" 
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                    <div className="p-6">
+                                        <h3 className="text-white font-bold text-xl">Night Campaigns</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
+                        >
+                            <div className="aspect-[4/5] relative overflow-hidden">
+                                <img 
+                                    src="/led-van-gallery-3.png" 
+                                    alt="LED Van on city street" 
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                    <div className="p-6">
+                                        <h3 className="text-white font-bold text-xl">City Wide Reach</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.4 }}
+                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
+                        >
+                            <div className="aspect-[4/5] relative overflow-hidden">
+                                <img 
+                                    src="/led-van-gallery-4.png" 
+                                    alt="Premium LED Van fleet" 
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                    <div className="p-6">
+                                        <h3 className="text-white font-bold text-xl">Premium Fleet</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* SECTION 2: Use Cases */}
+            <section className="py-20 bg-white border-b border-slate-200">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="text-center mb-16">
                         <motion.h2 
@@ -232,7 +333,7 @@ const LedVanAdvertising = () => {
             </section>
 
             {/* SECTION 3: Coverage Area */}
-            <section className="py-20 bg-white border-b border-slate-100">
+            <section className="py-20 bg-slate-50 border-b border-slate-100">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="max-w-4xl mx-auto text-center">
                         <motion.div
@@ -250,7 +351,7 @@ const LedVanAdvertising = () => {
             </section>
 
             {/* SECTION 4: FAQ */}
-            <section className="py-20 bg-slate-50">
+            <section className="py-20 bg-white">
                 <div className="container mx-auto px-6 max-w-3xl">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-black text-slate-900">Frequently Asked Questions</h2>
