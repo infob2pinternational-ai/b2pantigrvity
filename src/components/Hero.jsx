@@ -7,11 +7,15 @@ const Hero = () => {
     return (
         <section
             id="home"
-            className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-[#050914]"
+            className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden"
+            style={{ 
+                backgroundImage: `url('/led-van-hero-bg.png')`, 
+                backgroundSize: 'cover', 
+                backgroundPosition: 'center'
+            }}
         >
-            {/* Lightweight animated background */}
-            <div className="absolute inset-0 w-full h-full z-0 bg-[#050914]">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#17305f_0%,#08111f_40%,#050914_75%)]"></div>
+            {/* Overlay and animated elements */}
+            <div className="absolute inset-0 w-full h-full z-0 bg-[#050914]/70">
                 <div className="hero-orb hero-orb-primary"></div>
                 <div className="hero-orb hero-orb-secondary"></div>
                 <div className="hero-orb hero-orb-accent"></div>
