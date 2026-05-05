@@ -153,7 +153,7 @@ const LedWall = () => {
                             key={index}
                             src={src}
                             alt={`LED Wall Rental in Kerala ${index + 1}`}
-                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${heroImageLoaded && currentBgIndex === index ? 'opacity-60' : 'opacity-0'}`}
+                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${heroImageLoaded && currentBgIndex === index ? 'opacity-[0.65]' : 'opacity-0'}`}
                             loading={index === 0 ? "eager" : "lazy"}
                             fetchPriority={index === 0 ? "high" : "auto"}
                             decoding="async"
