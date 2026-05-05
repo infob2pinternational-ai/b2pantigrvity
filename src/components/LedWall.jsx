@@ -34,11 +34,26 @@ const DESCRIPTION = 'Rent LED walls and LED video walls for weddings, events, co
 
 const LedWall = () => {
     const [heroImageLoaded, setHeroImageLoaded] = useState(false);
+    const [currentBgIndex, setCurrentBgIndex] = useState(0);
+
+    const bgImages = [
+        "/led-wall-image2.webp",
+        "/led-wall-image1.jfif",
+        "/led-wall-image3.webp"
+    ];
 
     useEffect(() => {
+        // Preload first image
         const heroImage = new Image();
-        heroImage.src = "/led-wall-image2.webp";
+        heroImage.src = bgImages[0];
         heroImage.onload = () => setHeroImageLoaded(true);
+
+        // Rotate images every 4 seconds
+        const interval = setInterval(() => {
+            setCurrentBgIndex((prev) => (prev + 1) % bgImages.length);
+        }, 4000);
+
+        return () => clearInterval(interval);
     }, []);
 
     const reasons = [
@@ -133,15 +148,18 @@ const LedWall = () => {
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-[#050914] overflow-hidden min-h-[80vh] flex flex-col justify-center">
                 <div className="absolute inset-0 w-full h-full z-0 opacity-40">
                     <div className="absolute inset-0 bg-[#08111f]"></div>
-                    <img
-                        src="/led-wall-image2.webp"
-                        alt="LED Wall Rental in Kerala"
-                        className={`w-full h-full object-cover transition-opacity duration-500 ${heroImageLoaded ? 'opacity-100' : 'opacity-0'}`}
-                        loading="eager"
-                        fetchPriority="high"
-                        decoding="async"
-                        onLoad={() => setHeroImageLoaded(true)}
-                    />
+                    {bgImages.map((src, index) => (
+                        <img
+                            key={index}
+                            src={src}
+                            alt={`LED Wall Rental in Kerala ${index + 1}`}
+                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${heroImageLoaded && currentBgIndex === index ? 'opacity-100' : 'opacity-0'}`}
+                            loading={index === 0 ? "eager" : "lazy"}
+                            fetchPriority={index === 0 ? "high" : "auto"}
+                            decoding="async"
+                            onLoad={index === 0 ? () => setHeroImageLoaded(true) : undefined}
+                        />
+                    ))}
                     <div className="absolute inset-0 bg-[#050914]/80 mix-blend-multiply"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-transparent to-[#050914]/80"></div>
                 </div>
