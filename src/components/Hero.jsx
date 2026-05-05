@@ -11,11 +11,12 @@ const Hero = () => {
         >
             {/* Background Image with 70% Opacity */}
             <div 
-                className="absolute inset-0 w-full h-full z-0 opacity-70 scale-125 translate-x-[15%]"
+                className="absolute inset-0 w-full h-full z-0 opacity-70"
                 style={{ 
                     backgroundImage: `url('/led-van-hero-bg.png')`, 
-                    backgroundSize: 'cover', 
-                    backgroundPosition: 'right center'
+                    backgroundSize: '130%', 
+                    backgroundPosition: '100% center',
+                    backgroundRepeat: 'no-repeat'
                 }}
             ></div>
 
