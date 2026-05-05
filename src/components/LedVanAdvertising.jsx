@@ -36,12 +36,35 @@ const LED_SERVICE_DESCRIPTION =
 
 const LedVanAdvertising = () => {
     const [heroImageLoaded, setHeroImageLoaded] = useState(false);
+    const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
+
+    const banners = [
+        {
+            src: "/led-van-gallery-1.png",
+            title: "High Brightness Displays"
+        },
+        {
+            src: "/led-van-gallery-2.png",
+            title: "Night Campaigns"
+        },
+        {
+            src: "/led-van-gallery-3.png",
+            title: "City Wide Reach"
+        }
+    ];
 
     useEffect(() => {
         const heroImage = new Image();
         heroImage.src = "/led-van-advertising.png";
         heroImage.onload = () => setHeroImageLoaded(true);
     }, []);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % banners.length);
+        }, 4000); // Change image every 4 seconds
+        return () => clearInterval(interval);
+    }, [banners.length]);
 
     return (
         <>
@@ -178,67 +201,36 @@ const LedVanAdvertising = () => {
                             Experience the visual impact of our high-resolution LED advertising vans on the streets of Kerala.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 gap-12 max-w-6xl mx-auto">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.1 }}
-                            className="rounded-3xl overflow-hidden shadow-xl border border-slate-200 group"
-                        >
-                            <div className="aspect-video md:aspect-[21/9] relative overflow-hidden bg-slate-100">
+                    <div className="relative max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-200 aspect-video md:aspect-[21/9]">
+                        {banners.map((banner, index) => (
+                            <div 
+                                key={index}
+                                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentBannerIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+                            >
                                 <img 
-                                    src="/led-van-gallery-1.png" 
-                                    alt="LED Van displaying ad" 
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src={banner.src} 
+                                    alt={banner.title} 
+                                    className="w-full h-full object-cover"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                                    <div className="p-6">
-                                        <h3 className="text-white font-bold text-xl">High Brightness Displays</h3>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end">
+                                    <div className="p-8 md:p-12">
+                                        <h3 className="text-white font-black text-2xl md:text-4xl tracking-tight">{banner.title}</h3>
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.2 }}
-                            className="rounded-3xl overflow-hidden shadow-xl border border-slate-200 group"
-                        >
-                            <div className="aspect-video md:aspect-[21/9] relative overflow-hidden bg-slate-100">
-                                <img 
-                                    src="/led-van-gallery-2.png" 
-                                    alt="LED Van advertising at night" 
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        ))}
+
+                        {/* Slider Navigation Dots */}
+                        <div className="absolute bottom-8 right-8 z-20 flex gap-3">
+                            {banners.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setCurrentBannerIndex(index)}
+                                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentBannerIndex ? 'bg-white scale-125' : 'bg-white/40 hover:bg-white/70'}`}
+                                    aria-label={`Go to slide ${index + 1}`}
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                                    <div className="p-6">
-                                        <h3 className="text-white font-bold text-xl">Night Campaigns</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.3 }}
-                            className="rounded-3xl overflow-hidden shadow-xl border border-slate-200 group"
-                        >
-                            <div className="aspect-video md:aspect-[21/9] relative overflow-hidden bg-slate-100">
-                                <img 
-                                    src="/led-van-gallery-3.png" 
-                                    alt="LED Van on city street" 
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                                    <div className="p-6">
-                                        <h3 className="text-white font-bold text-xl">City Wide Reach</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
