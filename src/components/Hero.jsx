@@ -9,9 +9,9 @@ const Hero = () => {
             id="home"
             className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-[#050914]"
         >
-            {/* Background Image with 30% Opacity for text readability */}
+            {/* Background Image with 70% Opacity */}
             <div 
-                className="absolute inset-0 w-full h-full z-0 opacity-30"
+                className="absolute inset-0 w-full h-full z-0 opacity-70"
                 style={{ 
                     backgroundImage: `url('/led-van-hero-bg.png')`, 
                     backgroundSize: 'cover', 
@@ -19,8 +19,8 @@ const Hero = () => {
                 }}
             ></div>
 
-            {/* Animated elements (No dark overlay) */}
-            <div className="absolute inset-0 w-full h-full z-0">
+            {/* Dark gradient on the left side so text is readable without clashing with the van's text */}
+            <div className="absolute inset-0 w-full h-full z-0 bg-gradient-to-r from-[#050914] via-[#050914]/80 to-transparent">
                 <div className="hero-orb hero-orb-primary"></div>
                 <div className="hero-orb hero-orb-secondary"></div>
                 <div className="hero-orb hero-orb-accent"></div>
