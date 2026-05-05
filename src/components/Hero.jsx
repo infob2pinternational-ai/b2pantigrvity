@@ -15,7 +15,7 @@ const Hero = () => {
                 style={{ 
                     backgroundImage: `url('/led-van-hero-bg.png')`, 
                     backgroundSize: 'cover', 
-                    backgroundPosition: 'center'
+                    backgroundPosition: 'right center'
                 }}
             ></div>
 
