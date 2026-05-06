@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Printer, Megaphone, Radio, Calendar, Zap, Truck, MessageCircle, Bot, Globe, ArrowRight } from 'lucide-react';
+import { Printer, Megaphone, Radio, Calendar, Zap, Truck, MessageCircle, Bot, Globe, ArrowRight, Video, Palette, Monitor, Building } from 'lucide-react';
 import Seo from './Seo';
 import {
     buildBreadcrumbSchema,
@@ -103,6 +103,46 @@ const Services = () => {
             desc: "Navigate international market entry and build localized content strategies while leveraging our global B2B cross-border networks.",
             icon: <Globe size={40} className="text-brand-secondary" />,
             delay: 0.8,
+            hasBooking: true
+        },
+        {
+            id: 9,
+            title: "Video Production",
+            desc: "Creative visual content production for brands, campaigns, and promotions. Services include: Corporate Videos, Promotional Videos, Event Coverage, Ad Shoots, Social Media Reels, and Motion Graphics.",
+            icon: <Video size={40} className="text-brand-primary" />,
+            delay: 0.9,
+            hasBooking: true
+        },
+        {
+            id: 10,
+            title: "Creative Designing",
+            desc: "Professional branding and marketing design solutions. Services include: Posters, Flyers, Brochures, Social Media Creatives, In-Shop Branding, Brand Identity Design, and Campaign Artwork.",
+            icon: <Palette size={40} className="text-brand-secondary" />,
+            delay: 1.0,
+            hasBooking: true
+        },
+        {
+            id: 11,
+            title: "Printing Solutions",
+            desc: "High-quality commercial and promotional printing services. We print: Flyers, Brochures, Leaflets, Pamphlets, Dangles, Visiting Cards, Letterheads, and Custom Print Materials.",
+            icon: <Printer size={40} className="text-brand-primary" />,
+            delay: 1.1,
+            hasBooking: true
+        },
+        {
+            id: 12,
+            title: "Signage Solutions",
+            desc: "Indoor and outdoor signage fabrication for maximum brand visibility. We provide: Acrylic Sign Boards, 3D Signage, LED Letters, Glow Sign Boards, Normal Signages, Shop Boards, and Directional Signage.",
+            icon: <Monitor size={40} className="text-brand-secondary" />,
+            delay: 1.2,
+            hasBooking: true
+        },
+        {
+            id: 13,
+            title: "Outdoor Advertising",
+            desc: "Strategic outdoor branding solutions to maximize reach. Options include: Mini Hoardings, Billboards, Blinkers, Traffic Island Branding, Pole Kiosks, and Roadside Branding.",
+            icon: <Building size={40} className="text-brand-primary" />,
+            delay: 1.3,
             hasBooking: true
         }
     ];
