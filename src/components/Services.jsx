@@ -98,14 +98,6 @@ const Services = () => {
             hasBooking: true
         },
         {
-            id: 8,
-            title: "Global Marketing Campaigns",
-            desc: "Navigate international market entry and build localized content strategies while leveraging our global B2B cross-border networks.",
-            icon: <Globe size={40} className="text-brand-secondary" />,
-            delay: 0.8,
-            hasBooking: true
-        },
-        {
             id: 9,
             title: "Video Production",
             desc: "Creative visual content production for brands, campaigns, and promotions. Services include: Corporate Videos, Promotional Videos, Event Coverage, Ad Shoots, Social Media Reels, and Motion Graphics.",
