@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Printer, Megaphone, Radio, Calendar, Zap, Truck, MessageCircle, Bot, Globe, ArrowRight, Video, Palette, Monitor, Building } from 'lucide-react';
+import servicesHero from '../assets/images/services-hero.png';
 import Seo from './Seo';
 import {
     buildBreadcrumbSchema,
@@ -187,6 +188,22 @@ const Services = () => {
                         <span className="text-sm font-bold tracking-widest text-slate-300 uppercase">Our LED Advertising Solutions</span>
                     </motion.div>
 
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="w-full max-w-lg mx-auto mb-10 relative"
+                    >
+                        <div className="absolute inset-0 bg-brand-primary/20 blur-[80px] rounded-full"></div>
+                        <motion.img 
+                            src={servicesHero} 
+                            alt="Premium Services" 
+                            className="w-full h-auto rounded-3xl relative z-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10"
+                            animate={{ y: [0, -15, 0] }}
+                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                        />
+                    </motion.div>
+
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -194,7 +211,7 @@ const Services = () => {
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight"
                     >
-                        LED Van Advertising <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Services</span>
+                        Our Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Services</span>
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -203,7 +220,7 @@ const Services = () => {
                         transition={{ delay: 0.2 }}
                         className="text-xl text-slate-400 font-light"
                     >
-                        Our LED Van Advertising solutions provide one of the most effective outdoor marketing strategies for modern brands. Unlike static billboards, LED advertising vans move through high-traffic areas, ensuring your advertisement reaches a wider audience in Thrissur, Kochi, and across Kerala.
+                        Discover our comprehensive suite of advertising and branding solutions. From dynamic outdoor campaigns and creative design to global marketing strategies, we elevate your brand's presence across all channels.
                     </motion.p>
                 </div>
 
