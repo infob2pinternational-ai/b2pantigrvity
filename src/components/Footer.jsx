@@ -31,7 +31,10 @@ const Footer = () => {
                             <li><Link to="/about" className="text-slate-600 hover:text-brand-primary transition-colors">About Us</Link></li>
                             <li><Link to="/services" className="text-slate-600 hover:text-brand-primary transition-colors">Services</Link></li>
                             <li><Link to="/led-van-advertising" className="text-slate-600 hover:text-brand-primary transition-colors">LED Van Advertising</Link></li>
-                            <li><Link to="/locations" className="text-slate-600 hover:text-brand-primary transition-colors">Locations</Link></li>
+                            <li><Link to="/locations" className="text-slate-600 hover:text-brand-primary transition-colors">All Locations</Link></li>
+                            <li><Link to="/locations/kochi" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Kochi</Link></li>
+                            <li><Link to="/locations/kozhikode" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Kozhikode</Link></li>
+                            <li><Link to="/locations/trivandrum" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Trivandrum</Link></li>
                             <li><Link to="/gallery" className="text-slate-600 hover:text-brand-primary transition-colors">Gallery</Link></li>
                             <li><Link to="/blog" className="text-slate-600 hover:text-brand-primary transition-colors">Blog</Link></li>
                         </ul>

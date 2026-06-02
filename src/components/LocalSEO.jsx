@@ -103,8 +103,29 @@ const LocalSEO = () => {
                                         to="/locations/thrissur"
                                         className="inline-flex items-center justify-between rounded-2xl border border-white/10 bg-[#0d1526] px-4 py-3 text-sm font-bold text-slate-200 transition-colors hover:border-brand-primary"
                                     >
-                                        Thrissur Location Page
+                                        Thrissur Location
                                         <span className="text-brand-primary">/locations/thrissur</span>
+                                    </Link>
+                                    <Link
+                                        to="/locations/kochi"
+                                        className="inline-flex items-center justify-between rounded-2xl border border-white/10 bg-[#0d1526] px-4 py-3 text-sm font-bold text-slate-200 transition-colors hover:border-brand-primary"
+                                    >
+                                        Kochi Location
+                                        <span className="text-brand-primary">/locations/kochi</span>
+                                    </Link>
+                                    <Link
+                                        to="/locations/kozhikode"
+                                        className="inline-flex items-center justify-between rounded-2xl border border-white/10 bg-[#0d1526] px-4 py-3 text-sm font-bold text-slate-200 transition-colors hover:border-brand-primary"
+                                    >
+                                        Kozhikode Location
+                                        <span className="text-brand-primary">/locations/kozhikode</span>
+                                    </Link>
+                                    <Link
+                                        to="/locations/trivandrum"
+                                        className="inline-flex items-center justify-between rounded-2xl border border-white/10 bg-[#0d1526] px-4 py-3 text-sm font-bold text-slate-200 transition-colors hover:border-brand-primary"
+                                    >
+                                        Trivandrum Location
+                                        <span className="text-brand-primary">/locations/trivandrum</span>
                                     </Link>
                                 </div>
                             </div>
