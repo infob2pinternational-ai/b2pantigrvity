@@ -23,6 +23,7 @@ const ThrissurLocation = lazy(() => import('./components/ThrissurLocation'));
 const KochiLocation = lazy(() => import('./components/KochiLocation'));
 const KozhikodeLocation = lazy(() => import('./components/KozhikodeLocation'));
 const TrivandrumLocation = lazy(() => import('./components/TrivandrumLocation'));
+const CompanyProfile = lazy(() => import('./components/CompanyProfile'));
 const NotFound = lazy(() => import('./components/NotFound'));
 
 const ScrollToTop = () => {
@@ -106,6 +107,7 @@ function App() {
             <Route path="/services" element={<RouteElement><PageWrapper><Services /></PageWrapper></RouteElement>} />
             <Route path="/gallery" element={<RouteElement><PageWrapper><Gallery /></PageWrapper></RouteElement>} />
             <Route path="/blog" element={<RouteElement><PageWrapper><Blog /></PageWrapper></RouteElement>} />
+            <Route path="/company-profile" element={<RouteElement><CompanyProfile /></RouteElement>} />
             <Route path="/led-van-advertising" element={<RouteElement><LedVanAdvertising /></RouteElement>} />
             <Route path="/lookwalker" element={<RouteElement><Lookwalker /></RouteElement>} />
             <Route path="/led-wall" element={<RouteElement><LedWall /></RouteElement>} />
