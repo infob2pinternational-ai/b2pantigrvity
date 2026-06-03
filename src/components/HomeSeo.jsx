@@ -6,6 +6,7 @@ import {
   buildWebPageSchema,
   localBusinessSchema,
   websiteSchema,
+  buildSiteNavigationSchema,
 } from '../lib/seo';
 
 const HOME_TITLE = 'LED Van Advertising in Thrissur, Kerala | B2P International';
@@ -52,6 +53,14 @@ const HomeSeo = () => (
       }),
       buildBreadcrumbSchema([{ name: 'Home', path: '/' }]),
       buildFaqSchema(homeFaqs),
+      buildSiteNavigationSchema([
+        { name: 'Services', path: '/services' },
+        { name: 'Locations', path: '/locations' },
+        { name: 'Gallery', path: '/gallery' },
+        { name: 'Blog', path: '/blog' },
+        { name: 'About Us', path: '/about' },
+        { name: 'LED Van Advertising', path: '/led-van-advertising' },
+      ]),
     ]}
   />
 );

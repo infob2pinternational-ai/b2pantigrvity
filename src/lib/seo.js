@@ -186,6 +186,13 @@ export const buildItemListSchema = ({ name, items }) => ({
   })),
 });
 
+export const buildSiteNavigationSchema = (navItems) => ({
+  '@context': 'https://schema.org',
+  '@type': 'SiteNavigationElement',
+  name: 'Main Navigation',
+  url: navItems.map(item => toAbsoluteUrl(item.path)),
+});
+
 export const buildBlogPostingSchema = ({
   headline,
   description,
