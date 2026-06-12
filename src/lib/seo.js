@@ -5,7 +5,7 @@ export const LOGO_URL = `${SITE_URL}/B2P_logo_trimmed.png`;
 
 export const BUSINESS_DETAILS = {
   name: SITE_NAME,
-  telephone: '+91 89899 09034',
+  telephone: '+91 85899 09034',
   email: 'info@b2pinternational.com',
   priceRange: '$$',
   foundingDate: '2012',
@@ -14,7 +14,7 @@ export const BUSINESS_DETAILS = {
     streetAddress: '10/15 Devassy Square, Marathakam Centre, Puranattukara',
     addressLocality: 'Thrissur',
     addressRegion: 'Kerala',
-    postalCode: '680014',
+    postalCode: '680551',
     addressCountry: 'IN',
   },
   geo: {
@@ -23,7 +23,7 @@ export const BUSINESS_DETAILS = {
     longitude: 76.1577759,
   },
   sameAs: [
-    'https://www.facebook.com/b2pinternational',
+    'https://www.facebook.com/b2pinternational/',
     'https://www.instagram.com/b2p_international/',
   ],
 };
@@ -69,11 +69,24 @@ export const localBusinessSchema = {
   priceRange: BUSINESS_DETAILS.priceRange,
   foundingDate: BUSINESS_DETAILS.foundingDate,
   description:
-    'B2P International provides LED van advertising in Thrissur and across Kerala for launches, roadshows, local promotions, and outdoor brand visibility.',
+    'B2P International provides LED van advertising, LED wall rental, lookwalker advertising and WhatsApp bulk messaging across all 14 districts of Kerala. Based in Puranattukara, Thrissur.',
   address: BUSINESS_DETAILS.address,
   geo: BUSINESS_DETAILS.geo,
-  areaServed: ['Thrissur', 'Kochi', 'Kozhikode', 'Trivandrum', 'Palakkad', 'Ernakulam', 'Malappuram', 'Kannur', 'Kottayam', 'Kerala'].map(toAreaServedEntity),
+  areaServed: [
+    'Thrissur', 'Kochi', 'Kozhikode', 'Thiruvananthapuram',
+    'Palakkad', 'Ernakulam', 'Malappuram', 'Kannur',
+    'Kottayam', 'Alappuzha', 'Kollam', 'Pathanamthitta',
+    'Idukki', 'Wayanad', 'Kasaragod', 'Kerala'
+  ].map(toAreaServedEntity),
   sameAs: BUSINESS_DETAILS.sameAs,
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
+  ],
   contactPoint: [
     {
       '@type': 'ContactPoint',
