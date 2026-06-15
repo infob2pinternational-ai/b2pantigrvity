@@ -24,6 +24,7 @@ const KochiLocation = lazy(() => import('./components/KochiLocation'));
 const KozhikodeLocation = lazy(() => import('./components/KozhikodeLocation'));
 const TrivandrumLocation = lazy(() => import('./components/TrivandrumLocation'));
 const CompanyProfile = lazy(() => import('./components/CompanyProfile'));
+const WhatsAppBulk = lazy(() => import('./components/WhatsAppBulk'));
 const NotFound = lazy(() => import('./components/NotFound'));
 
 const ScrollToTop = () => {
@@ -113,6 +114,7 @@ function App() {
             <Route path="/lookwalker-advertising" element={<RouteElement><Lookwalker /></RouteElement>} />
             <Route path="/led-wall" element={<RouteElement><LedWall /></RouteElement>} />
             <Route path="/led-wall-rental" element={<RouteElement><LedWall /></RouteElement>} />
+            <Route path="/whatsapp-bulk-messaging" element={<RouteElement><WhatsAppBulk /></RouteElement>} />
             <Route path="/locations" element={<RouteElement><PageWrapper><Locations /></PageWrapper></RouteElement>} />
             <Route path="/locations/thrissur" element={<RouteElement><PageWrapper><ThrissurLocation /></PageWrapper></RouteElement>} />
             <Route path="/locations/kochi" element={<RouteElement><PageWrapper><KochiLocation /></PageWrapper></RouteElement>} />
