@@ -110,7 +110,9 @@ function App() {
             <Route path="/company-profile" element={<RouteElement><CompanyProfile /></RouteElement>} />
             <Route path="/led-van-advertising" element={<RouteElement><LedVanAdvertising /></RouteElement>} />
             <Route path="/lookwalker" element={<RouteElement><Lookwalker /></RouteElement>} />
+            <Route path="/lookwalker-advertising" element={<RouteElement><Lookwalker /></RouteElement>} />
             <Route path="/led-wall" element={<RouteElement><LedWall /></RouteElement>} />
+            <Route path="/led-wall-rental" element={<RouteElement><LedWall /></RouteElement>} />
             <Route path="/locations" element={<RouteElement><PageWrapper><Locations /></PageWrapper></RouteElement>} />
             <Route path="/locations/thrissur" element={<RouteElement><PageWrapper><ThrissurLocation /></PageWrapper></RouteElement>} />
             <Route path="/locations/kochi" element={<RouteElement><PageWrapper><KochiLocation /></PageWrapper></RouteElement>} />
