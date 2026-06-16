@@ -30,13 +30,21 @@ import WhyChooseUs from './WhyChooseUs';
 import LocalSEO from './LocalSEO';
 import TrustBar from './TrustBar';
 import Seo from './Seo';
-import { buildBreadcrumbSchema, buildServiceSchema, buildWebPageSchema, localBusinessSchema } from '../lib/seo';
+import { buildBreadcrumbSchema, buildServiceSchema, buildWebPageSchema, buildFaqSchema, localBusinessSchema } from '../lib/seo';
 
 const LED_SERVICE_TITLE = 'LED Van Advertising & Rentals in Kerala | B2P International';
 const LED_SERVICE_DESCRIPTION =
     'Book premium mobile LED van advertising in Kerala. B2P International offers high-resolution video vans for product launches, roadshows, and election campaigns across Kochi, Trivandrum, Kozhikode, and Thrissur.';
 
 const LedVanAdvertising = () => {
+    const faqItems = [
+        { question: "What is the average cost of LED van advertising in Kerala?", answer: "The LED van advertising cost in Kerala varies based on campaign duration and routing. On average, daily rates range from ₹8,000 to ₹15,000 depending on screen size, fuel requirements, and operational hours. We offer substantial discounts for monthly bookings." },
+        { question: "Can we change the video content during the campaign?", answer: "Yes. One of the greatest advantages of digital LED vans is flexibility. You can update the video content mid-campaign to feature a new daily offer, a different product line, or a localized message for a specific town." },
+        { question: "Do the vans operate in the rain?", answer: "Our LED screens are P3/P4 outdoor-rated, waterproof, and built to withstand Kerala's heavy monsoons. However, during extreme weather conditions or severe storms, operations might be temporarily paused for safety reasons." },
+        { question: "How do we verify the van's location and operations?", answer: "We believe in complete transparency. Our vans are GPS-enabled, and we provide daily progress reports, route logs, and geo-tagged photographs/videos of the van operating in the agreed-upon locations." },
+        { question: "Is audio permitted along with the video display?", answer: "Yes, our vans are equipped with high-quality public address systems. We can play synchronized audio, jingles, or live announcements. However, audio usage is subject to local municipal noise regulations, especially near hospitals, schools, and late at night." },
+        { question: "What video format is required for the LED screen?", answer: "We accept standard video formats like MP4, AVI, and MOV. Our technical team will provide you with the exact aspect ratio and resolution guidelines based on the specific van assigned to your campaign to ensure the content looks sharp and professional." },
+    ];
     const [heroImageLoaded, setHeroImageLoaded] = useState(false);
     const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
 
@@ -101,6 +109,7 @@ const LedVanAdvertising = () => {
                     { name: 'Home', path: '/' },
                     { name: 'LED Van Advertising', path: '/led-van-advertising' },
                 ]),
+                buildFaqSchema(faqItems),
             ]}
         />
         <div className="bg-slate-50 min-h-screen">
