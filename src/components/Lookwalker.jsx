@@ -124,7 +124,7 @@ const Lookwalker = () => {
                 buildFaqSchema(faqItems),
                 buildBreadcrumbSchema([
                     { name: 'Home', path: '/' },
-                    { name: 'Lookwalkers', path: '/lookwalker' },
+                    { name: 'Lookwalker Advertising', path: '/lookwalker-advertising' },
                 ]),
             ]}
         />
