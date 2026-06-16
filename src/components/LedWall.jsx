@@ -139,7 +139,7 @@ const LedWall = () => {
                 buildFaqSchema(faqItems),
                 buildBreadcrumbSchema([
                     { name: 'Home', path: '/' },
-                    { name: 'LED Wall', path: '/led-wall' },
+                    { name: 'LED Wall Rental', path: '/led-wall-rental' },
                 ]),
             ]}
         />
