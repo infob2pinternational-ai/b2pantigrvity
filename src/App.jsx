@@ -1,5 +1,6 @@
 import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import HomeSeo from './components/HomeSeo';
@@ -136,6 +137,7 @@ function App() {
         </DeferredSection>
         <FloatButtons />
       </div>
+      <Analytics />
     </BrowserRouter>
   );
 }
