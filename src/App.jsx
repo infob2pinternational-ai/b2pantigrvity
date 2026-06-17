@@ -23,6 +23,10 @@ const ThrissurLocation = lazy(() => import('./components/ThrissurLocation'));
 const KochiLocation = lazy(() => import('./components/KochiLocation'));
 const KozhikodeLocation = lazy(() => import('./components/KozhikodeLocation'));
 const TrivandrumLocation = lazy(() => import('./components/TrivandrumLocation'));
+const MalappuramLocation = lazy(() => import('./components/MalappuramLocation'));
+const KannurLocation = lazy(() => import('./components/KannurLocation'));
+const PalakkadLocation = lazy(() => import('./components/PalakkadLocation'));
+const KottayamLocation = lazy(() => import('./components/KottayamLocation'));
 const CompanyProfile = lazy(() => import('./components/CompanyProfile'));
 const WhatsAppBulk = lazy(() => import('./components/WhatsAppBulk'));
 const NotFound = lazy(() => import('./components/NotFound'));
@@ -120,6 +124,10 @@ function App() {
             <Route path="/locations/kochi" element={<RouteElement><PageWrapper><KochiLocation /></PageWrapper></RouteElement>} />
             <Route path="/locations/kozhikode" element={<RouteElement><PageWrapper><KozhikodeLocation /></PageWrapper></RouteElement>} />
             <Route path="/locations/trivandrum" element={<RouteElement><PageWrapper><TrivandrumLocation /></PageWrapper></RouteElement>} />
+            <Route path="/locations/malappuram" element={<RouteElement><PageWrapper><MalappuramLocation /></PageWrapper></RouteElement>} />
+            <Route path="/locations/kannur" element={<RouteElement><PageWrapper><KannurLocation /></PageWrapper></RouteElement>} />
+            <Route path="/locations/palakkad" element={<RouteElement><PageWrapper><PalakkadLocation /></PageWrapper></RouteElement>} />
+            <Route path="/locations/kottayam" element={<RouteElement><PageWrapper><KottayamLocation /></PageWrapper></RouteElement>} />
             <Route path="*" element={<RouteElement><PageWrapper><NotFound /></PageWrapper></RouteElement>} />
           </Routes>
         </main>
