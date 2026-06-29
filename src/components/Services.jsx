@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Printer, Megaphone, Radio, Calendar, Zap, Truck, MessageCircle, Bot, Globe, ArrowRight, Video, Palette, Monitor, Building } from 'lucide-react';
+import { Printer, Megaphone, Radio, Calendar, Zap, Truck, MessageCircle, Bot, Globe, ArrowRight, Video, Palette, Monitor, Building, PersonStanding, Car } from 'lucide-react';
 import servicesHero from '../assets/images/services-hero.png';
 import Seo from './Seo';
 import {
@@ -56,7 +56,8 @@ const Services = () => {
             desc: "Large LED screens perfect for corporate events, product launches, concerts, and exhibitions.",
             icon: <Zap size={40} className="text-brand-secondary" />,
             delay: 0.2,
-            hasBooking: true
+            hasBooking: true,
+            link: "/led-wall-rental"
         },
         {
             id: 3,
@@ -137,6 +138,33 @@ const Services = () => {
             icon: <Building size={40} className="text-brand-primary" />,
             delay: 1.3,
             hasBooking: true
+        },
+        {
+            id: 14,
+            title: "Lookwalker Advertising",
+            desc: "Walking billboard and iWalker advertising across Kerala. Trained promoters carry illuminated display boards through busy markets, malls, and events for hyper-local brand visibility.",
+            icon: <PersonStanding size={40} className="text-brand-secondary" />,
+            delay: 1.4,
+            hasBooking: true,
+            link: "/lookwalker-advertising"
+        },
+        {
+            id: 15,
+            title: "WhatsApp Bulk Messaging",
+            desc: "Reach thousands of customers instantly across all 14 Kerala districts. Send promotional offers, event invitations, and campaign content directly via WhatsApp.",
+            icon: <MessageCircle size={40} className="text-brand-primary" />,
+            delay: 1.5,
+            hasBooking: true,
+            link: "/whatsapp-bulk-messaging"
+        },
+        {
+            id: 16,
+            title: "Vehicle Branding",
+            desc: "Full and partial vehicle wrap advertising for cars, autos, taxis, and commercial fleets. Turn your vehicles into moving billboards with durable, weatherproof vinyl graphics.",
+            icon: <Car size={40} className="text-brand-secondary" />,
+            delay: 1.6,
+            hasBooking: true,
+            link: "/vehicle-branding"
         }
     ];
 
