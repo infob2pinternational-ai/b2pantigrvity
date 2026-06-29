@@ -31,11 +31,19 @@ const Footer = () => {
                             <li><Link to="/about" className="text-slate-600 hover:text-brand-primary transition-colors">About Us</Link></li>
                             <li><Link to="/services" className="text-slate-600 hover:text-brand-primary transition-colors">Services</Link></li>
                             <li><Link to="/led-van-advertising" className="text-slate-600 hover:text-brand-primary transition-colors">LED Van Advertising</Link></li>
+                            <li><Link to="/led-wall-rental" className="text-slate-600 hover:text-brand-primary transition-colors">LED Wall Rental</Link></li>
+                            <li><Link to="/lookwalker-advertising" className="text-slate-600 hover:text-brand-primary transition-colors">Lookwalker Advertising</Link></li>
+                            <li><Link to="/whatsapp-bulk-messaging" className="text-slate-600 hover:text-brand-primary transition-colors">WhatsApp Bulk Messaging</Link></li>
+                            <li><Link to="/vehicle-branding" className="text-slate-600 hover:text-brand-primary transition-colors">Vehicle Branding</Link></li>
                             <li><Link to="/company-profile" className="text-slate-600 hover:text-brand-primary transition-colors">Company Profile</Link></li>
                             <li><Link to="/locations" className="text-slate-600 hover:text-brand-primary transition-colors">All Locations</Link></li>
                             <li><Link to="/locations/kochi" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Kochi</Link></li>
                             <li><Link to="/locations/kozhikode" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Kozhikode</Link></li>
                             <li><Link to="/locations/trivandrum" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Trivandrum</Link></li>
+                            <li><Link to="/locations/malappuram" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Malappuram</Link></li>
+                            <li><Link to="/locations/kannur" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Kannur</Link></li>
+                            <li><Link to="/locations/palakkad" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Palakkad</Link></li>
+                            <li><Link to="/locations/kottayam" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Kottayam</Link></li>
                             <li><Link to="/gallery" className="text-slate-600 hover:text-brand-primary transition-colors">Gallery</Link></li>
                             <li><Link to="/blog" className="text-slate-600 hover:text-brand-primary transition-colors">Blog</Link></li>
                         </ul>
