@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, ChevronDown, CheckCircle2, TrendingUp, MonitorPlay, Users, MapPin, Calculator, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Sparkles, ChevronDown, CheckCircle2, TrendingUp, MonitorPlay, Users, MapPin, Calculator, ShieldCheck, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const FaqItem = ({ question, answer }) => {
