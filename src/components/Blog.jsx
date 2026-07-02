@@ -24,7 +24,91 @@ const Blog = () => {
     // Placeholder blog data
     const blogPosts = [
         {
-            id: 5,
+            id: 6,
+            title: "Best Outdoor Advertising Options in Kerala 2025 — Complete Guide",
+            excerpt: "From LED van advertising to lookwalkers and LED wall rentals — a complete breakdown of the most effective outdoor advertising formats available across Kerala in 2025.",
+            author: "B2P Marketing Team",
+            date: "June 19, 2026",
+            category: "Outdoor Advertising",
+            image: "/led-van-advertising.png",
+            content: `
+                <p class="mb-4">Kerala's advertising landscape has evolved dramatically over the past few years. With increasing competition across every sector — from FMCG to real estate to political campaigns — businesses need outdoor advertising formats that are dynamic, measurable, and cost-effective. In this guide, we break down the best outdoor advertising options available across Kerala in 2025 and help you choose the right format for your campaign.</p>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">1. LED Van Advertising — Most Versatile Option</h4>
+                <p class="mb-4">LED van advertising remains the most versatile and impactful outdoor advertising format in Kerala. A mobile LED van carries a high-resolution video screen through targeted routes — markets, highways, residential areas, and commercial zones — bringing your brand message directly to your audience rather than waiting for them to drive past a static billboard.</p>
+                <p class="mb-6">B2P International operates GPS-tracked LED vans across all 14 Kerala districts. Daily route reports and geo-tagged photographs provide complete campaign transparency. LED van advertising is ideal for product launches, political campaigns, brand awareness drives, and event promotions.</p>
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-6">
+                    <strong class="text-slate-900 block mb-2">LED Van Advertising — Key Facts</strong>
+                    <ul class="space-y-1 text-slate-600 text-sm">
+                        <li>✓ Reaches new audiences every trip</li>
+                        <li>✓ Supports video, images, and audio</li>
+                        <li>✓ GPS-tracked with daily reports</li>
+                        <li>✓ Covers all 14 Kerala districts</li>
+                        <li>✓ Best for: product launches, political campaigns, brand awareness</li>
+                    </ul>
+                </div>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">2. Lookwalker / iWalker Advertising — Best for Crowded Locations</h4>
+                <p class="mb-4">Lookwalker advertising is uniquely effective in high-footfall locations where vehicles cannot operate — busy markets, shopping malls, beach areas, and festival grounds. Trained promoters carry illuminated LED or backlit display boards through the crowd, delivering your brand message at eye level to pedestrians and shoppers.</p>
+                <p class="mb-6">B2P International offers two lookwalker formats: the Still Walker (static display, ₹3,500/day) and the Video Walker (LED screen with moving video, ₹5,500/day). Lookwalkers are particularly effective during Onam, Vishu, and Christmas shopping seasons in Kerala when foot traffic at markets peaks.</p>
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-6">
+                    <strong class="text-slate-900 block mb-2">Lookwalker Advertising — Key Facts</strong>
+                    <ul class="space-y-1 text-slate-600 text-sm">
+                        <li>✓ Works in pedestrian-only zones</li>
+                        <li>✓ Eye-level visibility — impossible to ignore</li>
+                        <li>✓ Promoter can interact with customers directly</li>
+                        <li>✓ Still Walker: ₹3,500/day | Video Walker: ₹5,500/day</li>
+                        <li>✓ Best for: retail promotions, festival campaigns, product sampling</li>
+                    </ul>
+                </div>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">3. LED Wall Rental — Best for Events</h4>
+                <p class="mb-4">For events, product launches, political rallies, and corporate functions, LED wall rental delivers the kind of visual impact that no other format can match. A large-format LED screen at your venue makes your brand unmissable — whether it's a stage backdrop at a concert, a display at a trade exhibition, or a live feed at a political rally.</p>
+                <p class="mb-6">B2P International provides both indoor P3 LED walls (ideal for corporate events and weddings) and outdoor P4 LED walls (designed for brightness in direct sunlight, perfect for open-air rallies). Full setup, operation, and dismantling are handled by our technical team.</p>
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-6">
+                    <strong class="text-slate-900 block mb-2">LED Wall Rental — Key Facts</strong>
+                    <ul class="space-y-1 text-slate-600 text-sm">
+                        <li>✓ Available in custom sizes</li>
+                        <li>✓ Indoor P3 and outdoor P4 options</li>
+                        <li>✓ Full setup and operation included</li>
+                        <li>✓ Available across all Kerala districts</li>
+                        <li>✓ Best for: events, rallies, exhibitions, product launches</li>
+                    </ul>
+                </div>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">4. WhatsApp Bulk Messaging — Best Digital Complement</h4>
+                <p class="mb-4">Kerala has one of the highest WhatsApp penetration rates in India. Combining outdoor advertising with a targeted WhatsApp bulk messaging campaign creates a powerful one-two punch — customers see your brand on the street and receive your offer directly on their phone. WhatsApp messages have an open rate of over 90%, making this the most direct digital channel available.</p>
+                <p class="mb-6">B2P International's WhatsApp bulk messaging service supports text, images, PDFs, video clips, and clickable links. We can send campaigns to your own contact database or to targeted audiences by district or demographic across all 14 Kerala districts.</p>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">5. Vehicle Branding — Best for Long-Term Visibility</h4>
+                <p class="mb-4">Vehicle branding offers the best cost-per-impression ratio of any advertising format in Kerala. A single branded vehicle generates thousands of daily impressions as it travels through cities, highways, and residential areas. Unlike other formats with daily or weekly rates, a vehicle wrap is a one-time investment that delivers visibility for 3–5 years.</p>
+                <p class="mb-6">B2P International provides full and partial vehicle wraps using premium weatherproof vinyl for cars, autos, taxis, and commercial fleets across Kerala. This makes vehicle branding an excellent choice for businesses looking to build continuous local brand awareness over the long term.</p>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">Which Format is Right for Your Campaign?</h4>
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-slate-100">
+                                <th class="text-left p-3 font-bold text-slate-900 border border-slate-200">Campaign Goal</th>
+                                <th class="text-left p-3 font-bold text-slate-900 border border-slate-200">Recommended Format</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="p-3 border border-slate-200">Product launch across Kerala</td><td class="p-3 border border-slate-200">LED Van + WhatsApp Bulk</td></tr>
+                            <tr class="bg-slate-50"><td class="p-3 border border-slate-200">Political campaign</td><td class="p-3 border border-slate-200">LED Van + LED Wall + WhatsApp</td></tr>
+                            <tr><td class="p-3 border border-slate-200">Retail promotion in busy market</td><td class="p-3 border border-slate-200">Lookwalker</td></tr>
+                            <tr class="bg-slate-50"><td class="p-3 border border-slate-200">Corporate event / conference</td><td class="p-3 border border-slate-200">LED Wall Rental</td></tr>
+                            <tr><td class="p-3 border border-slate-200">Long-term brand visibility</td><td class="p-3 border border-slate-200">Vehicle Branding</td></tr>
+                            <tr class="bg-slate-50"><td class="p-3 border border-slate-200">Festival campaign (Onam, Vishu)</td><td class="p-3 border border-slate-200">Lookwalker + LED Van</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">Why Choose B2P International?</h4>
+                <p class="mb-4">B2P International is based in Puranattukara, Thrissur, and has served clients across FMCG, real estate, education, healthcare, and political sectors across all 14 Kerala districts. We offer transparent pricing, GPS-tracked campaigns, daily reporting, and dedicated account management for every campaign.</p>
+                <p class="mb-6">Contact us at <strong>+91 85899 09034</strong> or visit <strong>www.b2pinternational.com</strong> to discuss your outdoor advertising campaign across Kerala.</p>
+            `
+        },
             title: "Lookwalker Advertising: The Ultimate Eye-Level Marketing Strategy",
             excerpt: "Lookwalker advertising brings your brand directly into the crowd. Discover why this mobile, wearable LED billboard is revolutionizing local marketing in crowded spaces.",
             author: "B2P Marketing Team",
