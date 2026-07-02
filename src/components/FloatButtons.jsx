@@ -20,7 +20,7 @@ const FloatButtons = () => {
 
             {/* Call Now Button */}
             <a
-                href="tel:+918989909034"
+                href="tel:+918589909034"
                 className="fixed bottom-[85px] md:bottom-[115px] right-[20px] md:right-[40px] w-[50px] md:w-[60px] h-[50px] md:h-[60px] bg-brand-primary text-white rounded-full flex items-center justify-center shadow-[0_5px_25px_rgba(37,99,235,0.4)] hover:-translate-y-1 hover:scale-110 hover:shadow-[0_10px_30px_rgba(37,99,235,0.6)] transition-all duration-300 z-[1000]"
                 title="Call Now"
                 aria-label="Call B2P International now"
