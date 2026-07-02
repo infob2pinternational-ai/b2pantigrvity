@@ -109,6 +109,75 @@ const Blog = () => {
                 <p class="mb-6">Contact us at <strong>+91 85899 09034</strong> or visit <strong>www.b2pinternational.com</strong> to discuss your outdoor advertising campaign across Kerala.</p>
             `
         },
+        {
+            id: 7,
+            title: "LED Van Advertising vs Traditional Hoardings — Which Works Better in Kerala?",
+            excerpt: "Comparing two of Kerala's most popular outdoor advertising formats head-to-head. We break down cost, reach, flexibility, and impact to help you decide which is right for your campaign.",
+            author: "B2P Marketing Team",
+            date: "June 19, 2026",
+            category: "Outdoor Advertising",
+            image: "/led-van-advertising.png",
+            content: `
+                <p class="mb-4">When planning an outdoor advertising campaign in Kerala, two formats dominate the conversation: traditional hoardings (static billboards) and LED van advertising (mobile video screens). Both have their strengths, but they serve fundamentally different campaign objectives. In this post we compare them head-to-head so you can make the right choice for your brand.</p>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">What is Traditional Hoarding Advertising?</h4>
+                <p class="mb-6">A hoarding is a large static billboard installed at a fixed location — typically on a busy road, junction, or commercial area. The advertisement is printed on flex or vinyl and displayed for a fixed period, usually 30 days at a time. The brand message reaches whoever happens to pass that specific location during the campaign period.</p>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">What is LED Van Advertising?</h4>
+                <p class="mb-6">An LED van is a vehicle fitted with a high-resolution LED screen that plays video advertisements as it travels through targeted routes. Unlike a static hoarding, the van moves through markets, residential areas, highways, and commercial zones — reaching new audiences continuously throughout the day. B2P International's LED vans are GPS-tracked and cover all 14 Kerala districts.</p>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">Head-to-Head Comparison</h4>
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-slate-100">
+                                <th class="text-left p-3 font-bold text-slate-900 border border-slate-200">Factor</th>
+                                <th class="text-left p-3 font-bold text-slate-900 border border-slate-200">Traditional Hoarding</th>
+                                <th class="text-left p-3 font-bold text-slate-900 border border-slate-200">LED Van Advertising</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="p-3 border border-slate-200 font-medium">Location</td><td class="p-3 border border-slate-200">Fixed — one junction</td><td class="p-3 border border-slate-200">Mobile — entire city/district</td></tr>
+                            <tr class="bg-slate-50"><td class="p-3 border border-slate-200 font-medium">Audience reach</td><td class="p-3 border border-slate-200">Same commuters repeatedly</td><td class="p-3 border border-slate-200">New audiences every route</td></tr>
+                            <tr><td class="p-3 border border-slate-200 font-medium">Content format</td><td class="p-3 border border-slate-200">Static image only</td><td class="p-3 border border-slate-200">Video, animation, audio</td></tr>
+                            <tr class="bg-slate-50"><td class="p-3 border border-slate-200 font-medium">Content changes</td><td class="p-3 border border-slate-200">Costly reprint required</td><td class="p-3 border border-slate-200">Update instantly, no extra cost</td></tr>
+                            <tr><td class="p-3 border border-slate-200 font-medium">Visibility at night</td><td class="p-3 border border-slate-200">Requires separate lighting</td><td class="p-3 border border-slate-200">Bright LED — visible day and night</td></tr>
+                            <tr class="bg-slate-50"><td class="p-3 border border-slate-200 font-medium">Campaign tracking</td><td class="p-3 border border-slate-200">No data available</td><td class="p-3 border border-slate-200">GPS logs, daily route reports</td></tr>
+                            <tr><td class="p-3 border border-slate-200 font-medium">Flexibility</td><td class="p-3 border border-slate-200">Fixed location, fixed duration</td><td class="p-3 border border-slate-200">Change routes, areas anytime</td></tr>
+                            <tr class="bg-slate-50"><td class="p-3 border border-slate-200 font-medium">Minimum booking</td><td class="p-3 border border-slate-200">30 days typically</td><td class="p-3 border border-slate-200">Daily bookings available</td></tr>
+                            <tr><td class="p-3 border border-slate-200 font-medium">Impact in traffic</td><td class="p-3 border border-slate-200">High at busy junctions</td><td class="p-3 border border-slate-200">Very high — movement attracts eyes</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">When Traditional Hoardings Win</h4>
+                <p class="mb-4">Traditional hoardings still have genuine advantages for certain campaign types. They are best when:</p>
+                <ul class="space-y-3 mb-6 text-slate-600">
+                    <li><strong class="text-slate-900">Location is everything.</strong> If your business is at a specific junction and you want to direct people there, a hoarding at that exact spot creates directional awareness that a moving van cannot replicate.</li>
+                    <li><strong class="text-slate-900">Long-term brand presence.</strong> A hoarding at a premium location for 6–12 months builds strong locality-based brand recall — particularly effective for real estate projects and new retail outlets.</li>
+                    <li><strong class="text-slate-900">Premium junction visibility.</strong> Key junctions in Thrissur, Kochi, and Kozhikode have extremely high traffic volumes where a well-placed hoarding delivers exceptional daily impressions for months.</li>
+                </ul>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">When LED Van Advertising Wins</h4>
+                <p class="mb-4">LED van advertising outperforms traditional hoardings in most modern campaign scenarios. It wins when:</p>
+                <ul class="space-y-3 mb-6 text-slate-600">
+                    <li><strong class="text-slate-900">You need state-wide coverage fast.</strong> A single LED van can cover an entire district in a day. Three vans can cover all of Kerala in a week — impossible with static hoardings.</li>
+                    <li><strong class="text-slate-900">Your campaign has a deadline.</strong> Product launches, election campaigns, and festival promotions have short windows. LED vans can be deployed within 24 hours and reach maximum coverage immediately.</li>
+                    <li><strong class="text-slate-900">Video content drives your message.</strong> Some products and campaigns simply cannot be communicated with a static image. A video demonstration, a political candidate's speech, or a brand jingle needs a moving screen.</li>
+                    <li><strong class="text-slate-900">You want measurable results.</strong> GPS tracking, daily route logs, and geo-tagged photos mean you can verify exactly where your campaign ran — something traditional hoardings cannot provide.</li>
+                </ul>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">The Best Strategy — Combine Both</h4>
+                <p class="mb-4">The most effective outdoor advertising campaigns in Kerala combine LED van advertising with traditional hoardings at key junctions. This creates a surround-sound effect — your audience sees your brand on hoardings at major junctions and then encounters your LED van in their neighbourhood, market, or workplace. The repeated exposure drives significantly higher brand recall.</p>
+                <p class="mb-6">B2P International can help you design a combined outdoor campaign that maximises coverage across Kerala within your budget. Contact our team at <strong>+91 85899 09034</strong> to discuss the right approach for your campaign.</p>
+
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">Verdict</h4>
+                <p class="mb-4">For most campaign types in Kerala — product launches, political campaigns, brand promotions, and event marketing — <strong>LED van advertising delivers better ROI</strong> than traditional hoardings due to its mobility, video capability, measurability, and flexibility. However, hoardings remain valuable for long-term location-specific brand presence.</p>
+                <p>Choose LED vans when you need speed, coverage, and video impact. Choose hoardings when you need long-term presence at a specific, high-traffic location. Choose both when your budget allows — the combination is unbeatable.</p>
+            `
+        },
+        {
+            id: 5,
             title: "Lookwalker Advertising: The Ultimate Eye-Level Marketing Strategy",
             excerpt: "Lookwalker advertising brings your brand directly into the crowd. Discover why this mobile, wearable LED billboard is revolutionizing local marketing in crowded spaces.",
             author: "B2P Marketing Team",
