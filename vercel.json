@@ -1,4 +1,5 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/doc/:path*",
@@ -17,7 +18,7 @@
       "destination": "https://document-gen-ten.vercel.app/quotation/:path*"
     },
     {
-      "source": "/(.*)",
+      "source": "/((?!assets/|static/|api/|.*\\..*$).*)",
       "destination": "/index.html"
     }
   ]
