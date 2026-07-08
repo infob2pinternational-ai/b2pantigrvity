@@ -1,24 +1,5 @@
 {
   "rewrites": [
-    {
-      "source": "/doc/:path*",
-      "destination": "https://document-gen-ten.vercel.app/doc/:path*"
-    },
-    {
-      "source": "/invoice/:path*",
-      "destination": "https://document-gen-ten.vercel.app/invoice/:path*"
-    },
-    {
-      "source": "/receipt/:path*",
-      "destination": "https://document-gen-ten.vercel.app/receipt/:path*"
-    },
-    {
-      "source": "/quotation/:path*",
-      "destination": "https://document-gen-ten.vercel.app/quotation/:path*"
-    },
-    {
-      "source": "/((?!.*\\.).*)",
-      "destination": "/index.html"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
