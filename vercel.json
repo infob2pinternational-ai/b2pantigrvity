@@ -17,7 +17,7 @@
       "destination": "https://document-gen-ten.vercel.app/quotation/:path*"
     },
     {
-      "source": "/:path*",
+      "source": "/((?!.*\\.).*)",
       "destination": "/index.html"
     }
   ]
