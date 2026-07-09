@@ -1,5 +1,20 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/billing",
+      "destination": "https://document-gen-ten.vercel.app/billing"
+    },
+    {
+      "source": "/billing/:path*",
+      "destination": "https://document-gen-ten.vercel.app/billing/:path*"
+    },
+    {
+      "source": "/doc/:path*",
+      "destination": "https://document-gen-ten.vercel.app/doc/:path*"
+    },
+    {
+      "source": "/((?!assets/|static/|api/|.*\\..*$).*)",
+      "destination": "/index.html"
+    }
   ]
 }
