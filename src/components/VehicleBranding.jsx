@@ -31,6 +31,32 @@ const TITLE = 'Vehicle Branding Kerala | Car & Fleet Wrap Advertising | B2P Inte
 const DESCRIPTION = 'B2P International offers vehicle branding and wrap advertising for cars, autos, taxis, and commercial fleets across Kerala. Turn your vehicles into moving billboards with professional vinyl wraps. Call now for a quote.';
 
 const VehicleBranding = () => {
+    const heroImages = [
+        {
+            src: "/vehicle-branding-hero-1.jpg",
+            title: "Commercial Fleets, Cars, Autos & Trucks",
+            tag: "Fleet Wrap Advertising"
+        },
+        {
+            src: "/vehicle-branding-hero-2.jpg",
+            title: "B2P Professional Installation Center & Design Studio",
+            tag: "Expert Vinyl Installation"
+        },
+        {
+            src: "/vehicle-branding-hero-3.jpg",
+            title: "Multi-Vehicle Highway & City Brand Coverage",
+            tag: "Kerala-Wide Reach"
+        }
+    ];
+
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+        }, 4500);
+        return () => clearInterval(interval);
+    }, [heroImages.length]);
 
     const features = [
         {
@@ -137,10 +163,22 @@ const VehicleBranding = () => {
             <div className="bg-slate-50 min-h-screen">
 
                 {/* Hero Section */}
-                <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-[#050914] overflow-hidden min-h-[80vh] flex flex-col justify-center">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(var(--brand-primary-rgb),0.15),transparent_50%),radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.12),transparent_40%)]" />
+                <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-32 bg-[#050914] overflow-hidden min-h-[90vh] flex flex-col justify-center">
+                    {/* Background Dynamic Image Crossfade */}
+                    <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+                        <div className="absolute inset-0 bg-[#050914]/80 z-10"></div>
+                        {heroImages.map((img, idx) => (
+                            <img
+                                key={img.src}
+                                src={img.src}
+                                alt={img.title}
+                                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${idx === currentImageIndex ? 'opacity-40 scale-105' : 'opacity-0 scale-100'}`}
+                            />
+                        ))}
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-[#050914]/50 to-[#050914]/90 z-20"></div>
+                    </div>
 
-                    <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center flex flex-col items-center">
+                    <div className="container mx-auto px-6 max-w-7xl relative z-30 text-center flex flex-col items-center">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -163,7 +201,7 @@ const VehicleBranding = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto mb-12 leading-relaxed font-light"
+                            className="text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-light"
                         >
                             B2P International provides professional vehicle branding and wrap advertising for cars, autos, taxis, and commercial fleets across all 14 districts of Kerala. High-quality vinyl, custom design, and expert installation.
                         </motion.p>
@@ -172,7 +210,7 @@ const VehicleBranding = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3 }}
-                            className="flex flex-col sm:flex-row gap-6 justify-center"
+                            className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
                         >
                             <a
                                 href="/#contact"
@@ -187,6 +225,52 @@ const VehicleBranding = () => {
                             >
                                 View Our Services
                             </a>
+                        </motion.div>
+
+                        {/* Interactive Hero Image Showcase Slider */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4 }}
+                            className="w-full max-w-5xl rounded-3xl overflow-hidden border border-white/15 bg-white/5 backdrop-blur-xl shadow-2xl shadow-brand-primary/10"
+                        >
+                            <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden group">
+                                {heroImages.map((img, idx) => (
+                                    <img
+                                        key={img.src}
+                                        src={img.src}
+                                        alt={img.title}
+                                        className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out ${idx === currentImageIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
+                                    />
+                                ))}
+
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-transparent to-transparent"></div>
+
+                                {/* Active Image Caption Overlay */}
+                                <div className="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-4 text-left">
+                                    <div>
+                                        <span className="px-3 py-1 rounded-full text-xs font-bold bg-brand-primary/80 backdrop-blur-md text-white uppercase tracking-wider mb-2 inline-block">
+                                            {heroImages[currentImageIndex].tag}
+                                        </span>
+                                        <h3 className="text-xl md:text-2xl font-bold text-white drop-shadow-md">
+                                            {heroImages[currentImageIndex].title}
+                                        </h3>
+                                    </div>
+
+                                    {/* Thumbnail Dots/Tabs */}
+                                    <div className="flex gap-3">
+                                        {heroImages.map((img, idx) => (
+                                            <button
+                                                key={img.src}
+                                                onClick={() => setCurrentImageIndex(idx)}
+                                                type="button"
+                                                className={`h-2.5 rounded-full transition-all duration-300 ${idx === currentImageIndex ? 'w-10 bg-gradient-to-r from-brand-primary to-brand-secondary' : 'w-2.5 bg-white/40 hover:bg-white/70'}`}
+                                                aria-label={`Show slide ${idx + 1}`}
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
                         </motion.div>
                     </div>
                 </section>
