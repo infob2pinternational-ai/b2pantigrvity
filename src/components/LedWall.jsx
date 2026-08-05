@@ -37,9 +37,9 @@ const LedWall = () => {
     const [currentBgIndex, setCurrentBgIndex] = useState(0);
 
     const bgImages = [
-        "/led-wall-image2.webp",
-        "/led-wall-image1.jfif",
-        "/led-wall-image3.webp"
+        "/led-wall-1.jpg",
+        "/led-wall-2.jpg",
+        "/led-wall-3.jpg"
     ];
 
     useEffect(() => {
@@ -196,7 +196,7 @@ const LedWall = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="flex flex-col sm:flex-row gap-6 justify-center"
+                        className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
                     >
                         <a href="/#contact" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-8 py-4 rounded-full font-bold hover:scale-105 hover:shadow-[0_0_30px_rgba(var(--brand-primary-rgb),0.5)] transition-all duration-300">
                             Get a Free Quote
@@ -205,6 +205,54 @@ const LedWall = () => {
                         <a href="/services" className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-all duration-300">
                             View Our Services
                         </a>
+                    </motion.div>
+
+                    {/* Interactive Hero LED Wall Showcase Slider */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                        className="w-full max-w-5xl rounded-3xl overflow-hidden border border-white/15 bg-white/5 backdrop-blur-xl shadow-2xl shadow-brand-primary/10"
+                    >
+                        <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden group">
+                            {bgImages.map((src, idx) => (
+                                <img
+                                    key={src}
+                                    src={src}
+                                    alt={`B2P International LED Wall Setup ${idx + 1}`}
+                                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out ${idx === currentBgIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
+                                />
+                            ))}
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-transparent to-transparent"></div>
+
+                            {/* Caption Overlay */}
+                            <div className="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-4 text-left">
+                                <div>
+                                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-brand-primary/80 backdrop-blur-md text-white uppercase tracking-wider mb-2 inline-block">
+                                        P3 & P4 Outdoor/Indoor LED Video Wall
+                                    </span>
+                                    <h3 className="text-xl md:text-2xl font-bold text-white drop-shadow-md">
+                                        {currentBgIndex === 0 && "Ultra-Bright Concert & Event Stage Displays"}
+                                        {currentBgIndex === 1 && "Custom Truss & Sunset Event Stage Backdrops"}
+                                        {currentBgIndex === 2 && "Massive Crowd Event & Political Rally LED Video Walls"}
+                                    </h3>
+                                </div>
+
+                                {/* Thumbnail Selector Dots */}
+                                <div className="flex gap-3">
+                                    {bgImages.map((src, idx) => (
+                                        <button
+                                            key={src}
+                                            onClick={() => setCurrentBgIndex(idx)}
+                                            type="button"
+                                            className={`h-2.5 rounded-full transition-all duration-300 ${idx === currentBgIndex ? 'w-10 bg-gradient-to-r from-brand-primary to-brand-secondary' : 'w-2.5 bg-white/40 hover:bg-white/70'}`}
+                                            aria-label={`Show LED Wall slide ${idx + 1}`}
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     </motion.div>
                 </div>
             </section>
@@ -357,16 +405,16 @@ const LedWall = () => {
                             transition={{ delay: 0.1 }}
                             className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
                         >
-                            <div className="aspect-[4/3] relative overflow-hidden">
+                            <div className="aspect-[16/10] relative overflow-hidden">
                                 <img 
-                                    src="/led-wall-image1.jfif" 
-                                    alt="Outdoor Stage LED Wall Setup in Kerala" 
+                                    src="/led-wall-1.jpg" 
+                                    alt="Outdoor Stage Concert & Wedding LED Wall Setup in Kerala" 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                                     <div className="p-6">
-                                        <h3 className="text-white font-bold text-xl">Outdoor Stage Show</h3>
-                                        <p className="text-slate-200 text-sm">High-brightness P4 LED Wall</p>
+                                        <h3 className="text-white font-bold text-xl">Outdoor Stage & Concerts</h3>
+                                        <p className="text-slate-200 text-sm">High-brightness P4 Outdoor LED Wall</p>
                                     </div>
                                 </div>
                             </div>
@@ -378,16 +426,16 @@ const LedWall = () => {
                             transition={{ delay: 0.2 }}
                             className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
                         >
-                            <div className="aspect-[4/3] relative overflow-hidden">
+                            <div className="aspect-[16/10] relative overflow-hidden">
                                 <img 
-                                    src="/led-wall-image2.webp" 
-                                    alt="Corporate Event LED Video Wall in Kerala" 
+                                    src="/led-wall-2.jpg" 
+                                    alt="Sunset Stage LED Video Wall Setup B2P International" 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                                     <div className="p-6">
-                                        <h3 className="text-white font-bold text-xl">Corporate Event</h3>
-                                        <p className="text-slate-200 text-sm">Ultra-sharp P3 Indoor LED Wall</p>
+                                        <h3 className="text-white font-bold text-xl">Event & Beachside Stages</h3>
+                                        <p className="text-slate-200 text-sm">Vibrant Outdoor Display Panels</p>
                                     </div>
                                 </div>
                             </div>
@@ -399,16 +447,16 @@ const LedWall = () => {
                             transition={{ delay: 0.3 }}
                             className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
                         >
-                            <div className="aspect-[4/3] relative overflow-hidden">
+                            <div className="aspect-[16/10] relative overflow-hidden">
                                 <img 
-                                    src="/led-wall-image3.webp" 
-                                    alt="Live Stage Performance LED Wall in Kerala" 
+                                    src="/led-wall-3.jpg" 
+                                    alt="Large Audience Event & Rally LED Video Wall Rental Kerala" 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                                     <div className="p-6">
-                                        <h3 className="text-white font-bold text-xl">Live Performances</h3>
-                                        <p className="text-slate-200 text-sm">High-refresh rate display panels</p>
+                                        <h3 className="text-white font-bold text-xl">Large Public Rallies & Stage Shows</h3>
+                                        <p className="text-slate-200 text-sm">Massive modular display screen setups</p>
                                     </div>
                                 </div>
                             </div>
