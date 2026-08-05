@@ -285,9 +285,35 @@ const services = [
 ];
 
 const Services = () => {
+    const heroImages = [
+        {
+            src: "/services-hero-1.jpg",
+            title: "Your Brand. Our Solutions. Maximum Impact.",
+            tag: "Moving Vans to Mega Screens"
+        },
+        {
+            src: "/services-hero-2.jpg",
+            title: "Big Screen. Bigger Impact. LED Wall & Signage Solutions",
+            tag: "Outdoor & Event Solutions"
+        },
+        {
+            src: "/services-hero-3.jpg",
+            title: "360° Advertising, Printing, Video Production & Signage",
+            tag: "Kerala Wide 360° Reach"
+        }
+    ];
+
+    const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
     const [activeTab, setActiveTab] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');
     const [openFaqIndex, setOpenFaqIndex] = useState(null);
+
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentHeroIndex((prev) => (prev + 1) % heroImages.length);
+        }, 4500);
+        return () => clearInterval(interval);
+    }, [heroImages.length]);
 
     const phoneNumber = "919876543210";
 
@@ -339,8 +365,23 @@ const Services = () => {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
 
                 {/* Hero Header Section */}
-                <section className="relative pt-32 pb-16 lg:pt-44 lg:pb-24 z-10">
-                    <div className="container mx-auto px-6 max-w-7xl text-center flex flex-col items-center">
+                <section className="relative pt-32 pb-16 lg:pt-44 lg:pb-24 z-10 overflow-hidden min-h-[85vh] flex flex-col justify-center">
+                    {/* Background Dynamic Image Crossfade */}
+                    <div className="absolute inset-0 w-full h-full z-0">
+                        <div className="absolute inset-0 bg-[#0B0F19]"></div>
+                        {heroImages.map((img, idx) => (
+                            <img
+                                key={img.src}
+                                src={img.src}
+                                alt={img.title}
+                                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${idx === currentHeroIndex ? 'opacity-[0.70]' : 'opacity-0'}`}
+                                loading={idx === 0 ? "eager" : "lazy"}
+                            />
+                        ))}
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-[#0B0F19]/40 to-[#0B0F19]/80"></div>
+                    </div>
+
+                    <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center flex flex-col items-center">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -405,7 +446,7 @@ const Services = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4 }}
-                            className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl shadow-2xl"
+                            className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl shadow-2xl mb-14"
                         >
                             <div className="flex flex-col items-center p-3 border-r border-white/10 last:border-0 md:last:border-r">
                                 <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-cyan-400">500+</span>
@@ -422,6 +463,52 @@ const Services = () => {
                             <div className="flex flex-col items-center p-3">
                                 <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">4.9 ★</span>
                                 <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1">Client Rating</span>
+                            </div>
+                        </motion.div>
+
+                        {/* Interactive Hero Image Showcase Slider */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.5 }}
+                            className="w-full max-w-5xl rounded-3xl overflow-hidden border border-white/15 bg-white/5 backdrop-blur-xl shadow-2xl shadow-brand-primary/10"
+                        >
+                            <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden group">
+                                {heroImages.map((img, idx) => (
+                                    <img
+                                        key={img.src}
+                                        src={img.src}
+                                        alt={img.title}
+                                        className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out ${idx === currentHeroIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
+                                    />
+                                ))}
+
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-transparent"></div>
+
+                                {/* Caption Overlay */}
+                                <div className="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-4 text-left">
+                                    <div>
+                                        <span className="px-3 py-1 rounded-full text-xs font-bold bg-brand-primary/80 backdrop-blur-md text-white uppercase tracking-wider mb-2 inline-block">
+                                            {heroImages[currentHeroIndex].tag}
+                                        </span>
+                                        <h3 className="text-xl md:text-2xl font-bold text-white drop-shadow-md">
+                                            {heroImages[currentHeroIndex].title}
+                                        </h3>
+                                    </div>
+
+                                    {/* Thumbnail Dots */}
+                                    <div className="flex gap-3">
+                                        {heroImages.map((img, idx) => (
+                                            <button
+                                                key={img.src}
+                                                onClick={() => setCurrentHeroIndex(idx)}
+                                                type="button"
+                                                className={`h-2.5 rounded-full transition-all duration-300 ${idx === currentHeroIndex ? 'w-10 bg-gradient-to-r from-brand-primary to-brand-secondary' : 'w-2.5 bg-white/40 hover:bg-white/70'}`}
+                                                aria-label={`Show Services Hero slide ${idx + 1}`}
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
                     </div>
