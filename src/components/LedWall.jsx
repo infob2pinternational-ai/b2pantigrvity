@@ -150,18 +150,16 @@ const LedWall = () => {
                     <div className="absolute inset-0 bg-[#050914]"></div>
                     {bgImages.map((src, index) => (
                         <img
-                            key={index}
+                            key={src}
                             src={src}
                             alt={`LED Wall Rental in Kerala ${index + 1}`}
-                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${heroImageLoaded && currentBgIndex === index ? 'opacity-[0.65]' : 'opacity-0'}`}
+                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${currentBgIndex === index ? 'opacity-[0.70]' : 'opacity-0'}`}
                             loading={index === 0 ? "eager" : "lazy"}
                             fetchPriority={index === 0 ? "high" : "auto"}
                             decoding="async"
-                            onLoad={index === 0 ? () => setHeroImageLoaded(true) : undefined}
                         />
                     ))}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-transparent to-[#050914]/60"></div>
-                    <div className="absolute inset-0 bg-[#050914]/40 mix-blend-overlay"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-[#050914]/40 to-[#050914]/80"></div>
                 </div>
                 
                 <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center flex flex-col items-center">
@@ -196,7 +194,7 @@ const LedWall = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
+                        className="flex flex-col sm:flex-row gap-6 justify-center"
                     >
                         <a href="/#contact" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-8 py-4 rounded-full font-bold hover:scale-105 hover:shadow-[0_0_30px_rgba(var(--brand-primary-rgb),0.5)] transition-all duration-300">
                             Get a Free Quote
@@ -205,54 +203,6 @@ const LedWall = () => {
                         <a href="/services" className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-all duration-300">
                             View Our Services
                         </a>
-                    </motion.div>
-
-                    {/* Interactive Hero LED Wall Showcase Slider */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4 }}
-                        className="w-full max-w-5xl rounded-3xl overflow-hidden border border-white/15 bg-white/5 backdrop-blur-xl shadow-2xl shadow-brand-primary/10"
-                    >
-                        <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden group">
-                            {bgImages.map((src, idx) => (
-                                <img
-                                    key={src}
-                                    src={src}
-                                    alt={`B2P International LED Wall Setup ${idx + 1}`}
-                                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out ${idx === currentBgIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
-                                />
-                            ))}
-
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-transparent to-transparent"></div>
-
-                            {/* Caption Overlay */}
-                            <div className="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-4 text-left">
-                                <div>
-                                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-brand-primary/80 backdrop-blur-md text-white uppercase tracking-wider mb-2 inline-block">
-                                        P3 & P4 Outdoor/Indoor LED Video Wall
-                                    </span>
-                                    <h3 className="text-xl md:text-2xl font-bold text-white drop-shadow-md">
-                                        {currentBgIndex === 0 && "Ultra-Bright Concert & Event Stage Displays"}
-                                        {currentBgIndex === 1 && "Custom Truss & Sunset Event Stage Backdrops"}
-                                        {currentBgIndex === 2 && "Massive Crowd Event & Political Rally LED Video Walls"}
-                                    </h3>
-                                </div>
-
-                                {/* Thumbnail Selector Dots */}
-                                <div className="flex gap-3">
-                                    {bgImages.map((src, idx) => (
-                                        <button
-                                            key={src}
-                                            onClick={() => setCurrentBgIndex(idx)}
-                                            type="button"
-                                            className={`h-2.5 rounded-full transition-all duration-300 ${idx === currentBgIndex ? 'w-10 bg-gradient-to-r from-brand-primary to-brand-secondary' : 'w-2.5 bg-white/40 hover:bg-white/70'}`}
-                                            aria-label={`Show LED Wall slide ${idx + 1}`}
-                                        />
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
                     </motion.div>
                 </div>
             </section>
