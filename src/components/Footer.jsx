@@ -23,29 +23,31 @@ const Footer = () => {
 
                     <div>
                         <h3 className="text-lg font-bold text-slate-900 mb-6 relative inline-block">
+                            Core Services
+                            <span className="absolute -bottom-2 left-0 w-1/2 h-0.5 bg-brand-primary rounded-full"></span>
+                        </h3>
+                        <ul className="space-y-3">
+                            <li><Link to="/led-van-advertising" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">LED Van Advertising</Link></li>
+                            <li><Link to="/led-wall-rental" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">LED Wall Rental</Link></li>
+                            <li><Link to="/lookwalker-advertising" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">Lookwalker Advertising</Link></li>
+                            <li><Link to="/services" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">All Services (Signage, Video & Print)</Link></li>
+                            <li><Link to="/vehicle-branding" className="text-slate-600 hover:text-brand-primary transition-colors">Vehicle Branding</Link></li>
+                            <li><Link to="/whatsapp-bulk-messaging" className="text-slate-600 hover:text-brand-primary transition-colors">WhatsApp Bulk Messaging</Link></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 className="text-lg font-bold text-slate-900 mb-6 relative inline-block">
                             Quick Links
                             <span className="absolute -bottom-2 left-0 w-1/2 h-0.5 bg-brand-primary rounded-full"></span>
                         </h3>
-                        <ul className="space-y-4">
+                        <ul className="space-y-3">
                             <li><Link to="/" className="text-slate-600 hover:text-brand-primary transition-colors">Home</Link></li>
                             <li><Link to="/about" className="text-slate-600 hover:text-brand-primary transition-colors">About Us</Link></li>
-                            <li><Link to="/services" className="text-slate-600 hover:text-brand-primary transition-colors">Services</Link></li>
-                            <li><Link to="/led-van-advertising" className="text-slate-600 hover:text-brand-primary transition-colors">LED Van Advertising</Link></li>
-                            <li><Link to="/led-wall-rental" className="text-slate-600 hover:text-brand-primary transition-colors">LED Wall Rental</Link></li>
-                            <li><Link to="/lookwalker-advertising" className="text-slate-600 hover:text-brand-primary transition-colors">Lookwalker Advertising</Link></li>
-                            <li><Link to="/whatsapp-bulk-messaging" className="text-slate-600 hover:text-brand-primary transition-colors">WhatsApp Bulk Messaging</Link></li>
-                            <li><Link to="/vehicle-branding" className="text-slate-600 hover:text-brand-primary transition-colors">Vehicle Branding</Link></li>
-                            <li><Link to="/company-profile" className="text-slate-600 hover:text-brand-primary transition-colors">Company Profile</Link></li>
-                            <li><Link to="/locations" className="text-slate-600 hover:text-brand-primary transition-colors">All Locations</Link></li>
-                            <li><Link to="/locations/kochi" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Kochi</Link></li>
-                            <li><Link to="/locations/kozhikode" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Kozhikode</Link></li>
-                            <li><Link to="/locations/trivandrum" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Trivandrum</Link></li>
-                            <li><Link to="/locations/malappuram" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Malappuram</Link></li>
-                            <li><Link to="/locations/kannur" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Kannur</Link></li>
-                            <li><Link to="/locations/palakkad" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Palakkad</Link></li>
-                            <li><Link to="/locations/kottayam" className="text-slate-600 hover:text-brand-primary transition-colors">Advertising in Kottayam</Link></li>
                             <li><Link to="/gallery" className="text-slate-600 hover:text-brand-primary transition-colors">Gallery</Link></li>
                             <li><Link to="/blog" className="text-slate-600 hover:text-brand-primary transition-colors">Blog</Link></li>
+                            <li><Link to="/company-profile" className="text-slate-600 hover:text-brand-primary transition-colors">Company Profile</Link></li>
+                            <li><Link to="/locations" className="text-slate-600 hover:text-brand-primary transition-colors">All Locations</Link></li>
                         </ul>
                     </div>
 
