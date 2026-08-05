@@ -315,7 +315,7 @@ const Services = () => {
         return () => clearInterval(interval);
     }, [heroImages.length]);
 
-    const phoneNumber = "919876543210";
+    const phoneNumber = "918589909034";
 
     const handleWhatsAppBooking = (serviceName) => {
         const message = `Hello B2P International! I would like to get a quote and details for your ${serviceName} service in Kerala.`;
@@ -696,7 +696,7 @@ const Services = () => {
                                     WhatsApp Us Now
                                 </button>
                                 <a
-                                    href="tel:+919876543210"
+                                    href="tel:+918589909034"
                                     className="inline-flex items-center justify-center gap-3 bg-white/10 border border-white/20 text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition-all duration-300"
                                 >
                                     <PhoneCall size={20} />
