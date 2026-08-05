@@ -201,9 +201,15 @@ export const buildItemListSchema = ({ name, items }) => ({
 
 export const buildSiteNavigationSchema = (navItems) => ({
   '@context': 'https://schema.org',
-  '@type': 'SiteNavigationElement',
-  name: 'Main Navigation',
-  url: navItems.map(item => toAbsoluteUrl(item.path)),
+  '@type': 'ItemList',
+  name: 'Site Navigation Sitelinks',
+  itemListElement: navItems.map((item, index) => ({
+    '@type': 'SiteNavigationElement',
+    position: index + 1,
+    name: item.name,
+    description: item.description || item.name,
+    url: toAbsoluteUrl(item.path),
+  })),
 });
 
 export const buildBlogPostingSchema = ({

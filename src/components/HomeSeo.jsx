@@ -54,12 +54,14 @@ const HomeSeo = () => (
       buildBreadcrumbSchema([{ name: 'Home', path: '/' }]),
       buildFaqSchema(homeFaqs),
       buildSiteNavigationSchema([
-        { name: 'Services', path: '/services' },
-        { name: 'Locations', path: '/locations' },
-        { name: 'Gallery', path: '/gallery' },
-        { name: 'Blog', path: '/blog' },
-        { name: 'About Us', path: '/about' },
-        { name: 'LED Van Advertising', path: '/led-van-advertising' },
+        { name: 'LED Van Advertising', path: '/led-van-advertising', description: 'High-resolution mobile LED screen vans for roadshows across Thrissur and Kerala.' },
+        { name: 'LED Wall Rental', path: '/led-wall', description: 'P3 & P4 outdoor/indoor LED video wall displays for events & stage backdrops.' },
+        { name: 'Lookwalker Advertising', path: '/lookwalker', description: 'LED & normal lookwalkers for street-level human billboard marketing.' },
+        { name: 'All Services', path: '/services', description: 'Explore video production, creative design, printing, signage, and outdoor ads.' },
+        { name: 'Campaign Gallery', path: '/gallery', description: 'View photos and videos of past LED van and lookwalker advertising campaigns.' },
+        { name: 'Coverage Locations', path: '/locations', description: 'Advertising service locations including Thrissur, Kochi, Kozhikode & Trivandrum.' },
+        { name: 'About B2P International', path: '/about', description: 'Kerala premier offline & mobile outdoor advertising agency.' },
+        { name: 'Blog & Articles', path: '/blog', description: 'Marketing insights and guides on LED advertising and outdoor branding.' },
       ]),
     ]}
   />
