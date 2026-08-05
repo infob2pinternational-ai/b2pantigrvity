@@ -12,22 +12,26 @@ import {
     localBusinessSchema,
 } from '../lib/seo';
 
-const SERVICES_TITLE = 'LED Van Advertising Services in Thrissur & Kerala | B2P International';
+const SERVICES_TITLE = 'Advertising, Video Production, Signage & Printing Services Thrissur Kerala | B2P International';
 const SERVICES_DESCRIPTION =
-    'Explore B2P International services including LED van advertising, mobile campaigns, event promotions, LED walls, and local brand visibility support across Thrissur and Kerala.';
+    'Explore B2P International advertising & marketing solutions across Thrissur and Kerala: LED van advertising, Lookwalkers, LED wall rental, corporate video production, creative graphic design, commercial printing, 3D acrylic signage boards, and outdoor hoardings.';
 
 const serviceFaqs = [
     {
-        question: 'Where do you provide LED van services?',
-        answer: 'We provide mobile advertising and LED van services throughout Thrissur, Kochi, and all major parts of Kerala.',
+        question: 'What marketing & advertising services does B2P International offer in Kerala?',
+        answer: 'We provide full 360° advertising services across Kerala including Mobile LED Van Advertising, Lookwalkers, LED Wall Rentals, Corporate Video Production, Creative Graphic Designing, Commercial Printing (flyers, brochures, visiting cards), 3D Signage Fabrication, and Outdoor Billboard Advertising.',
     },
     {
-        question: 'What businesses use your LED advertising services?',
-        answer: 'Our LED advertising campaigns are used by retail stores, hypermarkets, real estate brands, jewelry businesses, exhibitions, launch events, and corporate promotions that need stronger local visibility.',
+        question: 'Where do you provide LED van and mobile advertising services?',
+        answer: 'We provide mobile LED van advertising and roadshow promotions throughout Thrissur, Kochi, Kozhikode, Trivandrum, and all major commercial centers in Kerala.',
     },
     {
-        question: 'Can you plan local campaigns in Thrissur?',
-        answer: 'Yes. We help brands plan local LED van routes, timing, campaign messaging, and audience-focused promotions for Thrissur and nearby Kerala markets.',
+        question: 'Do you offer custom 3D signage and shop board fabrication in Thrissur?',
+        answer: 'Yes! We design, fabricate, and install Acrylic Sign Boards, 3D LED Letters, Glow Sign Boards, Shop Name Boards, and Directional Signages tailored for businesses across Thrissur and Kerala.',
+    },
+    {
+        question: 'Can you handle commercial video production and ad shoots for brands?',
+        answer: 'Absolutely. Our creative team produces high-impact Corporate Videos, Promotional Ad Shoots, Event Coverage reels, Social Media Videos, and Motion Graphics optimized for TV, LED screens, and digital campaigns.',
     },
 ];
 
@@ -173,7 +177,7 @@ const Services = () => {
         <Seo
             title={SERVICES_TITLE}
             description={SERVICES_DESCRIPTION}
-            keywords="LED van advertising services Thrissur, mobile LED advertising Kerala, LED wall display Thrissur, event promotion Kerala, outdoor branding services Kerala"
+            keywords="LED van advertising Thrissur, lookwalker advertising Kerala, video production agency Thrissur, corporate video shoots Kerala, creative design agency Thrissur, brochure printing Thrissur, printing solutions Kerala, 3D signage boards Thrissur, acrylic LED letter sign boards Kerala, outdoor hoarding billboard advertising Thrissur"
             path="/services"
             schema={[
                 localBusinessSchema,
@@ -184,7 +188,7 @@ const Services = () => {
                     type: 'CollectionPage',
                 }),
                 buildServiceSchema({
-                    name: 'LED Van Advertising Services in Thrissur and Kerala',
+                    name: '360° Advertising, Signage, Video Production & Printing Services in Thrissur and Kerala',
                     description: SERVICES_DESCRIPTION,
                     path: '/services',
                 }),

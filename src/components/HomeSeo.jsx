@@ -9,9 +9,9 @@ import {
   buildSiteNavigationSchema,
 } from '../lib/seo';
 
-const HOME_TITLE = 'LED Van Advertising in Thrissur, Kerala | B2P International';
+const HOME_TITLE = 'LED Van, Signage, Printing & Video Production Thrissur Kerala | B2P International';
 const HOME_DESCRIPTION =
-  'B2P International provides LED advertising services including LED van advertising, LED lookwalkers, normal look walkers, and LED wall rentals across Kerala for roadshows and local brand marketing.';
+  'B2P International provides 360-degree marketing & advertising services in Thrissur & Kerala, including LED van advertising, LED lookwalkers, LED wall rentals, video production, creative design, printing solutions, 3D signage boards, and outdoor branding.';
 
 const homeFaqs = [
   {
@@ -35,7 +35,7 @@ const HomeSeo = () => (
   <Seo
     title={HOME_TITLE}
     description={HOME_DESCRIPTION}
-    keywords="LED advertising, LED lookwalker, normal look walker, LED wall rentals, LED van advertising Thrissur, LED van advertising Kerala"
+    keywords="LED advertising Kerala, LED lookwalker, normal look walker, LED wall rentals, LED van advertising Thrissur, video production Thrissur, creative designing agency Thrissur, printing solutions Thrissur, acrylic signage boards Thrissur, 3D LED letters Kerala, outdoor advertising Thrissur"
     path="/"
     schema={[
       localBusinessSchema,
