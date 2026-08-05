@@ -84,9 +84,6 @@ const Home = () => (
     <WhyChooseUs />
     <SocialProof />
     <LocalSEO />
-    <DeferredSection height="min-h-[600px]">
-      <Contact />
-    </DeferredSection>
   </>
 );
 
