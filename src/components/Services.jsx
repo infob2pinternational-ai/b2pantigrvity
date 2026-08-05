@@ -446,7 +446,7 @@ const Services = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4 }}
-                            className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl shadow-2xl mb-14"
+                            className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl shadow-2xl"
                         >
                             <div className="flex flex-col items-center p-3 border-r border-white/10 last:border-0 md:last:border-r">
                                 <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-cyan-400">500+</span>
@@ -463,52 +463,6 @@ const Services = () => {
                             <div className="flex flex-col items-center p-3">
                                 <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">4.9 ★</span>
                                 <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1">Client Rating</span>
-                            </div>
-                        </motion.div>
-
-                        {/* Interactive Hero Image Showcase Slider */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.5 }}
-                            className="w-full max-w-5xl rounded-3xl overflow-hidden border border-white/15 bg-white/5 backdrop-blur-xl shadow-2xl shadow-brand-primary/10"
-                        >
-                            <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden group">
-                                {heroImages.map((img, idx) => (
-                                    <img
-                                        key={img.src}
-                                        src={img.src}
-                                        alt={img.title}
-                                        className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out ${idx === currentHeroIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
-                                    />
-                                ))}
-
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-transparent"></div>
-
-                                {/* Caption Overlay */}
-                                <div className="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-4 text-left">
-                                    <div>
-                                        <span className="px-3 py-1 rounded-full text-xs font-bold bg-brand-primary/80 backdrop-blur-md text-white uppercase tracking-wider mb-2 inline-block">
-                                            {heroImages[currentHeroIndex].tag}
-                                        </span>
-                                        <h3 className="text-xl md:text-2xl font-bold text-white drop-shadow-md">
-                                            {heroImages[currentHeroIndex].title}
-                                        </h3>
-                                    </div>
-
-                                    {/* Thumbnail Dots */}
-                                    <div className="flex gap-3">
-                                        {heroImages.map((img, idx) => (
-                                            <button
-                                                key={img.src}
-                                                onClick={() => setCurrentHeroIndex(idx)}
-                                                type="button"
-                                                className={`h-2.5 rounded-full transition-all duration-300 ${idx === currentHeroIndex ? 'w-10 bg-gradient-to-r from-brand-primary to-brand-secondary' : 'w-2.5 bg-white/40 hover:bg-white/70'}`}
-                                                aria-label={`Show Services Hero slide ${idx + 1}`}
-                                            />
-                                        ))}
-                                    </div>
-                                </div>
                             </div>
                         </motion.div>
                     </div>
