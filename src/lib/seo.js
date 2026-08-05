@@ -68,8 +68,29 @@ export const localBusinessSchema = {
   email: BUSINESS_DETAILS.email,
   priceRange: BUSINESS_DETAILS.priceRange,
   foundingDate: BUSINESS_DETAILS.foundingDate,
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '158',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: '360° Advertising & Branding Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile LED Van Advertising Kerala' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'LED Wall Rental Kerala' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Lookwalker & iWalker Advertising Kerala' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vehicle Branding & Car Wrap Kerala' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '4K Corporate Video Production Thrissur' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '3D Acrylic LED Signage Boards Thrissur' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Printing Solutions Thrissur' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'WhatsApp Bulk Messaging Kerala' } },
+    ],
+  },
   description:
-    'B2P International provides LED van advertising, LED wall rental, lookwalker advertising and WhatsApp bulk messaging across all 14 districts of Kerala. Based in Puranattukara, Thrissur.',
+    'B2P International provides LED van advertising, LED wall rental, lookwalker advertising, corporate video production, creative designing, commercial printing, 3D signage boards and outdoor branding across all 14 districts of Kerala. Based in Puranattukara, Thrissur.',
   address: BUSINESS_DETAILS.address,
   geo: BUSINESS_DETAILS.geo,
   areaServed: [
