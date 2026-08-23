@@ -345,7 +345,7 @@ const LedVanAdvertising = () => {
                 <div className="container mx-auto px-6 max-w-7xl text-center">
                     <h2 className="text-3xl md:text-5xl font-black mb-6">Unrivaled Coverage Across Kerala</h2>
                     <p className="text-lg text-slate-300 max-w-3xl mx-auto mb-16">
-                        We operate the largest and most well-maintained fleet of LED advertising vans in Kerala. While we cover all 14 districts, we have specialized route knowledge and dedicated teams in the major urban centers.
+                        We operate a dedicated and well-maintained fleet of LED advertising vans in Kerala. While we cover all 14 districts, we have specialized route knowledge and dedicated teams in the major urban centers.
                     </p>
                     
                     <div className="grid md:grid-cols-3 gap-8">

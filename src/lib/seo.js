@@ -68,13 +68,6 @@ export const localBusinessSchema = {
   email: BUSINESS_DETAILS.email,
   priceRange: BUSINESS_DETAILS.priceRange,
   foundingDate: BUSINESS_DETAILS.foundingDate,
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '158',
-    bestRating: '5',
-    worstRating: '1',
-  },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: '360° Advertising & Branding Services',
