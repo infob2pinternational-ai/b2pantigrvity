@@ -29,8 +29,8 @@ const FaqItem = ({ question, answer }) => {
     );
 };
 
-const TITLE = 'LED Wall Rental in Kerala | LED Video Wall for Events | B2P International';
-const DESCRIPTION = 'Rent LED walls and LED video walls for weddings, events, concerts & political gatherings in Kerala. B2P International offers P3 & P4 LED screen rental across Thrissur, Kochi and Kerala.';
+const TITLE = 'LED Wall Rental Thrissur & Kerala | Event LED Screens | B2P';
+const DESCRIPTION = 'Professional LED wall rental in Thrissur and Kerala. We provide indoor and outdoor LED screens for events, stage shows, concerts, and corporate displays.';
 
 const LedWall = () => {
     const [heroImageLoaded, setHeroImageLoaded] = useState(false);
@@ -107,7 +107,7 @@ const LedWall = () => {
         <Seo
             title={TITLE}
             description={DESCRIPTION}
-            keywords="LED wall rental Kerala, LED video wall, stage screens, concert LED wall, event backdrop, P3 indoor LED, P4 outdoor LED, Thrissur LED screen, stage rentals"
+            keywords="LED wall rental Thrissur, LED video wall rental Thrissur, LED screen rental Thrissur, LED wall for events Thrissur, LED stage screen Thrissur, concert LED wall Thrissur, event LED wall Kerala, LED wall rental Kerala, stage LED screen Kerala, indoor LED walls, outdoor LED walls"
             path="/led-wall"
             schema={[
                 localBusinessSchema,
@@ -181,7 +181,7 @@ const LedWall = () => {
                         transition={{ delay: 0.1 }}
                         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tight leading-tight max-w-5xl mx-auto"
                     >
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">LED Wall Rental in Kerala</span> — Stunning Displays for Every Event
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">LED Wall Rental in Thrissur & Kerala</span> <br /> Professional Event LED Screens
                     </motion.h1>
                     
                     <motion.p 
@@ -290,13 +290,13 @@ const LedWall = () => {
                                     <div className="w-6 h-6 rounded-full bg-brand-primary/10 flex items-center justify-center mt-1 shrink-0">
                                         <div className="w-2 h-2 rounded-full bg-brand-primary"></div>
                                     </div>
-                                    <span className="text-slate-700 leading-relaxed"><strong>Refresh Rate:</strong> 3,840Hz+ Camera-Safe (Zero flickering on video)</span>
+                                    <span className="text-slate-700 leading-relaxed"><strong>Refresh Rate:</strong> High refresh rate for smooth, flicker-free event recordings</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <div className="w-6 h-6 rounded-full bg-brand-primary/10 flex items-center justify-center mt-1 shrink-0">
                                         <div className="w-2 h-2 rounded-full bg-brand-primary"></div>
                                     </div>
-                                    <span className="text-slate-700 leading-relaxed"><strong>Screen Quality:</strong> Brand-new panels with zero dead pixels</span>
+                                    <span className="text-slate-700 leading-relaxed"><strong>Screen Quality:</strong> Well-maintained, high-resolution display panels</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <div className="w-6 h-6 rounded-full bg-brand-primary/10 flex items-center justify-center mt-1 shrink-0">
@@ -478,7 +478,7 @@ const LedWall = () => {
                         >
                             <h3 className="text-xl font-bold text-slate-900 mb-4">Concerts, Stage Shows & Cultural Events</h3>
                             <p className="text-slate-600 leading-relaxed">
-                                Elevate the audience experience at concerts, cultural festivals, Onam celebrations, and entertainment events with our large-format outdoor LED display walls. Our screens deliver vibrant, lag-free visuals that make every performance more impressive. While we specialize in delivering the ultimate visual backdrop, we seamlessly partner with top local sound vendors for heavy line-array stadium audio, giving you a complete, world-class concert stage.
+                                Elevate the audience experience at concerts, cultural festivals, Onam celebrations, and entertainment events with our large-format outdoor LED display walls. Our screens deliver vibrant, lag-free visuals that make every performance more impressive — visible clearly from the front row to the back of the largest venues in Kerala.
                             </p>
                         </motion.div>
                     </div>
@@ -494,7 +494,7 @@ const LedWall = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">LED Wall Rental Across Kerala</h2>
+                            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">LED Wall Rental in Thrissur & Kerala</h2>
                             <p className="text-lg text-slate-600 leading-relaxed text-left md:text-center">
                                 We provide LED wall rental and LED video wall hire across Thrissur, Kochi, Ernakulam, Palakkad, Kozhikode, Malappuram, Kannur, Kollam, Kottayam, Thiruvananthapuram, and all major towns and venues across Kerala. Contact us early to check availability for your event date — especially during peak wedding and election seasons.
                             </p>

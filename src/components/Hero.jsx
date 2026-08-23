@@ -61,11 +61,6 @@ const Hero = () => {
                         </p>
 
                         <div className="flex flex-wrap items-center gap-4 mb-10 text-white/90">
-                            <div className="flex items-center gap-1.5">
-                                <span className="text-brand-secondary text-lg">★★★★★</span>
-                                <span className="text-sm font-bold tracking-wide">5.0 Google Rating</span>
-                            </div>
-                            <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-white/20"></span>
                             <div className="text-sm font-bold tracking-wide">
                                 Trusted Since 2012
                             </div>

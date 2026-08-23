@@ -321,8 +321,8 @@ const LedVanAdvertising = () => {
                                 <div className="flex gap-6">
                                     <div className="w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center font-black text-xl shrink-0">4</div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-slate-900 mb-2">Legal Clearances & Live Tracking</h3>
-                                        <p className="text-slate-600">We handle all end-to-end legal clearances (including RTO permits, traffic police route clearances, and local municipality advertising tax papers). During deployment, we provide daily GPS trails, route logs, and geo-tagged photo/video proofs of the campaign in action.</p>
+                                        <h3 className="text-xl font-bold text-slate-900 mb-2">Execution & Live Tracking</h3>
+                                        <p className="text-slate-600">The van is deployed with a trained operator. We provide regular updates and photo/video proofs of the campaign in action.</p>
                                     </div>
                                 </div>
                             </div>
@@ -444,7 +444,7 @@ const LedVanAdvertising = () => {
                         />
                         <FaqItem 
                             question="Do the vans operate in the rain?" 
-                            answer="Yes. Our LED screens are IP65 Weatherproof and outdoor-rated, built to withstand Kerala's heavy monsoons. Your commercials will play clearly through unpredictable downpours without short-circuiting. However, during severe storms, operations might be temporarily paused for safety reasons." 
+                            answer="Our LED screens are P3/P4 outdoor-rated, waterproof, and built to withstand Kerala's heavy monsoons. However, during extreme weather conditions or severe storms, operations might be temporarily paused for safety reasons." 
                         />
                         <FaqItem 
                             question="How do we verify the van's location and operations?" 
