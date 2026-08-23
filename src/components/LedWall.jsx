@@ -420,11 +420,17 @@ const LedWall = () => {
                                 transition={{ delay: 0.1 }}
                                 className="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-200"
                             >
-                                <div className="aspect-[16/9] bg-slate-100 flex items-center justify-center relative border-b border-slate-200 p-8 text-center">
-                                    <div className="text-slate-400 flex flex-col items-center">
-                                        <MonitorPlay size={48} className="mb-4 opacity-50" />
-                                        <span className="text-slate-500 font-medium text-lg mb-1">Awaiting Original Project Photos</span>
-                                        <span className="text-slate-400 text-sm">Space reserved for verified project media.</span>
+                                <div className="flex flex-col gap-1 border-b border-slate-200">
+                                    <div className="aspect-video bg-slate-100 relative overflow-hidden">
+                                        <img src="/adat-1.png" alt="B2P LED wall setup for Adat Farmers Bank meeting in Thrissur" className="w-full h-full object-cover" />
+                                    </div>
+                                    <div className="grid grid-cols-2 gap-1">
+                                        <div className="aspect-video bg-slate-100 relative overflow-hidden">
+                                            <img src="/adat-2.png" alt="LED wall installation by B2P International at Adat Farmers Bank event" className="w-full h-full object-cover" />
+                                        </div>
+                                        <div className="aspect-video bg-slate-100 relative overflow-hidden">
+                                            <img src="/adat-3.png" alt="B2P technician installing LED wall for Adat Farmers Bank event in Thrissur" className="w-full h-full object-cover" />
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="p-8">
