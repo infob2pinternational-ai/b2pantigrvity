@@ -379,22 +379,24 @@ const LedWall = () => {
                             viewport={{ once: true }}
                             className="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-200 flex flex-col lg:flex-row"
                         >
-                            <div className="lg:w-3/5 bg-slate-950 flex flex-col items-center justify-center relative min-h-[300px] lg:min-h-[400px] overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-800 group">
-                                <video 
-                                    src="/fifa-world-cup.mp4" 
-                                    autoPlay 
-                                    muted 
-                                    loop 
-                                    playsInline 
-                                    controls
-                                    className="absolute inset-0 w-full h-full object-contain bg-black"
-                                >
-                                    Your browser does not support the video tag.
-                                </video>
+                            <div className="lg:w-3/5 bg-slate-950 flex flex-col items-center justify-center relative min-h-[550px] lg:min-h-[600px] overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-800">
+                                <div className="absolute inset-0 flex items-center justify-center p-4">
+                                    <iframe 
+                                        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3041441926206057&show_text=false&width=315" 
+                                        width="315" 
+                                        height="560" 
+                                        style={{ border: "none", overflow: "hidden", maxWidth: "100%" }} 
+                                        scrolling="no" 
+                                        frameBorder="0" 
+                                        allowFullScreen={true} 
+                                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                        title="FIFA World Cup 2026 Final Project Reel"
+                                    ></iframe>
+                                </div>
                                 
-                                <div className="absolute bottom-6 left-0 right-0 flex justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <a href="https://www.facebook.com/reel/3041441926206057" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand-primary/90 hover:bg-brand-primary backdrop-blur-sm text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg transition-colors">
-                                        View Project Reference (Facebook Reel)
+                                <div className="absolute bottom-6 left-0 right-0 flex justify-center z-10 pointer-events-none">
+                                    <a href="https://www.facebook.com/reel/3041441926206057" target="_blank" rel="noopener noreferrer" className="pointer-events-auto inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-secondary text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg transition-colors">
+                                        View on Facebook (Original Source)
                                     </a>
                                 </div>
                             </div>
