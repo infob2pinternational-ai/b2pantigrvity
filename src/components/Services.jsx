@@ -76,7 +76,7 @@ const services = [
         id: 1,
         title: "Mobile LED Advertising Vans",
         category: "outdoor",
-        desc: "Dynamic moving billboards with ultra-bright P3/P4 LED screens, audio system, and GPS tracking to dominate city streets.",
+        desc: "Dynamic moving billboards with ultra-bright LED screens, audio system, and GPS tracking to dominate city streets.",
         icon: <Truck size={32} className="text-brand-primary" />,
         image: "/led-van-advertising.png",
         badge: "🔥 High Demand",
@@ -92,12 +92,12 @@ const services = [
         id: 2,
         title: "LED Wall Displays & Video Walls",
         category: "outdoor",
-        desc: "High-resolution P3 & P4 indoor and outdoor modular LED video screens for concerts, corporate events, and rallies.",
+        desc: "High-resolution indoor and outdoor modular LED video screens for concerts, corporate events, and rallies.",
         icon: <Zap size={32} className="text-brand-secondary" />,
         image: "/led-wall-1.jpg",
         badge: "⚡ Event Favorite",
         highlights: [
-            "Indoor P3 & Outdoor P4 Pitch",
+            "Indoor & Outdoor Event Screens",
             "Custom Size Modular Setup",
             "Full On-Site Tech Support"
         ],

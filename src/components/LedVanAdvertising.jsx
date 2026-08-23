@@ -40,7 +40,7 @@ const LedVanAdvertising = () => {
     const faqItems = [
         { question: "What is the average cost of LED van advertising in Kerala?", answer: "The LED van advertising cost in Kerala varies based on campaign duration and routing. On average, daily rates range from ₹8,000 to ₹15,000 depending on screen size, fuel requirements, and operational hours. We offer substantial discounts for monthly bookings." },
         { question: "Can we change the video content during the campaign?", answer: "Yes. One of the greatest advantages of digital LED vans is flexibility. You can update the video content mid-campaign to feature a new daily offer, a different product line, or a localized message for a specific town." },
-        { question: "Do the vans operate in the rain?", answer: "Our LED screens are P3/P4 outdoor-rated, waterproof, and built to withstand Kerala's heavy monsoons. However, during extreme weather conditions or severe storms, operations might be temporarily paused for safety reasons." },
+        { question: "Do the vans operate in the rain?", answer: "Our LED screens are outdoor-rated, waterproof, and built to withstand Kerala's heavy monsoons. However, during extreme weather conditions or severe storms, operations might be temporarily paused for safety reasons." },
         { question: "How do we verify the van's location and operations?", answer: "We believe in complete transparency. Our vans are GPS-enabled, and we provide daily progress reports, route logs, and geo-tagged photographs/videos of the van operating in the agreed-upon locations." },
         { question: "Is audio permitted along with the video display?", answer: "Yes, our vans are equipped with high-quality public address systems. We can play synchronized audio, jingles, or live announcements. However, audio usage is subject to local municipal noise regulations, especially near hospitals, schools, and late at night." },
         { question: "What video format is required for the LED screen?", answer: "We accept standard video formats like MP4, AVI, and MOV. Our technical team will provide you with the exact aspect ratio and resolution guidelines based on the specific van assigned to your campaign to ensure the content looks sharp and professional." },
@@ -182,7 +182,7 @@ const LedVanAdvertising = () => {
                                     LED Van Advertising—also referred to as Mobile Digital Billboards or Video Vans—is a revolutionary outdoor advertising format where high-resolution LED screens are mounted on commercial vehicles. Unlike traditional static hoardings that require the audience to pass by a specific location, LED vans take your vibrant, full-motion video advertisements directly to your target audience.
                                 </p>
                                 <p>
-                                    At B2P International, we equip our fleet with state-of-the-art, daylight-visible P3 and P4 LED screens. These screens ensure that whether you are running a campaign under the bright midday Kerala sun or navigating through crowded evening markets, your brand message is crystal clear. 
+                                    At B2P International, we equip our fleet with state-of-the-art, daylight-visible LED screens. These screens ensure that whether you are running a campaign under the bright midday Kerala sun or navigating through crowded evening markets, your brand message is crystal clear. 
                                 </p>
                                 <p>
                                     This medium bridges the gap between digital marketing and outdoor advertising. It allows brands to broadcast TV-commercial-quality content on the streets, accompanied by synchronized audio systems, creating a multi-sensory marketing experience that commands attention and drives immediate consumer action.
@@ -324,7 +324,7 @@ const LedVanAdvertising = () => {
                                     <div className="w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center font-black text-xl shrink-0">3</div>
                                     <div>
                                         <h3 className="text-xl font-bold text-slate-900 mb-2">Content Verification</h3>
-                                        <p className="text-slate-600">Our technical team ensures your video content is formatted correctly for optimal brightness, contrast, and aspect ratio on our P3/P4 outdoor screens.</p>
+                                        <p className="text-slate-600">Our technical team ensures your video content is formatted correctly for optimal brightness, contrast, and aspect ratio on our outdoor screens.</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-6">
@@ -453,7 +453,7 @@ const LedVanAdvertising = () => {
                         />
                         <FaqItem 
                             question="Do the vans operate in the rain?" 
-                            answer="Our LED screens are P3/P4 outdoor-rated, waterproof, and built to withstand Kerala's heavy monsoons. However, during extreme weather conditions or severe storms, operations might be temporarily paused for safety reasons." 
+                            answer="Our LED screens are outdoor-rated, waterproof, and built to withstand Kerala's heavy monsoons. However, during extreme weather conditions or severe storms, operations might be temporarily paused for safety reasons." 
                         />
                         <FaqItem 
                             question="How do we verify the van's location and operations?" 

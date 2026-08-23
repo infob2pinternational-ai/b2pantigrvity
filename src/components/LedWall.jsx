@@ -59,12 +59,12 @@ const LedWall = () => {
     const reasons = [
         {
             title: "Indoor & Outdoor LED Walls",
-            desc: "We offer LED walls for both indoor and outdoor events across Kerala. Our indoor P3 LED walls deliver sharp, close-up visuals perfect for conferences, weddings, and corporate events. Our outdoor P4 LED walls are high-brightness panels built to perform in direct sunlight at concerts, political rallies, and large public gatherings.",
+            desc: "We offer LED walls for both indoor and outdoor events across Kerala. Our indoor LED walls deliver sharp, close-up visuals perfect for conferences, weddings, and corporate events. Our outdoor LED walls are high-brightness panels built to perform in direct sunlight at concerts, political rallies, and large public gatherings.",
             icon: <MonitorPlay size={32} className="text-brand-primary" />
         },
         {
-            title: "P3 & P4 Pixel Pitch Options",
-            desc: "Pixel pitch determines image sharpness. Our P3 LED walls are ideal for indoor events where the audience is within 3-10 metres of the screen — delivering razor-sharp visuals for presentations and live feeds. Our P4 LED walls are built for outdoor use where higher brightness matters more than pixel density, making them perfect for stages, rallies, and open-air events.",
+            title: "Crystal Clear Resolutions",
+            desc: "Pixel pitch determines image sharpness. We provide tight pixel pitches for indoor events where the audience is close to the screen — delivering razor-sharp visuals for presentations and live feeds. For outdoor events, we use specialized panels where higher brightness matters most, making them perfect for stages, rallies, and open-air events.",
             icon: <Sun size={32} className="text-brand-secondary" />
         },
         {
@@ -82,11 +82,11 @@ const LedWall = () => {
     const faqItems = [
         {
             question: "What is the LED wall rental price in Kerala?",
-            answer: "LED wall rental price in Kerala depends on screen size, pixel pitch (P3 or P4), event duration, and location. Contact B2P International for a free quote tailored to your specific event and venue."
+            answer: "LED wall rental price in Kerala depends on screen size, pixel pitch, event duration, and location. Contact B2P International for a free quote tailored to your specific event and venue."
         },
         {
-            question: "What is the difference between P3 and P4 LED wall?",
-            answer: "P3 refers to a 3mm pixel pitch — used for indoor events where the audience is close to the screen, delivering very sharp images. P4 refers to a 4mm pixel pitch — used for outdoor events where higher brightness is more important than pixel density. Our team will recommend the right option for your event."
+            question: "What is the difference between indoor and outdoor LED walls?",
+            answer: "Indoor LED walls use a tighter pixel pitch for audiences close to the screen, delivering very sharp images. Outdoor LED walls prioritize higher brightness to compete with direct sunlight. Our team will recommend the right option for your event."
         },
         {
             question: "Can I rent an LED wall for a single day in Thrissur?",
@@ -121,7 +121,7 @@ const LedWall = () => {
                     "@context": "https://schema.org",
                     "@type": "Service",
                     "name": "LED Wall Rental in Kerala",
-                    "description": "LED wall and LED video wall rental for weddings, corporate events, concerts, and political gatherings across Thrissur, Kochi, and Kerala. P3 indoor and P4 outdoor LED screens available.",
+                    "description": "LED wall and LED video wall rental for weddings, corporate events, concerts, and political gatherings across Thrissur, Kochi, and Kerala. Indoor and outdoor LED screens available.",
                     "serviceType": "LED Wall Rental",
                     "url": "https://www.b2pinternational.com/led-wall",
                     "provider": {
@@ -228,7 +228,7 @@ const LedWall = () => {
                                     LED walls are brighter, sharper, and more durable than traditional projection screens. They work perfectly in both indoor and outdoor settings — delivering crystal-clear visuals even in direct sunlight. With no projector and no screen dependency, an LED wall is the most reliable and visually impressive display solution for any event in Kerala.
                                 </p>
                                 <p>
-                                    At B2P International, we offer P3 pixel pitch LED walls for indoor events and P4 pixel pitch LED walls for outdoor events — covering everything from intimate corporate meetings to large-scale public gatherings.
+                                    At B2P International, we offer high-resolution LED walls for indoor events and high-brightness LED walls for outdoor events — covering everything from intimate corporate meetings to large-scale public gatherings.
                                 </p>
                             </div>
                         </motion.div>
@@ -286,13 +286,13 @@ const LedWall = () => {
                                     <div className="w-6 h-6 rounded-full bg-brand-primary/10 flex items-center justify-center mt-1 shrink-0">
                                         <div className="w-2 h-2 rounded-full bg-brand-primary"></div>
                                     </div>
-                                    <span className="text-slate-700 leading-relaxed"><strong>Indoor pixel pitch:</strong> P3 (ideal for audiences within 3-10m)</span>
+                                    <span className="text-slate-700 leading-relaxed"><strong>Indoor Screens:</strong> Tight pixel pitch for sharp visuals when audiences are seated close</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <div className="w-6 h-6 rounded-full bg-brand-primary/10 flex items-center justify-center mt-1 shrink-0">
                                         <div className="w-2 h-2 rounded-full bg-brand-primary"></div>
                                     </div>
-                                    <span className="text-slate-700 leading-relaxed"><strong>Outdoor pixel pitch:</strong> P4 (high brightness for sunlight use)</span>
+                                    <span className="text-slate-700 leading-relaxed"><strong>Outdoor Screens:</strong> High brightness configuration to cut through direct sunlight</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <div className="w-6 h-6 rounded-full bg-brand-primary/10 flex items-center justify-center mt-1 shrink-0">
@@ -364,76 +364,17 @@ const LedWall = () => {
                             viewport={{ once: true }}
                             className="text-3xl md:text-4xl font-black text-slate-900 mb-6"
                         >
-                            Our Work: Recent Event & Stage LED Setups
+                            Our Work: Recent LED Wall Projects & Case Studies
                         </motion.h2>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                            Take a look at some of our recent LED wall installations for corporate events and outdoor stage shows across Kerala.
+                            We are currently compiling our latest event galleries and case studies. Check back soon for photos of our recent LED wall setups across Kerala.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.1 }}
-                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
-                        >
-                            <div className="aspect-[16/10] relative overflow-hidden">
-                                <img 
-                                    src="/led-wall-1.jpg" 
-                                    alt="Outdoor Stage Concert & Wedding LED Wall Setup in Kerala" 
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                                    <div className="p-6">
-                                        <h3 className="text-white font-bold text-xl">Outdoor Stage & Concerts</h3>
-                                        <p className="text-slate-200 text-sm">High-brightness P4 Outdoor LED Wall</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.2 }}
-                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
-                        >
-                            <div className="aspect-[16/10] relative overflow-hidden">
-                                <img 
-                                    src="/led-wall-2.jpg" 
-                                    alt="Sunset Stage LED Video Wall Setup B2P International" 
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                                    <div className="p-6">
-                                        <h3 className="text-white font-bold text-xl">Event & Beachside Stages</h3>
-                                        <p className="text-slate-200 text-sm">Vibrant Outdoor Display Panels</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.3 }}
-                            className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
-                        >
-                            <div className="aspect-[16/10] relative overflow-hidden">
-                                <img 
-                                    src="/led-wall-3.jpg" 
-                                    alt="Large Audience Event & Rally LED Video Wall Rental Kerala" 
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                                    <div className="p-6">
-                                        <h3 className="text-white font-bold text-xl">Large Public Rallies & Stage Shows</h3>
-                                        <p className="text-slate-200 text-sm">Massive modular display screen setups</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
+                    <div className="grid grid-cols-1 gap-8">
+                        <div className="rounded-3xl border-2 border-dashed border-slate-300 bg-slate-50 p-12 text-center flex flex-col items-center justify-center min-h-[300px]">
+                            <p className="text-slate-500 font-medium text-lg">Project Photos & Case Studies Coming Soon</p>
+                            <p className="text-slate-400 text-sm mt-2">Space reserved for genuine B2P project evidence.</p>
+                        </div>
                     </div>
                 </div>
             </section>

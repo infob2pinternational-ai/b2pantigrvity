@@ -101,7 +101,7 @@ const ThrissurLocation = () => {
                 If you are targeting shoppers, commuters, event visitors, or residential catchments in Thrissur,
                 LED van advertising gives you a more flexible option than static outdoor space. B2P International
                 helps brands plan moving digital campaigns for launches, roadshows, store activations, and
-                city-wide awareness across the strongest local routes.
+                city-wide awareness across the strongest local routes. Looking for stage displays or event screens? Explore our <Link to="/led-wall" className="text-brand-primary font-semibold hover:underline">LED Wall Rental</Link> services in Thrissur.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a

@@ -203,6 +203,7 @@ const Contact = () => {
                                 <select id="service" name="service" required defaultValue="" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-xl text-slate-600 focus:outline-none focus:border-brand-primary focus:bg-white transition-colors appearance-none">
                                     <option value="" disabled>Select a Service</option>
                                     <option value="led">LED Van Services</option>
+                                    <option value="led-wall">LED Wall & Stage Rental</option>
                                     <option value="marketing">Exclusive Marketing Campaigns & Implementation</option>
                                     <option value="ai">AI-Driven Social Intelligence & Growth (ASIG)</option>
                                 </select>

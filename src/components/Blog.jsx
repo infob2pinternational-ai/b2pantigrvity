@@ -64,12 +64,12 @@ const Blog = () => {
 
                 <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">3. LED Wall Rental — Best for Events</h4>
                 <p class="mb-4">For events, product launches, political rallies, and corporate functions, LED wall rental delivers the kind of visual impact that no other format can match. A large-format LED screen at your venue makes your brand unmissable — whether it's a stage backdrop at a concert, a display at a trade exhibition, or a live feed at a political rally.</p>
-                <p class="mb-6">B2P International provides both indoor P3 LED walls (ideal for corporate events and weddings) and outdoor P4 LED walls (designed for brightness in direct sunlight, perfect for open-air rallies). Full setup, operation, and dismantling are handled by our technical team.</p>
+                <p class="mb-6">B2P International provides both indoor LED walls (ideal for corporate events and weddings) and outdoor LED walls (designed for brightness in direct sunlight, perfect for open-air rallies). Full setup, operation, and dismantling are handled by our technical team.</p>
                 <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-6">
                     <strong class="text-slate-900 block mb-2">LED Wall Rental — Key Facts</strong>
                     <ul class="space-y-1 text-slate-600 text-sm">
                         <li>✓ Available in custom sizes</li>
-                        <li>✓ Indoor P3 and outdoor P4 options</li>
+                        <li>✓ Indoor and outdoor screen options</li>
                         <li>✓ Full setup and operation included</li>
                         <li>✓ Available across all Kerala districts</li>
                         <li>✓ Best for: events, rallies, exhibitions, product launches</li>
@@ -221,9 +221,9 @@ const Blog = () => {
             content: `
                 <p class="mb-4">Gone are the days of dim, blurry projectors and uninspiring backdrop flex banners. In 2026, the standard for any professional event—be it a wedding, corporate conference, or political rally—is a high-resolution <strong>LED Video Wall</strong>.</p>
                 
-                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">Indoor P3 vs Outdoor P4 LED Walls</h4>
-                <p class="mb-6">Choosing the right LED wall is crucial for your event's success. <strong>Indoor P3 walls</strong> offer a tight pixel pitch (3mm), meaning the image remains razor-sharp even when the audience is sitting just a few meters away. They are the go-to choice for corporate events, hotel ballrooms, and weddings.</p>
-                <p class="mb-6"><strong>Outdoor P4 walls</strong>, on the other hand, are built for brightness. Designed to cut through direct sunlight, they ensure your live feed or presentation is visible to crowds of thousands at open-air concerts or political rallies.</p>
+                <h4 class="text-xl font-bold text-slate-900 mb-3 mt-8">Indoor vs Outdoor LED Walls</h4>
+                <p class="mb-6">Choosing the right LED wall is crucial for your event's success. <strong>Indoor screens</strong> offer a tight pixel pitch, meaning the image remains razor-sharp even when the audience is sitting just a few meters away. They are the go-to choice for corporate events, hotel ballrooms, and weddings.</p>
+                <p class="mb-6"><strong>Outdoor screens</strong>, on the other hand, are built for brightness. Designed to cut through direct sunlight, they ensure your live feed or presentation is visible to crowds of thousands at open-air concerts or political rallies.</p>
 
                 <h4 class="text-xl font-bold text-slate-900 mb-4 mt-8">Why LED Walls Are Unbeatable</h4>
                 <div class="space-y-4 mb-8">

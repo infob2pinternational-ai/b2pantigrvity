@@ -55,7 +55,7 @@ const HomeSeo = () => (
       buildFaqSchema(homeFaqs),
       buildSiteNavigationSchema([
         { name: 'LED Van Advertising', path: '/led-van-advertising', description: 'High-resolution mobile LED screen vans for roadshows across Thrissur and Kerala.' },
-        { name: 'LED Wall Rental', path: '/led-wall-rental', description: 'P3 & P4 outdoor/indoor LED video wall displays for events & stage backdrops.' },
+        { name: 'LED Wall Rental', path: '/led-wall-rental', description: 'Outdoor/indoor LED video wall displays for events & stage backdrops.' },
         { name: 'Lookwalker Advertising', path: '/lookwalker-advertising', description: 'LED & normal lookwalkers for street-level human billboard marketing.' },
         { name: 'All Services', path: '/services', description: 'Explore video production, creative design, printing, signage, and outdoor ads.' },
         { name: 'Campaign Gallery', path: '/gallery', description: 'View photos and videos of past LED van and lookwalker advertising campaigns.' },
