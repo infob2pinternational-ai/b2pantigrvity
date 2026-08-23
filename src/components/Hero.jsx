@@ -52,13 +52,28 @@ const Hero = () => {
                                 Your Brand Impossible to Ignore
                             </span>
                         </h1>
-                        <p className="text-lg sm:text-xl text-slate-400 mb-10 max-w-2xl font-light leading-relaxed">
+                        <p className="text-lg sm:text-xl text-slate-400 mb-8 max-w-2xl font-light leading-relaxed">
                             Our LED Van Advertising services deliver powerful mobile marketing that captures attention wherever your audience is. With high-resolution LED screens mounted on moving advertising vans, your brand message reaches thousands of people across busy streets, commercial areas, and major events. For businesses looking for{" "}
                             <Link to="/services" className="font-semibold text-white underline decoration-brand-primary/70 underline-offset-4 transition-colors hover:text-brand-primary">
                                 LED Van Advertising in Thrissur
                             </Link>{" "}
                             and across Kerala, our mobile LED advertising solutions maximize visibility and engagement.
                         </p>
+
+                        <div className="flex flex-wrap items-center gap-4 mb-10 text-white/90">
+                            <div className="flex items-center gap-1.5">
+                                <span className="text-brand-secondary text-lg">★★★★★</span>
+                                <span className="text-sm font-bold tracking-wide">5.0 Google Rating</span>
+                            </div>
+                            <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-white/20"></span>
+                            <div className="text-sm font-bold tracking-wide">
+                                Trusted Since 2012
+                            </div>
+                            <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-white/20"></span>
+                            <div className="text-sm font-bold tracking-wide">
+                                Based in Thrissur, Serving All Kerala
+                            </div>
+                        </div>
 
                         <div className="flex flex-col sm:flex-row items-start gap-5">
                             <a
