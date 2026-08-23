@@ -379,14 +379,13 @@ const LedWall = () => {
                             viewport={{ once: true }}
                             className="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-200 flex flex-col lg:flex-row"
                         >
-                            <div className="lg:w-3/5 bg-slate-950 flex items-center justify-center relative group min-h-[300px] lg:min-h-[400px]">
-                                {/* This space is prepared for the actual video file */}
-                                <div className="absolute inset-0 opacity-50 bg-[url('https://images.unsplash.com/photo-1540039155733-d7696d4eb98e?auto=format&fit=crop&q=80')] bg-cover bg-center mix-blend-overlay"></div>
-                                <a href="https://www.facebook.com/reel/3041441926206057" target="_blank" rel="noopener noreferrer" className="relative z-10 flex flex-col items-center justify-center bg-black/40 hover:bg-black/60 inset-0 absolute transition-colors">
-                                    <div className="w-20 h-20 rounded-full bg-brand-primary text-white flex items-center justify-center mb-4 shadow-[0_0_30px_rgba(37,99,235,0.5)] group-hover:scale-110 transition-transform">
-                                        <MonitorPlay size={40} />
-                                    </div>
-                                    <span className="text-white font-bold bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-2 rounded-full text-sm">View Project Reference (Facebook Reel)</span>
+                            <div className="lg:w-3/5 bg-slate-900 flex flex-col items-center justify-center relative min-h-[300px] lg:min-h-[400px] p-8 text-center border-b lg:border-b-0 lg:border-r border-slate-800">
+                                <MonitorPlay size={64} className="mb-6 opacity-30 text-white" />
+                                <span className="text-white font-medium text-lg mb-2">Awaiting Original Project Video</span>
+                                <span className="text-slate-400 text-sm max-w-xs mb-8">This space is reserved for the verified FIFA World Cup 2026 project video file.</span>
+                                
+                                <a href="https://www.facebook.com/reel/3041441926206057" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand-primary text-white hover:bg-brand-secondary px-6 py-3 rounded-full text-sm font-bold shadow-lg transition-colors">
+                                    View Project Reference (Facebook Reel)
                                 </a>
                             </div>
                             <div className="lg:w-2/5 p-10 lg:p-12 flex flex-col justify-center">
@@ -421,10 +420,11 @@ const LedWall = () => {
                                 transition={{ delay: 0.1 }}
                                 className="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-200"
                             >
-                                <div className="aspect-[16/9] bg-slate-100 flex items-center justify-center relative">
+                                <div className="aspect-[16/9] bg-slate-100 flex items-center justify-center relative border-b border-slate-200 p-8 text-center">
                                     <div className="text-slate-400 flex flex-col items-center">
-                                        <MonitorPlay size={48} className="mb-3 opacity-50" />
-                                        <span className="text-sm font-medium">Pending Project Media</span>
+                                        <MonitorPlay size={48} className="mb-4 opacity-50" />
+                                        <span className="text-slate-500 font-medium text-lg mb-1">Awaiting Original Project Photos</span>
+                                        <span className="text-slate-400 text-sm">Space reserved for verified project media.</span>
                                     </div>
                                 </div>
                                 <div className="p-8">
