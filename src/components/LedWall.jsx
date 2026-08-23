@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, ChevronDown, MonitorPlay, Sun, Maximize, Wrench, MapPin } from 'lucide-react';
+import { ArrowRight, Sparkles, ChevronDown, MonitorPlay, Sun, Maximize, Wrench, MapPin, ExternalLink } from 'lucide-react';
 import LocalSEO from './LocalSEO';
 import TrustBar from './TrustBar';
 import Seo from './Seo';
@@ -379,25 +379,33 @@ const LedWall = () => {
                             viewport={{ once: true }}
                             className="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-200 flex flex-col lg:flex-row"
                         >
-                            <div className="lg:w-3/5 bg-slate-950 flex flex-col items-center justify-center relative min-h-[550px] lg:min-h-[600px] overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-800">
-                                <div className="absolute inset-0 flex items-center justify-center p-4">
-                                    <iframe 
-                                        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3041441926206057&show_text=false&width=315" 
-                                        width="315" 
-                                        height="560" 
-                                        style={{ border: "none", overflow: "hidden", maxWidth: "100%" }} 
-                                        scrolling="no" 
-                                        frameBorder="0" 
-                                        allowFullScreen={true} 
-                                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                                        title="FIFA World Cup 2026 Final Project Reel"
-                                    ></iframe>
-                                </div>
-                                
-                                <div className="absolute bottom-6 left-0 right-0 flex justify-center z-10 pointer-events-none">
-                                    <a href="https://www.facebook.com/reel/3041441926206057" target="_blank" rel="noopener noreferrer" className="pointer-events-auto inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-secondary text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg transition-colors">
-                                        View on Facebook (Original Source)
-                                    </a>
+                            <div className="lg:w-3/5 bg-slate-950 flex flex-col items-center justify-center p-6 sm:p-8 min-h-[620px] relative overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-800">
+                                <div className="w-full max-w-[325px] flex flex-col items-center justify-center">
+                                    <div className="w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-black flex items-center justify-center min-h-[560px]">
+                                        <iframe 
+                                            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3041441926206057&show_text=false&width=315" 
+                                            width="315" 
+                                            height="560" 
+                                            style={{ border: "none", overflow: "hidden", maxWidth: "100%", minHeight: "560px" }} 
+                                            scrolling="no" 
+                                            frameBorder="0" 
+                                            allowFullScreen={true} 
+                                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                            title="FIFA World Cup 2026 Final Project Reel"
+                                            className="w-full h-full"
+                                        ></iframe>
+                                    </div>
+                                    <div className="mt-4 text-center">
+                                        <a 
+                                            href="https://www.facebook.com/reel/3041441926206057" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            className="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-secondary text-white px-5 py-2.5 rounded-full text-xs md:text-sm font-bold shadow-md hover:shadow-lg transition-all"
+                                        >
+                                            View Project on Facebook
+                                            <ExternalLink size={14} />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             <div className="lg:w-2/5 p-10 lg:p-12 flex flex-col justify-center">
