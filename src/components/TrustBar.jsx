@@ -31,7 +31,7 @@ const TrustBar = () => {
             <div className="container mx-auto px-6 max-w-7xl relative z-10">
                 <p className="text-center text-sm font-bold tracking-[0.2em] text-slate-400 uppercase mb-12 flex items-center justify-center gap-4">
                     <span className="w-12 h-px bg-slate-700 hidden md:block"></span>
-                    Trusted By Industry Leaders Worldwide
+                    BRANDS & ORGANIZATIONS WE'VE WORKED WITH
                     <span className="w-12 h-px bg-slate-700 hidden md:block"></span>
                 </p>
 

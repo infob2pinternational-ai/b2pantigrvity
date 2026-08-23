@@ -69,13 +69,13 @@ const SocialProof = () => {
 
                         <div className="mt-10">
                             <p className="text-xs font-bold uppercase tracking-[0.28em] text-slate-500">
-                                Campaign Performance
+                                Campaign Effectiveness
                             </p>
-                            <p className="mt-4 text-6xl font-black tracking-tight text-slate-950 sm:text-7xl">
-                                40<span className="text-brand-primary">%</span>
-                            </p>
+                            <h3 className="mt-4 text-4xl sm:text-5xl font-black tracking-tight text-slate-950">
+                                Proven<br /><span className="text-brand-primary">Visibility</span>
+                            </h3>
                             <p className="mt-4 max-w-xs text-xl font-medium leading-relaxed text-slate-700">
-                                Average increase in client brand awareness
+                                Direct audience engagement where it matters most.
                             </p>
                         </div>
 

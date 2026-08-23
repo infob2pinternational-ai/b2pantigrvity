@@ -414,7 +414,7 @@ const LedVanAdvertising = () => {
                             </p>
                             <div className="bg-white p-6 rounded-2xl border border-slate-100">
                                 <span className="text-sm font-bold text-slate-400 uppercase tracking-wider">Result</span>
-                                <p className="text-slate-900 font-medium mt-2">Over 15,000 recorded footfalls on inauguration day, with 40% of surveyed customers citing the video vans as their primary awareness source.</p>
+                                <p className="text-slate-900 font-medium mt-2">Significant footfall on inauguration day, with strong brand recall directly tied to the high-visibility video vans.</p>
                             </div>
                         </div>
                         <div className="bg-slate-50 rounded-[2.5rem] p-10 border border-slate-200">
@@ -427,7 +427,7 @@ const LedVanAdvertising = () => {
                             </p>
                             <div className="bg-white p-6 rounded-2xl border border-slate-100">
                                 <span className="text-sm font-bold text-slate-400 uppercase tracking-wider">Result</span>
-                                <p className="text-slate-900 font-medium mt-2">A 200% increase in website inquiries via the QR code prominently displayed on the LED screen, validating the hyper-targeted approach.</p>
+                                <p className="text-slate-900 font-medium mt-2">A substantial surge in targeted inquiries validating the hyper-local placement strategy.</p>
                             </div>
                         </div>
                     </div>
