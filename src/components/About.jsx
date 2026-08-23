@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Target, Eye, Lightbulb, Users, Award, ShieldCheck, Globe, Briefcase } from 'lucide-react';
 import Seo from './Seo';
 import { buildBreadcrumbSchema, buildWebPageSchema, localBusinessSchema } from '../lib/seo';
+import { Link } from 'react-router-dom';
 
 const ABOUT_TITLE = 'About B2P International | LED Van Advertising Company in Thrissur';
 const ABOUT_DESCRIPTION =
@@ -125,7 +126,7 @@ const About = () => {
                         <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">Who We <span className="text-brand-primary">Are</span></h1>
                         <div className="text-lg text-slate-600 space-y-4 leading-relaxed">
                             <p>
-                                We are a leading provider of LED Van Advertising and LED Wall Display solutions based in Thrissur, serving businesses throughout Kerala. We specialize in helping brands reach thousands of people through high-impact outdoor advertising and digital mobile campaigns. Our expertise lies in providing the best LED advertising near you, utilizing mobile vans, digital billboards, and event display services designed to maximize brand visibility.
+                                We are a leading provider of LED Van Advertising and <Link to="/led-wall" className="text-brand-primary font-semibold hover:underline">LED Wall Display</Link> solutions based in Thrissur, serving businesses throughout Kerala. We specialize in helping brands reach thousands of people through high-impact outdoor advertising and digital mobile campaigns. Our expertise lies in providing the best LED advertising near you, utilizing mobile vans, digital billboards, and <Link to="/led-wall" className="text-brand-primary font-semibold hover:underline">event display services</Link> designed to maximize brand visibility.
                             </p>
                             <p>
                                 With years of experience in the Kerala outdoor advertising market, we help businesses capture attention in busy city locations, corporate events, and public promotions. Our mission is simple — to help brands stand out and connect with audiences through innovative LED technology across Thrissur and beyond.

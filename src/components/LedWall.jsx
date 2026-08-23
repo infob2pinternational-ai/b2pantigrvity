@@ -219,10 +219,10 @@ const LedWall = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">What is an LED Wall?</h2>
+                            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">Event LED Screen Solutions</h2>
                             <div className="text-lg text-slate-600 leading-relaxed space-y-6 text-left md:text-center">
                                 <p>
-                                    An LED wall (also called an LED video wall or LED display wall) is a large modular screen made up of individual LED panels joined together. These screens can be configured in any size and are used to display live video feeds, presentations, brand videos, event graphics, and more.
+                                    An LED wall (also called an LED video wall or event LED screen) is a large modular display made up of individual LED panels joined together. These screens can be configured in any size and are used to display live video feeds, presentations, brand videos, stage graphics, and more.
                                 </p>
                                 <p>
                                     LED walls are brighter, sharper, and more durable than traditional projection screens. They work perfectly in both indoor and outdoor settings — delivering crystal-clear visuals even in direct sunlight. With no projector and no screen dependency, an LED wall is the most reliable and visually impressive display solution for any event in Kerala.
@@ -239,6 +239,16 @@ const LedWall = () => {
             {/* Feature Cards Section */}
             <section className="py-24 bg-slate-50 border-b border-slate-200">
                 <div className="container mx-auto px-6 max-w-7xl">
+                    <div className="text-center mb-16">
+                        <motion.h2 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-3xl md:text-4xl font-black text-slate-900 mb-6"
+                        >
+                            Why Choose B2P for Stage & Event Displays?
+                        </motion.h2>
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {reasons.map((reason, idx) => (
                             <motion.div 
@@ -354,7 +364,7 @@ const LedWall = () => {
                             viewport={{ once: true }}
                             className="text-3xl md:text-4xl font-black text-slate-900 mb-6"
                         >
-                            Our Recent LED Wall Setups
+                            Our Work: Recent Event & Stage LED Setups
                         </motion.h2>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                             Take a look at some of our recent LED wall installations for corporate events and outdoor stage shows across Kerala.

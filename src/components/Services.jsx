@@ -101,7 +101,7 @@ const services = [
             "Custom Size Modular Setup",
             "Full On-Site Tech Support"
         ],
-        link: "/led-wall-rental",
+        link: "/led-wall",
         hasBooking: true
     },
     {
