@@ -5,7 +5,7 @@ export const LOGO_URL = `${SITE_URL}/B2P_logo_trimmed.png`;
 
 export const BUSINESS_DETAILS = {
   name: SITE_NAME,
-  telephone: '+91 89899 09034',
+  telephone: '+91 85899 09034',
   email: 'info@b2pinternational.com',
   priceRange: '$$',
   foundingDate: '2012',
@@ -14,7 +14,7 @@ export const BUSINESS_DETAILS = {
     streetAddress: '10/15 Devassy Square, Marathakam Centre, Puranattukara',
     addressLocality: 'Thrissur',
     addressRegion: 'Kerala',
-    postalCode: '680014',
+    postalCode: '680551',
     addressCountry: 'IN',
   },
   geo: {
@@ -23,7 +23,7 @@ export const BUSINESS_DETAILS = {
     longitude: 76.1577759,
   },
   sameAs: [
-    'https://www.facebook.com/b2pinternational',
+    'https://www.facebook.com/b2pinternational/',
     'https://www.instagram.com/b2p_international/',
   ],
 };
@@ -68,12 +68,46 @@ export const localBusinessSchema = {
   email: BUSINESS_DETAILS.email,
   priceRange: BUSINESS_DETAILS.priceRange,
   foundingDate: BUSINESS_DETAILS.foundingDate,
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '158',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: '360° Advertising & Branding Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile LED Van Advertising Kerala' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'LED Wall Rental Kerala' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Lookwalker & iWalker Advertising Kerala' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vehicle Branding & Car Wrap Kerala' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '4K Corporate Video Production Thrissur' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '3D Acrylic LED Signage Boards Thrissur' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Printing Solutions Thrissur' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'WhatsApp Bulk Messaging Kerala' } },
+    ],
+  },
   description:
-    'B2P International provides LED van advertising in Thrissur and across Kerala for launches, roadshows, local promotions, and outdoor brand visibility.',
+    'B2P International provides LED van advertising, LED wall rental, lookwalker advertising, corporate video production, creative designing, commercial printing, 3D signage boards and outdoor branding across all 14 districts of Kerala. Based in Puranattukara, Thrissur.',
   address: BUSINESS_DETAILS.address,
   geo: BUSINESS_DETAILS.geo,
-  areaServed: ['Thrissur', 'Kochi', 'Kozhikode', 'Trivandrum', 'Palakkad', 'Ernakulam', 'Malappuram', 'Kannur', 'Kottayam', 'Kerala'].map(toAreaServedEntity),
+  areaServed: [
+    'Thrissur', 'Kochi', 'Kozhikode', 'Thiruvananthapuram',
+    'Palakkad', 'Ernakulam', 'Malappuram', 'Kannur',
+    'Kottayam', 'Alappuzha', 'Kollam', 'Pathanamthitta',
+    'Idukki', 'Wayanad', 'Kasaragod', 'Kerala'
+  ].map(toAreaServedEntity),
   sameAs: BUSINESS_DETAILS.sameAs,
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
+  ],
   contactPoint: [
     {
       '@type': 'ContactPoint',
@@ -188,9 +222,15 @@ export const buildItemListSchema = ({ name, items }) => ({
 
 export const buildSiteNavigationSchema = (navItems) => ({
   '@context': 'https://schema.org',
-  '@type': 'SiteNavigationElement',
-  name: 'Main Navigation',
-  url: navItems.map(item => toAbsoluteUrl(item.path)),
+  '@type': 'ItemList',
+  name: 'Site Navigation Sitelinks',
+  itemListElement: navItems.map((item, index) => ({
+    '@type': 'SiteNavigationElement',
+    position: index + 1,
+    name: item.name,
+    description: item.description || item.name,
+    url: toAbsoluteUrl(item.path),
+  })),
 });
 
 export const buildBlogPostingSchema = ({

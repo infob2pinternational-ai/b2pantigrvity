@@ -41,8 +41,9 @@ const Navbar = () => {
                         <Link to="/about" className={`font-medium transition-colors ${location.pathname === '/about' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>About Us</Link>
                         <Link to="/services" className={`font-medium transition-colors ${location.pathname === '/services' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>Services</Link>
                         <Link to="/led-van-advertising" className={`font-medium transition-colors ${location.pathname === '/led-van-advertising' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>LED Vans</Link>
-                        <Link to="/lookwalker" className={`font-medium transition-colors ${location.pathname === '/lookwalker' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>Lookwalkers</Link>
-                        <Link to="/led-wall" className={`font-medium transition-colors ${location.pathname === '/led-wall' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>LED Wall</Link>
+                        <Link to="/led-wall-rental" className={`font-medium transition-colors ${location.pathname === '/led-wall-rental' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>LED Wall</Link>
+                        <Link to="/lookwalker-advertising" className={`font-medium transition-colors ${location.pathname === '/lookwalker-advertising' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>Lookwalkers</Link>
+                        <Link to="/vehicle-branding" className={`font-medium transition-colors ${location.pathname === '/vehicle-branding' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>Vehicle Branding</Link>
                         <Link to="/gallery" className={`font-medium transition-colors ${location.pathname === '/gallery' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>Gallery</Link>
                         <Link to="/blog" className={`font-medium transition-colors ${location.pathname === '/blog' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>Blog</Link>
                         <a href="#contact" className="px-6 py-2.5 rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-medium hover:-translate-y-0.5 shadow-lg shadow-brand-primary/30 transition-all">Contact Us</a>
@@ -72,8 +73,9 @@ const Navbar = () => {
                 <Link to="/about" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/about' ? 'text-brand-primary' : 'text-slate-900'}`}>About Us</Link>
                 <Link to="/services" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/services' ? 'text-brand-primary' : 'text-slate-900'}`}>Services</Link>
                 <Link to="/led-van-advertising" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/led-van-advertising' ? 'text-brand-primary' : 'text-slate-900'}`}>LED Vans</Link>
-                <Link to="/lookwalker" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/lookwalker' ? 'text-brand-primary' : 'text-slate-900'}`}>Lookwalkers</Link>
-                <Link to="/led-wall" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/led-wall' ? 'text-brand-primary' : 'text-slate-900'}`}>LED Wall</Link>
+                <Link to="/led-wall-rental" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/led-wall-rental' ? 'text-brand-primary' : 'text-slate-900'}`}>LED Wall</Link>
+                <Link to="/lookwalker-advertising" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/lookwalker-advertising' ? 'text-brand-primary' : 'text-slate-900'}`}>Lookwalkers</Link>
+                <Link to="/vehicle-branding" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/vehicle-branding' ? 'text-brand-primary' : 'text-slate-900'}`}>Vehicle Branding</Link>
                 <Link to="/gallery" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/gallery' ? 'text-brand-primary' : 'text-slate-900'}`}>Gallery</Link>
                 <Link to="/blog" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/blog' ? 'text-brand-primary' : 'text-slate-900'}`}>Blog</Link>
                 <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-2xl sm:text-3xl font-bold text-brand-primary">Contact Us</a>

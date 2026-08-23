@@ -107,8 +107,8 @@ const Contact = () => {
                                 <div>
                                     <h4 className="text-lg font-bold text-slate-900 mb-1">Call Us</h4>
                                     <p className="text-slate-600 leading-relaxed">
-                                        <a href="tel:+918989909034" className="hover:text-brand-primary transition-colors">
-                                            +91 89899 09034
+                                        <a href="tel:+918589909034" className="hover:text-brand-primary transition-colors">
+                                            +91 85899 09034
                                         </a>
                                     </p>
                                 </div>

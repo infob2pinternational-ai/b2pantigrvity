@@ -280,7 +280,7 @@ const CompanyProfile = () => {
                         <div className="bg-[#131B2C] p-8 rounded-2xl border border-white/5 print:border-gray-300 print:bg-white">
                             <Phone className="mx-auto mb-4 text-brand-primary" size={32} />
                             <h4 className="text-lg font-bold text-white mb-2 print:text-black">Call Us</h4>
-                            <p className="text-slate-400 print:text-black">+91 89899 09034</p>
+                            <p className="text-slate-400 print:text-black">+91 85899 09034</p>
                         </div>
                         <div className="bg-[#131B2C] p-8 rounded-2xl border border-white/5 print:border-gray-300 print:bg-white">
                             <Mail className="mx-auto mb-4 text-brand-secondary" size={32} />

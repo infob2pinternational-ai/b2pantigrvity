@@ -37,9 +37,9 @@ const LedWall = () => {
     const [currentBgIndex, setCurrentBgIndex] = useState(0);
 
     const bgImages = [
-        "/led-wall-image2.webp",
-        "/led-wall-image1.jfif",
-        "/led-wall-image3.webp"
+        "/led-wall-1.jpg",
+        "/led-wall-2.jpg",
+        "/led-wall-3.jpg"
     ];
 
     useEffect(() => {
@@ -140,7 +140,7 @@ const LedWall = () => {
                 buildFaqSchema(faqItems),
                 buildBreadcrumbSchema([
                     { name: 'Home', path: '/' },
-                    { name: 'LED Wall', path: '/led-wall' },
+                    { name: 'LED Wall Rental', path: '/led-wall-rental' },
                 ]),
             ]}
         />
@@ -151,18 +151,16 @@ const LedWall = () => {
                     <div className="absolute inset-0 bg-[#050914]"></div>
                     {bgImages.map((src, index) => (
                         <img
-                            key={index}
+                            key={src}
                             src={src}
                             alt={`LED Wall Rental in Kerala ${index + 1}`}
-                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${heroImageLoaded && currentBgIndex === index ? 'opacity-[0.65]' : 'opacity-0'}`}
+                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${currentBgIndex === index ? 'opacity-[0.70]' : 'opacity-0'}`}
                             loading={index === 0 ? "eager" : "lazy"}
                             fetchPriority={index === 0 ? "high" : "auto"}
                             decoding="async"
-                            onLoad={index === 0 ? () => setHeroImageLoaded(true) : undefined}
                         />
                     ))}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-transparent to-[#050914]/60"></div>
-                    <div className="absolute inset-0 bg-[#050914]/40 mix-blend-overlay"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-[#050914]/40 to-[#050914]/80"></div>
                 </div>
                 
                 <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center flex flex-col items-center">
@@ -370,16 +368,16 @@ const LedWall = () => {
                             transition={{ delay: 0.1 }}
                             className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
                         >
-                            <div className="aspect-[4/3] relative overflow-hidden">
+                            <div className="aspect-[16/10] relative overflow-hidden">
                                 <img 
-                                    src="/led-wall-image1.jfif" 
-                                    alt="Outdoor Stage LED Wall Setup in Kerala" 
+                                    src="/led-wall-1.jpg" 
+                                    alt="Outdoor Stage Concert & Wedding LED Wall Setup in Kerala" 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                                     <div className="p-6">
-                                        <h3 className="text-white font-bold text-xl">Outdoor Stage Show</h3>
-                                        <p className="text-slate-200 text-sm">High-brightness P4 LED Wall</p>
+                                        <h3 className="text-white font-bold text-xl">Outdoor Stage & Concerts</h3>
+                                        <p className="text-slate-200 text-sm">High-brightness P4 Outdoor LED Wall</p>
                                     </div>
                                 </div>
                             </div>
@@ -391,16 +389,16 @@ const LedWall = () => {
                             transition={{ delay: 0.2 }}
                             className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
                         >
-                            <div className="aspect-[4/3] relative overflow-hidden">
+                            <div className="aspect-[16/10] relative overflow-hidden">
                                 <img 
-                                    src="/led-wall-image2.webp" 
-                                    alt="Corporate Event LED Video Wall in Kerala" 
+                                    src="/led-wall-2.jpg" 
+                                    alt="Sunset Stage LED Video Wall Setup B2P International" 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                                     <div className="p-6">
-                                        <h3 className="text-white font-bold text-xl">Corporate Event</h3>
-                                        <p className="text-slate-200 text-sm">Ultra-sharp P3 Indoor LED Wall</p>
+                                        <h3 className="text-white font-bold text-xl">Event & Beachside Stages</h3>
+                                        <p className="text-slate-200 text-sm">Vibrant Outdoor Display Panels</p>
                                     </div>
                                 </div>
                             </div>
@@ -412,16 +410,16 @@ const LedWall = () => {
                             transition={{ delay: 0.3 }}
                             className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 group"
                         >
-                            <div className="aspect-[4/3] relative overflow-hidden">
+                            <div className="aspect-[16/10] relative overflow-hidden">
                                 <img 
-                                    src="/led-wall-image3.webp" 
-                                    alt="Live Stage Performance LED Wall in Kerala" 
+                                    src="/led-wall-3.jpg" 
+                                    alt="Large Audience Event & Rally LED Video Wall Rental Kerala" 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                                     <div className="p-6">
-                                        <h3 className="text-white font-bold text-xl">Live Performances</h3>
-                                        <p className="text-slate-200 text-sm">High-refresh rate display panels</p>
+                                        <h3 className="text-white font-bold text-xl">Large Public Rallies & Stage Shows</h3>
+                                        <p className="text-slate-200 text-sm">Massive modular display screen setups</p>
                                     </div>
                                 </div>
                             </div>
@@ -528,7 +526,7 @@ const LedWall = () => {
                         <a href="https://wa.me/918589909034" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-8 py-4 rounded-full font-bold hover:scale-105 hover:shadow-[0_0_30px_rgba(var(--brand-primary-rgb),0.5)] transition-all duration-300">
                             WhatsApp Us Now
                         </a>
-                        <a href="tel:+918989909034" className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-all duration-300">
+                        <a href="tel:+918589909034" className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-all duration-300">
                             Call Now
                         </a>
                     </div>
