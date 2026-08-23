@@ -422,14 +422,14 @@ const LedWall = () => {
                             >
                                 <div className="flex flex-col gap-1 border-b border-slate-200">
                                     <div className="aspect-video bg-slate-100 relative overflow-hidden">
-                                        <img src="/adat-1.png" alt="B2P LED wall setup for Adat Farmers Bank meeting in Thrissur" className="w-full h-full object-cover" />
+                                        <img src="/adat-1.jpg" alt="B2P LED wall setup for Adat Farmers Bank meeting in Thrissur" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="grid grid-cols-2 gap-1">
                                         <div className="aspect-video bg-slate-100 relative overflow-hidden">
-                                            <img src="/adat-2.png" alt="LED wall installation by B2P International at Adat Farmers Bank event" className="w-full h-full object-cover" />
+                                            <img src="/adat-2.jpg" alt="LED wall installation by B2P International at Adat Farmers Bank event" className="w-full h-full object-cover" />
                                         </div>
                                         <div className="aspect-video bg-slate-100 relative overflow-hidden">
-                                            <img src="/adat-3.png" alt="B2P technician installing LED wall for Adat Farmers Bank event in Thrissur" className="w-full h-full object-cover" />
+                                            <img src="/adat-3.jpg" alt="B2P technician installing LED wall for Adat Farmers Bank event in Thrissur" className="w-full h-full object-cover" />
                                         </div>
                                     </div>
                                 </div>
