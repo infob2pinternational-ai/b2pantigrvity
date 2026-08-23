@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, ChevronDown, MonitorPlay, Sun, Maximize, Wrench } from 'lucide-react';
+import { ArrowRight, Sparkles, ChevronDown, MonitorPlay, Sun, Maximize, Wrench, MapPin } from 'lucide-react';
 import LocalSEO from './LocalSEO';
 import TrustBar from './TrustBar';
 import Seo from './Seo';
@@ -367,13 +367,92 @@ const LedWall = () => {
                             Our Work: Recent LED Wall Projects & Case Studies
                         </motion.h2>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                            We are currently compiling our latest event galleries and case studies. Check back soon for photos of our recent LED wall setups across Kerala.
+                            Explore our recent LED wall setups and event display projects across Kerala.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 gap-8">
-                        <div className="rounded-3xl border-2 border-dashed border-slate-300 bg-slate-50 p-12 text-center flex flex-col items-center justify-center min-h-[300px]">
-                            <p className="text-slate-500 font-medium text-lg">Project Photos & Case Studies Coming Soon</p>
-                            <p className="text-slate-400 text-sm mt-2">Space reserved for genuine B2P project evidence.</p>
+                    
+                    <div className="flex flex-col gap-12">
+                        {/* FEATURED PROJECT: FIFA World Cup 2026 Final */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-200 flex flex-col lg:flex-row"
+                        >
+                            <div className="lg:w-3/5 bg-slate-950 flex items-center justify-center relative group min-h-[300px] lg:min-h-[400px]">
+                                {/* This space is prepared for the actual video file */}
+                                <div className="absolute inset-0 opacity-50 bg-[url('https://images.unsplash.com/photo-1540039155733-d7696d4eb98e?auto=format&fit=crop&q=80')] bg-cover bg-center mix-blend-overlay"></div>
+                                <a href="https://www.facebook.com/reel/3041441926206057" target="_blank" rel="noopener noreferrer" className="relative z-10 flex flex-col items-center justify-center bg-black/40 hover:bg-black/60 inset-0 absolute transition-colors">
+                                    <div className="w-20 h-20 rounded-full bg-brand-primary text-white flex items-center justify-center mb-4 shadow-[0_0_30px_rgba(37,99,235,0.5)] group-hover:scale-110 transition-transform">
+                                        <MonitorPlay size={40} />
+                                    </div>
+                                    <span className="text-white font-bold bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-2 rounded-full text-sm">View Project Reference (Facebook Reel)</span>
+                                </a>
+                            </div>
+                            <div className="lg:w-2/5 p-10 lg:p-12 flex flex-col justify-center">
+                                <div className="flex items-center gap-3 mb-6">
+                                    <span className="bg-brand-primary text-white text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full">Featured Project</span>
+                                    <span className="bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full flex items-center gap-1"><MapPin size={12} /> Thrissur</span>
+                                </div>
+                                <h3 className="text-3xl lg:text-4xl font-black text-slate-900 mb-4 leading-tight">FIFA World Cup 2026 Final — Large-Scale LED Visual Setup</h3>
+                                <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                                    B2P International delivered a large-scale LED visual setup for the FIFA World Cup 2026 Final viewing experience, featuring an approximately 400-foot-wide LED display setup.
+                                </p>
+                                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-3">
+                                    <div className="flex justify-between items-center border-b border-slate-200 pb-3">
+                                        <span className="text-slate-500 font-medium text-sm uppercase tracking-wider">Location</span>
+                                        <span className="text-slate-900 font-bold">HiLITE Mall, Kerala</span>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-slate-500 font-medium text-sm uppercase tracking-wider">B2P Involvement</span>
+                                        <span className="text-slate-900 font-bold">Complete Event Visual Setup</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                        
+                        {/* SECONDARY PROJECTS GRID */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {/* Adat Farmers Bank */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.1 }}
+                                className="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-200"
+                            >
+                                <div className="aspect-[16/9] bg-slate-100 flex items-center justify-center relative">
+                                    <div className="text-slate-400 flex flex-col items-center">
+                                        <MonitorPlay size={48} className="mb-3 opacity-50" />
+                                        <span className="text-sm font-medium">Pending Project Media</span>
+                                    </div>
+                                </div>
+                                <div className="p-8">
+                                    <div className="flex items-center gap-2 mb-4">
+                                        <span className="bg-brand-secondary/10 text-brand-secondary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Corporate Event</span>
+                                        <span className="bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full flex items-center gap-1"><MapPin size={12} /> Thrissur</span>
+                                    </div>
+                                    <h3 className="text-2xl font-black text-slate-900 mb-3">Adat Farmers Bank Meeting</h3>
+                                    <p className="text-slate-600 leading-relaxed mb-6">
+                                        Provided a professional LED visual backdrop for the Adat Farmers Bank meeting, which featured a celebrity guest appearance. The setup featured an approximately 100-foot LED wall.
+                                    </p>
+                                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                        <p className="text-sm text-slate-700"><strong>Scale:</strong> Approximately 100-foot LED wall setup</p>
+                                    </div>
+                                </div>
+                            </motion.div>
+
+                            {/* Additional Placeholder */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.2 }}
+                                className="rounded-3xl border-2 border-dashed border-slate-300 bg-slate-50 p-12 text-center flex flex-col items-center justify-center min-h-[300px]"
+                            >
+                                <p className="text-slate-500 font-medium text-lg">More Case Studies Coming Soon</p>
+                                <p className="text-slate-400 text-sm mt-2">Space reserved for additional genuine B2P project evidence.</p>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
