@@ -47,17 +47,21 @@ const Hero = () => {
                         </motion.div>
 
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tighter text-white leading-[1.05]">
-                            LED Van Advertising That Makes <br />
+                            Mobile Advertising & Event LED Screens That Make <br className="hidden lg:block"/>
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-white to-brand-secondary bg-[length:200%_auto] animate-gradient">
                                 Your Brand Impossible to Ignore
                             </span>
                         </h1>
                         <p className="text-lg sm:text-xl text-slate-400 mb-8 max-w-2xl font-light leading-relaxed">
-                            Our LED Van Advertising services deliver powerful mobile marketing that captures attention wherever your audience is. With high-resolution LED screens mounted on moving advertising vans, your brand message reaches thousands of people across busy streets, commercial areas, and major events. For businesses looking for{" "}
-                            <Link to="/services" className="font-semibold text-white underline decoration-brand-primary/70 underline-offset-4 transition-colors hover:text-brand-primary">
-                                LED Van Advertising in Thrissur
+                            B2P International delivers high-impact visual solutions across Kerala. Whether you need powerful mobile marketing via our{" "}
+                            <Link to="/led-van-advertising" className="font-semibold text-white underline decoration-brand-primary/70 underline-offset-4 transition-colors hover:text-brand-primary">
+                                LED Advertising Vans
                             </Link>{" "}
-                            and across Kerala, our mobile LED advertising solutions maximize visibility and engagement.
+                            or stunning event backdrops through our professional{" "}
+                            <Link to="/led-wall" className="font-semibold text-white underline decoration-brand-primary/70 underline-offset-4 transition-colors hover:text-brand-primary">
+                                LED Wall Rentals
+                            </Link>
+                            , we ensure your message captures attention and engages thousands.
                         </p>
 
                         <div className="flex flex-wrap items-center gap-4 mb-10 text-white/90">
