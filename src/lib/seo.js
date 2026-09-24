@@ -37,8 +37,11 @@ export const toAbsoluteUrl = (value = '/') => {
     return value;
   }
 
-  const normalizedValue = value.startsWith('/') ? value : `/${value}`;
-  return `${SITE_URL}${normalizedValue}`;
+  let normalized = value.startsWith('/') ? value : `/${value}`;
+  if (normalized.length > 1 && normalized.endsWith('/')) {
+    normalized = normalized.slice(0, -1);
+  }
+  return `${SITE_URL}${normalized}`;
 };
 
 const toAreaServedEntity = (name) => {

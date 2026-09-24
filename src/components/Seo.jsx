@@ -21,12 +21,18 @@ const ensureMetaTag = (attribute, key, content) => {
   return tag;
 };
 
-const ensureLinkTag = (rel, href) => {
-  let link = document.head.querySelector(`link[rel="${rel}"]`);
+const ensureLinkTag = (rel, href, hreflang = null) => {
+  const selector = hreflang 
+    ? `link[rel="${rel}"][hreflang="${hreflang}"]` 
+    : `link[rel="${rel}"]:not([hreflang])`;
+  let link = document.head.querySelector(selector);
 
   if (!link) {
     link = document.createElement('link');
     link.setAttribute('rel', rel);
+    if (hreflang) {
+      link.setAttribute('hreflang', hreflang);
+    }
     document.head.appendChild(link);
   }
 
@@ -70,6 +76,9 @@ const Seo = ({
     document.title = title;
 
     ensureLinkTag('canonical', canonicalUrl);
+    ensureLinkTag('alternate', canonicalUrl, 'en-in');
+    ensureLinkTag('alternate', canonicalUrl, 'en');
+    ensureLinkTag('alternate', canonicalUrl, 'x-default');
 
     ensureMetaTag('name', 'description', description);
     ensureMetaTag('name', 'keywords', keywords);

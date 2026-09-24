@@ -92,13 +92,13 @@ const Lookwalker = () => {
         <Seo
             title={TITLE}
             description={DESCRIPTION}
-            path="/lookwalker"
+            path="/lookwalker-advertising"
             schema={[
                 localBusinessSchema,
                 buildWebPageSchema({
                     name: TITLE,
                     description: DESCRIPTION,
-                    path: '/lookwalker',
+                    path: '/lookwalker-advertising',
                     type: 'WebPage',
                 }),
                 {
@@ -107,7 +107,7 @@ const Lookwalker = () => {
                     "name": "Lookwalker Advertising in Kerala",
                     "description": "LED lookwalker and iWalker advertising services for brand promotions, product launches, mall activations, and election campaigns across Thrissur, Kochi, and Kerala.",
                     "serviceType": "Lookwalker Advertising",
-                    "url": "https://www.b2pinternational.com/lookwalker",
+                    "url": "https://www.b2pinternational.com/lookwalker-advertising",
                     "provider": {
                       "@type": "LocalBusiness",
                       "name": "B2P International",

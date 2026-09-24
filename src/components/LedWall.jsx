@@ -108,13 +108,13 @@ const LedWall = () => {
             title={TITLE}
             description={DESCRIPTION}
             keywords="LED wall rental Thrissur, LED video wall rental Thrissur, LED screen rental Thrissur, LED wall for events Thrissur, LED stage screen Thrissur, concert LED wall Thrissur, event LED wall Kerala, LED wall rental Kerala, stage LED screen Kerala, indoor LED walls, outdoor LED walls"
-            path="/led-wall"
+            path="/led-wall-rental"
             schema={[
                 localBusinessSchema,
                 buildWebPageSchema({
                     name: TITLE,
                     description: DESCRIPTION,
-                    path: '/led-wall',
+                    path: '/led-wall-rental',
                     type: 'WebPage',
                 }),
                 {
@@ -123,7 +123,7 @@ const LedWall = () => {
                     "name": "LED Wall Rental in Kerala",
                     "description": "LED wall and LED video wall rental for weddings, corporate events, concerts, and political gatherings across Thrissur, Kochi, and Kerala. Indoor and outdoor LED screens available.",
                     "serviceType": "LED Wall Rental",
-                    "url": "https://www.b2pinternational.com/led-wall",
+                    "url": "https://www.b2pinternational.com/led-wall-rental",
                     "provider": {
                       "@type": "LocalBusiness",
                       "name": "B2P International",

@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import HomeSeo from './components/HomeSeo';
@@ -115,9 +115,9 @@ function App() {
             <Route path="/blog" element={<RouteElement><PageWrapper><Blog /></PageWrapper></RouteElement>} />
             <Route path="/company-profile" element={<RouteElement><CompanyProfile /></RouteElement>} />
             <Route path="/led-van-advertising" element={<RouteElement><LedVanAdvertising /></RouteElement>} />
-            <Route path="/lookwalker" element={<RouteElement><Lookwalker /></RouteElement>} />
+            <Route path="/lookwalker" element={<Navigate to="/lookwalker-advertising" replace />} />
             <Route path="/lookwalker-advertising" element={<RouteElement><Lookwalker /></RouteElement>} />
-            <Route path="/led-wall" element={<RouteElement><LedWall /></RouteElement>} />
+            <Route path="/led-wall" element={<Navigate to="/led-wall-rental" replace />} />
             <Route path="/led-wall-rental" element={<RouteElement><LedWall /></RouteElement>} />
             <Route path="/whatsapp-bulk-messaging" element={<RouteElement><WhatsAppBulk /></RouteElement>} />
             <Route path="/vehicle-branding" element={<RouteElement><VehicleBranding /></RouteElement>} />

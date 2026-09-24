@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/lookwalker",
+      "destination": "/lookwalker-advertising",
+      "permanent": true
+    },
+    {
+      "source": "/led-wall",
+      "destination": "/led-wall-rental",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/billing",
