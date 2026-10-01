@@ -1,3 +1,4 @@
+
 {
   "redirects": [
     {
@@ -12,6 +13,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/api/detailed-staff-report",
+      "destination": "https://document-gen-ten.vercel.app/api/detailed-staff-report"
+    },
     {
       "source": "/billing",
       "destination": "https://document-gen-ten.vercel.app/billing"
