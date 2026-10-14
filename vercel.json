@@ -14,6 +14,10 @@
   ],
   "rewrites": [
     {
+      "source": "/api/whatsapp",
+      "destination": "https://document-gen-ten.vercel.app/api/whatsapp"
+    },
+    {
       "source": "/api/detailed-staff-report",
       "destination": "https://document-gen-ten.vercel.app/api/detailed-staff-report"
     },
