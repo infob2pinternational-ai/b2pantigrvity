@@ -14,6 +14,14 @@
   ],
   "rewrites": [
     {
+      "source": "/api/email",
+      "destination": "https://document-gen-ten.vercel.app/api/email"
+    },
+    {
+      "source": "/api/followup-review",
+      "destination": "https://document-gen-ten.vercel.app/api/followup-review"
+    },
+    {
       "source": "/api/whatsapp",
       "destination": "https://document-gen-ten.vercel.app/api/whatsapp"
     },
