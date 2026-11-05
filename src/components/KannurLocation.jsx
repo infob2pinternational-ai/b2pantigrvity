@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import Seo from './Seo';
 import { buildBreadcrumbSchema, buildFaqSchema, buildServiceSchema, buildWebPageSchema, localBusinessSchema } from '../lib/seo';
 
-const TITLE = 'LED Van Advertising Kannur | Outdoor Advertising Agency Kannur | B2P International';
-const DESCRIPTION = 'B2P International offers LED van advertising, lookwalker advertising, and WhatsApp bulk messaging in Kannur. Covering Thalassery, Payyanur, Iritty, and all Kannur district areas.';
+const TITLE = 'LED Van Advertising Kannur | B2P International';
+const DESCRIPTION = 'Reach high-footfall markets in Kannur with mobile LED van advertising and promotions covering Thalassery, Payyanur, Iritty, and major commercial junctions.';
 
 const zones = [
   { name: "Kannur Town & Bus Stand Area", detail: "The main commercial hub with heavy vehicular traffic. LED vans and lookwalkers at the busy junction areas generate excellent brand recall for retail, FMCG, and educational campaigns.", icon: Route },

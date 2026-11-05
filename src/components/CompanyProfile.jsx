@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Truck, Monitor, Calendar, Briefcase, Award, MapPin, Phone, Mail, Globe, CheckCircle2 } from 'lucide-react';
 import Seo from './Seo';
-import { buildWebPageSchema } from '../lib/seo';
+import { buildBreadcrumbSchema, buildWebPageSchema, localBusinessSchema } from '../lib/seo';
 
 import servicesHero from '../assets/images/services-hero.png';
 import van1 from '../assets/images/van1.jpg';
@@ -87,21 +87,26 @@ const CompanyProfile = () => {
     return (
         <div className="bg-[#0B0F19] min-h-screen text-slate-300 print:bg-white print:text-black">
             <Seo
-                title="Company Profile - Digital Brochure | B2P International"
-                description="View our comprehensive company profile. Discover how B2P International drives brand success across Kerala with advanced LED van advertising and marketing solutions."
+                title="Company Profile & Digital Brochure | B2P International"
+                description="Download the B2P International company profile. Learn about our mobile LED advertising fleet, LED wall capabilities, and 360° branding services in Kerala."
                 path="/company-profile"
                 schema={[
+                    localBusinessSchema,
                     buildWebPageSchema({
                         name: "B2P International Company Profile",
                         description: "Complete overview of B2P International's advertising services, geographic reach, and core philosophy.",
                         path: "/company-profile"
-                    })
+                    }),
+                    buildBreadcrumbSchema([
+                        { name: 'Home', path: '/' },
+                        { name: 'Company Profile', path: '/company-profile' },
+                    ]),
                 ]}
             />
 
             {/* Print Header (Only visible when printing) */}
             <div className="hidden print:block text-center py-8 border-b-4 border-brand-primary mb-8">
-                <img src="/B2P_logo_trimmed.png" alt="B2P Logo" className="h-24 mx-auto mb-4" />
+                <img src="/B2P_logo_trimmed.png" alt="B2P International Advertising & Marketing Agency Logo" className="h-24 mx-auto mb-4" />
                 <h1 className="text-4xl font-black text-black uppercase tracking-widest">Company Profile</h1>
                 <p className="text-lg text-slate-600 mt-2">Pioneering Mobile LED Advertising in Kerala</p>
             </div>
@@ -115,7 +120,7 @@ const CompanyProfile = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <img src="/B2P_logo_trimmed.png" alt="B2P Logo" className="h-28 mx-auto mb-8 drop-shadow-2xl" />
+                        <img src="/B2P_logo_trimmed.png" alt="B2P International Advertising & Marketing Agency Logo" className="h-28 mx-auto mb-8 drop-shadow-2xl" />
                         <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight">
                             Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Company Profile</span>
                         </h1>
@@ -171,7 +176,7 @@ const CompanyProfile = () => {
                             className="relative no-print"
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-3xl transform rotate-3 opacity-30 blur-xl"></div>
-                            <img src={servicesHero} alt="B2P Services" className="relative z-10 rounded-3xl w-full object-cover shadow-2xl border border-white/10" />
+                            <img src={servicesHero} alt="B2P International Advertising, LED Van & Signage Services in Kerala" loading="lazy" decoding="async" className="relative z-10 rounded-3xl w-full object-cover shadow-2xl border border-white/10" />
                         </motion.div>
                     </div>
                 </div>
@@ -201,7 +206,7 @@ const CompanyProfile = () => {
                                 <h3 className="text-2xl font-bold text-white mb-4 print:text-black">{service.title}</h3>
                                 <p className="text-slate-400 leading-relaxed mb-6 print:text-black">{service.desc}</p>
                                 {service.image && (
-                                    <img src={service.image} alt={service.title} className="w-full h-40 object-cover rounded-xl mt-auto no-print" />
+                                    <img src={service.image} alt={`${service.title} - B2P International Kerala`} loading="lazy" decoding="async" className="w-full h-40 object-cover rounded-xl mt-auto no-print" />
                                 )}
                             </motion.div>
                         ))}

@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import Seo from './Seo';
 import { buildBreadcrumbSchema, buildFaqSchema, buildServiceSchema, buildWebPageSchema, localBusinessSchema } from '../lib/seo';
 
-const TITLE = 'LED Van Advertising Kottayam | Outdoor Advertising Agency Kottayam | B2P International';
-const DESCRIPTION = 'B2P International offers LED van advertising, lookwalker advertising, and WhatsApp bulk messaging in Kottayam. Covering Changanacherry, Pala, Ettumanoor, Vaikom, and all Kottayam district areas.';
+const TITLE = 'LED Van Advertising Kottayam | B2P International';
+const DESCRIPTION = 'Drive high engagement with mobile LED van advertising and lookwalker promotions across Kottayam, Changanacherry, Pala, Ettumanoor, and central Kerala.';
 
 const zones = [
   { name: "Kottayam Town & KK Road", detail: "The educational and commercial capital of central Kerala. KK Road and the town centre have dense traffic making LED van advertising and lookwalkers highly impactful for brand and institutional campaigns.", icon: Route },

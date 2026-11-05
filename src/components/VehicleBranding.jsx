@@ -27,8 +27,8 @@ const FaqItem = ({ question, answer }) => {
     );
 };
 
-const TITLE = 'Vehicle Branding Kerala | Car & Fleet Wrap Advertising | B2P International';
-const DESCRIPTION = 'B2P International offers vehicle branding and wrap advertising for cars, autos, taxis, and commercial fleets across Kerala. Turn your vehicles into moving billboards with professional vinyl wraps. Call now for a quote.';
+const TITLE = 'Vehicle Branding Kerala | Car & Fleet Wrap Advertising | B2P';
+const DESCRIPTION = 'Professional vehicle branding and commercial fleet wraps in Kerala. Turn your cars, autos, and delivery vans into moving billboards with high-grade vinyl wraps.';
 
 const VehicleBranding = () => {
     const heroImages = [
@@ -170,7 +170,7 @@ const VehicleBranding = () => {
                             <img
                                 key={img.src}
                                 src={img.src}
-                                alt={img.title}
+                                alt={`${img.title} - B2P Vehicle Branding Kerala`}
                                 className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${idx === currentImageIndex ? 'opacity-[0.70]' : 'opacity-0'}`}
                                 loading={idx === 0 ? "eager" : "lazy"}
                             />

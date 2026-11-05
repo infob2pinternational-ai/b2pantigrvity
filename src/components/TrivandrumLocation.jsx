@@ -11,9 +11,9 @@ import {
   localBusinessSchema,
 } from '../lib/seo';
 
-const TRIVANDRUM_TITLE = 'Advertising Agency in Trivandrum | LED Van & Outdoor Marketing Kerala';
+const TRIVANDRUM_TITLE = 'LED Van & Advertising Agency Trivandrum | B2P International';
 const TRIVANDRUM_DESCRIPTION =
-  'B2P International is a premium advertising agency in Trivandrum offering LED van advertising, outdoor advertising, auto branding, and newspaper ads in the capital city.';
+  'Premier advertising agency in Trivandrum. High-impact LED van advertising, roadshows, and outdoor brand promotions across Technopark, MG Road & Kazhakkoottam.';
 
 const trivandrumZones = [
   {
@@ -256,11 +256,16 @@ const TrivandrumLocation = () => {
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-white/5 p-8 rounded-[2rem] border border-white/10">
               <h3 className="text-2xl font-bold mb-6">Case Study: Real Estate Launch</h3>
               <p className="text-slate-300 leading-relaxed mb-6">
-                A premium luxury apartment project near Technopark required highly targeted visibility. We deployed a multi-channel strategy: 2 LED Vans circling the IT park during shift changes, premium hoardings along the NH Bypass, and full-page newspaper advertising in the Sunday real estate supplements. The campaign generated over 500 qualified site visits in the first month.
+                A premium luxury apartment project near Technopark required highly targeted visibility. We deployed a multi-channel strategy: 2 LED Vans circling the IT park during shift changes, premium hoardings along the NH Bypass, and full-page newspaper advertising in the Sunday real estate supplements. The campaign generated strong qualified buyer interest in the first month.
               </p>
-              <Link to="/services" className="text-brand-secondary font-bold flex items-center gap-2 hover:gap-3 transition-all">
-                Explore All Services <ArrowRight size={18} />
-              </Link>
+              <div className="flex flex-wrap items-center gap-6">
+                <Link to="/services" className="text-brand-secondary font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                  Explore All Services <ArrowRight size={18} />
+                </Link>
+                <Link to="/led-wall" className="text-slate-300 font-bold flex items-center gap-2 hover:text-brand-secondary transition-all">
+                  LED Wall Rental Trivandrum <ArrowRight size={18} />
+                </Link>
+              </div>
             </motion.div>
           </div>
         </div>

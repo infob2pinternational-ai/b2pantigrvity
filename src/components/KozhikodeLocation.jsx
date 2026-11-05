@@ -11,9 +11,9 @@ import {
   localBusinessSchema,
 } from '../lib/seo';
 
-const KOZHIKODE_TITLE = 'Advertising Agency in Kozhikode | LED Van & Outdoor Advertising Kerala';
+const KOZHIKODE_TITLE = 'LED Van & Advertising Agency Kozhikode | B2P International';
 const KOZHIKODE_DESCRIPTION =
-  'B2P International is a leading advertising agency in Kozhikode (Calicut) offering LED van advertising, newspaper ads, auto branding, and outdoor hoarding campaigns across North Kerala.';
+  'Leading advertising agency in Kozhikode (Calicut). Mobile LED van promotions, auto branding, and outdoor campaigns across SM Street, Bypass, and North Kerala.';
 
 const kozhikodeZones = [
   {
@@ -256,11 +256,16 @@ const KozhikodeLocation = () => {
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-white/5 p-8 rounded-[2rem] border border-white/10">
               <h3 className="text-2xl font-bold mb-6">Case Study: Mega Festival Sale</h3>
               <p className="text-slate-300 leading-relaxed mb-6">
-                For a prominent local electronics retailer, we executed a 7-day blitz campaign leading up to Onam. We deployed 3 LED Vans covering the outskirts, 50 branded autos navigating SM Street and Palayam, and secured front-page strip ads in two major dailies. The coordinated effort resulted in a 300% increase in store walk-ins compared to the previous year.
+                For a prominent local electronics retailer, we executed a 7-day blitz campaign leading up to Onam. We deployed 3 LED Vans covering the outskirts, 50 branded autos navigating SM Street and Palayam, and secured front-page strip ads in two major dailies. The coordinated effort resulted in a significant increase in store walk-ins compared to the previous year.
               </p>
-              <Link to="/services" className="text-brand-secondary font-bold flex items-center gap-2 hover:gap-3 transition-all">
-                Explore All Services <ArrowRight size={18} />
-              </Link>
+              <div className="flex flex-wrap items-center gap-6">
+                <Link to="/services" className="text-brand-secondary font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                  Explore All Services <ArrowRight size={18} />
+                </Link>
+                <Link to="/led-wall" className="text-slate-300 font-bold flex items-center gap-2 hover:text-brand-secondary transition-all">
+                  LED Wall Rental Kozhikode <ArrowRight size={18} />
+                </Link>
+              </div>
             </motion.div>
           </div>
         </div>

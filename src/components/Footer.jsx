@@ -28,8 +28,8 @@ const Footer = () => {
                         </h3>
                         <ul className="space-y-3">
                             <li><Link to="/led-van-advertising" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">LED Van Advertising</Link></li>
-                            <li><Link to="/led-wall-rental" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">LED Wall Rental</Link></li>
-                            <li><Link to="/lookwalker-advertising" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">Lookwalker Advertising</Link></li>
+                            <li><Link to="/led-wall" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">LED Wall Rental</Link></li>
+                            <li><Link to="/lookwalker" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">Lookwalker Advertising</Link></li>
                             <li><Link to="/services" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">All Services (Signage, Video & Print)</Link></li>
                             <li><Link to="/vehicle-branding" className="text-slate-600 hover:text-brand-primary transition-colors">Vehicle Branding</Link></li>
                             <li><Link to="/whatsapp-bulk-messaging" className="text-slate-600 hover:text-brand-primary transition-colors">WhatsApp Bulk Messaging</Link></li>

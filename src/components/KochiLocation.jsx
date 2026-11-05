@@ -11,7 +11,7 @@ import {
   localBusinessSchema,
 } from '../lib/seo';
 
-const KOCHI_TITLE = 'Advertising Agency in Kochi | LED Van & Outdoor Marketing Kerala';
+const KOCHI_TITLE = 'LED Van & Advertising Agency in Kochi | B2P International';
 const KOCHI_DESCRIPTION =
   'Looking for a top advertising agency in Kochi? We provide LED van advertising, outdoor advertising, auto branding, and newspaper advertising across Ernakulam.';
 
@@ -258,9 +258,14 @@ const KochiLocation = () => {
               <p className="text-slate-300 leading-relaxed mb-6">
                 A major textile brand launching in Edappally utilized our hybrid strategy: 10 auto brandings for local lane penetration, 2 LED Vans circling the Lulu Mall belt for high-impact video display, and targeted front-page newspaper ads. The result was record-breaking opening day footfall, establishing immediate local dominance.
               </p>
-              <Link to="/services" className="text-brand-secondary font-bold flex items-center gap-2 hover:gap-3 transition-all">
-                View All Services <ArrowRight size={18} />
-              </Link>
+              <div className="flex flex-wrap items-center gap-6">
+                <Link to="/services" className="text-brand-secondary font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                  View All Services <ArrowRight size={18} />
+                </Link>
+                <Link to="/led-wall" className="text-slate-300 font-bold flex items-center gap-2 hover:text-brand-secondary transition-all">
+                  LED Wall Rental Kochi <ArrowRight size={18} />
+                </Link>
+              </div>
             </motion.div>
           </div>
         </div>

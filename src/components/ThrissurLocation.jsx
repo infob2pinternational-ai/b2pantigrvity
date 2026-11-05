@@ -13,7 +13,7 @@ import {
 
 const THRISSUR_TITLE = 'LED Van Advertising in Thrissur | B2P International';
 const THRISSUR_DESCRIPTION =
-  'Plan LED van advertising in Thrissur with B2P International for Swaraj Round routes, local launches, roadshows, event promotion, and targeted city-wide brand visibility.';
+  'Plan LED van advertising in Thrissur with B2P International. Targeted routes across Swaraj Round, West Fort & Mannuthy for high-impact city promotions.';
 
 const thrissurHotspots = [
   {

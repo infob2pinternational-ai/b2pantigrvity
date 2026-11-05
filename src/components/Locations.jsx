@@ -10,9 +10,9 @@ import {
   localBusinessSchema,
 } from '../lib/seo';
 
-const LOCATIONS_TITLE = 'Service Areas | LED Van Advertising in Thrissur and Kerala';
+const LOCATIONS_TITLE = 'Service Areas in Kerala | LED Van Advertising | B2P';
 const LOCATIONS_DESCRIPTION =
-  'Explore B2P International service areas for LED van advertising in Thrissur and across Kerala, including campaign planning for roadshows, launches, retail promotions, and high-footfall routes.';
+  'Explore B2P International service areas across Kerala. Mobile LED van advertising and outdoor branding routes covering Thrissur, Kochi, Calicut, and Trivandrum.';
 
 const coverageAreas = [
   {

@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import Seo from './Seo';
 import { buildBreadcrumbSchema, buildFaqSchema, buildServiceSchema, buildWebPageSchema, localBusinessSchema } from '../lib/seo';
 
-const TITLE = 'LED Van Advertising Malappuram | Outdoor Advertising Agency Malappuram | B2P International';
-const DESCRIPTION = 'B2P International offers LED van advertising, lookwalker advertising, and WhatsApp bulk messaging in Malappuram. Covering Tirur, Manjeri, Perinthalmanna, and all Malappuram districts.';
+const TITLE = 'LED Van Advertising Malappuram | B2P International';
+const DESCRIPTION = 'Targeted LED van advertising, lookwalkers, and WhatsApp marketing across Malappuram, including Manjeri, Tirur, and Perinthalmanna commercial corridors.';
 
 const zones = [
   { name: 'Manjeri & Perinthalmanna', detail: 'The commercial twin hubs of Malappuram. Heavy footfall at markets, textile shops, and bus stands makes LED van advertising and lookwalkers highly effective for brand launches and retail promotions.', icon: Store },

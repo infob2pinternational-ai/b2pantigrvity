@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import Seo from './Seo';
 import { buildBreadcrumbSchema, buildFaqSchema, buildServiceSchema, buildWebPageSchema, localBusinessSchema } from '../lib/seo';
 
-const TITLE = 'LED Van Advertising Palakkad | Outdoor Advertising Agency Palakkad | B2P International';
-const DESCRIPTION = 'B2P International offers LED van advertising, lookwalker advertising, and WhatsApp bulk messaging in Palakkad. Covering Thrithala, Ottapalam, Shornur, Mannarkkad, and all Palakkad district areas.';
+const TITLE = 'LED Van Advertising Palakkad | B2P International';
+const DESCRIPTION = 'Mobile LED van advertising and brand activations in Palakkad district, covering Ottapalam, Shornur, Mannarkkad, and highway routes near the Tamil Nadu border.';
 
 const zones = [
   { name: "Palakkad Town & Fort Area", detail: "The commercial and cultural heart of Palakkad. High footfall at the fort junction, markets, and bus stand makes it ideal for LED van advertising and lookwalker promotions.", icon: Route },

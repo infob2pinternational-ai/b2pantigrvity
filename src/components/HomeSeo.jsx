@@ -9,9 +9,9 @@ import {
   buildSiteNavigationSchema,
 } from '../lib/seo';
 
-const HOME_TITLE = 'LED Van, Signage, Printing & Video Production Thrissur Kerala | B2P International';
+const HOME_TITLE = 'LED Van Advertising & LED Wall Rental in Kerala | B2P';
 const HOME_DESCRIPTION =
-  'B2P International provides 360-degree marketing & advertising services in Thrissur & Kerala, including LED van advertising, LED lookwalkers, LED wall rentals, video production, creative design, printing solutions, 3D signage boards, and outdoor branding.';
+  'Book high-impact LED van advertising and modular LED wall rentals across Thrissur and Kerala. Perfect for brand roadshows, events, stage shows & store launches.';
 
 const homeFaqs = [
   {
@@ -35,7 +35,7 @@ const HomeSeo = () => (
   <Seo
     title={HOME_TITLE}
     description={HOME_DESCRIPTION}
-    keywords="LED advertising Kerala, LED lookwalker, normal look walker, LED wall rentals, LED van advertising Thrissur, video production Thrissur, creative designing agency Thrissur, printing solutions Thrissur, acrylic signage boards Thrissur, 3D LED letters Kerala, outdoor advertising Thrissur"
+    keywords="LED van advertising Kerala, LED wall rental Kerala, LED van advertising Thrissur, LED wall rental Thrissur, lookwalker Kerala, mobile advertising van Thrissur, stage LED screen Kerala, outdoor advertising Kerala"
     path="/"
     schema={[
       localBusinessSchema,
@@ -46,17 +46,18 @@ const HomeSeo = () => (
         path: '/',
       }),
       buildServiceSchema({
-        name: 'LED Advertising & Rentals in Thrissur and Kerala',
-        description:
-          'Mobile LED van advertising, LED lookwalkers, normal look walkers, and LED wall rentals for launches, local promotions, roadshows, and outdoor brand campaigns across Thrissur and Kerala.',
-        path: '/led-van-advertising',
+        name: 'LED Van Advertising & LED Wall Rentals in Kerala',
+        description: HOME_DESCRIPTION,
+        path: '/',
+        serviceType: 'LED Van Advertising and LED Wall Rental',
+        areaServed: ['Thrissur', 'Kochi', 'Kozhikode', 'Trivandrum', 'Kerala'],
       }),
       buildBreadcrumbSchema([{ name: 'Home', path: '/' }]),
       buildFaqSchema(homeFaqs),
       buildSiteNavigationSchema([
         { name: 'LED Van Advertising', path: '/led-van-advertising', description: 'High-resolution mobile LED screen vans for roadshows across Thrissur and Kerala.' },
-        { name: 'LED Wall Rental', path: '/led-wall-rental', description: 'Outdoor/indoor LED video wall displays for events & stage backdrops.' },
-        { name: 'Lookwalker Advertising', path: '/lookwalker-advertising', description: 'LED & normal lookwalkers for street-level human billboard marketing.' },
+        { name: 'LED Wall Rental', path: '/led-wall', description: 'Outdoor and indoor LED video wall displays for events and stage backdrops.' },
+        { name: 'Lookwalker Advertising', path: '/lookwalker', description: 'LED and normal lookwalkers for street-level human billboard marketing.' },
         { name: 'All Services', path: '/services', description: 'Explore video production, creative design, printing, signage, and outdoor ads.' },
         { name: 'Campaign Gallery', path: '/gallery', description: 'View photos and videos of past LED van and lookwalker advertising campaigns.' },
         { name: 'Coverage Locations', path: '/locations', description: 'Advertising service locations including Thrissur, Kochi, Kozhikode & Trivandrum.' },

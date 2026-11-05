@@ -34,7 +34,7 @@ import { buildBreadcrumbSchema, buildServiceSchema, buildWebPageSchema, buildFaq
 
 const LED_SERVICE_TITLE = 'LED Van Advertising & Rentals in Kerala | B2P International';
 const LED_SERVICE_DESCRIPTION =
-    'Book premium mobile LED van advertising in Kerala. B2P International offers high-resolution video vans for product launches, roadshows, and election campaigns across Kochi, Trivandrum, Kozhikode, and Thrissur.';
+    'Book mobile LED van advertising in Kerala. High-definition video screens for brand launches, roadshows, and promotions across Kochi, Calicut, and Thrissur.';
 
 const LedVanAdvertising = () => {
     const faqItems = [
@@ -301,7 +301,7 @@ const LedVanAdvertising = () => {
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                            <img src="/led-van-gallery-1.png" alt="LED Van Planning" className="rounded-[2.5rem] shadow-xl w-full" />
+                            <img src="/led-van-gallery-1.png" alt="Mobile LED van advertising route planning and campaign strategy by B2P International" loading="lazy" decoding="async" className="rounded-[2.5rem] shadow-xl w-full" />
                         </motion.div>
                         <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                             <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-8">How We Plan Your Campaign</h2>

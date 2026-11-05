@@ -5,9 +5,9 @@ import Seo from './Seo';
 import { buildBreadcrumbSchema, buildWebPageSchema, localBusinessSchema } from '../lib/seo';
 import { Link } from 'react-router-dom';
 
-const ABOUT_TITLE = 'About B2P International | LED Van Advertising Company in Thrissur';
+const ABOUT_TITLE = 'About B2P International | Advertising Agency Kerala';
 const ABOUT_DESCRIPTION =
-    'Learn about B2P International, a Thrissur-based LED van advertising company serving Kerala with mobile LED campaigns, outdoor brand visibility, and event promotion support.';
+    "Learn about B2P International, Kerala's trusted advertising agency since 2012. Specializing in mobile LED vans, LED walls, outdoor branding, and promotions.";
 
 const About = () => {
     const [counts, setCounts] = useState({ projects: 0, clients: 0, years: 0 });
@@ -160,7 +160,9 @@ const About = () => {
                         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/80 to-brand-secondary/80 mix-blend-multiply z-10 transition-opacity duration-500 group-hover:opacity-70"></div>
                         <img
                             src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
-                            alt="B2P Team Collaboration"
+                            alt="B2P International marketing team and campaign operations in Kerala"
+                            loading="lazy"
+                            decoding="async"
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 z-20 flex items-center justify-center p-10 text-center">

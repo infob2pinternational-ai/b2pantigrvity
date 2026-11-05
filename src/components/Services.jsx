@@ -35,9 +35,9 @@ import {
     localBusinessSchema,
 } from '../lib/seo';
 
-const SERVICES_TITLE = 'Advertising, Video Production, Signage & Printing Services Thrissur Kerala | B2P International';
+const SERVICES_TITLE = 'Advertising, Video & Printing Services Kerala | B2P';
 const SERVICES_DESCRIPTION =
-    'Explore B2P International advertising & marketing solutions across Thrissur and Kerala: Mobile LED Van Advertising, Lookwalkers, LED Wall Rental, Corporate Video Production, Creative Graphic Design, Commercial Printing, 3D Acrylic Signage Boards, and Outdoor Hoardings.';
+    '360° advertising & branding services in Kerala: LED vans, LED walls, lookwalkers, 4K corporate video shoots, 3D signage fabrication, and commercial printing.';
 
 const serviceFaqs = [
     {
@@ -535,7 +535,9 @@ const Services = () => {
                                                     <div className="relative aspect-[16/9] overflow-hidden group/img">
                                                         <img
                                                             src={service.image}
-                                                            alt={service.title}
+                                                            alt={`${service.title} - B2P International Advertising Services Kerala`}
+                                                            loading="lazy"
+                                                            decoding="async"
                                                             className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-700 ease-out"
                                                         />
                                                         <div className="absolute inset-0 bg-gradient-to-t from-[#131B2C] via-[#131B2C]/40 to-transparent"></div>

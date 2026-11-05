@@ -5,11 +5,11 @@ import van1 from '../assets/images/van1.jpg';
 import van2 from '../assets/images/van2.jpg';
 import van3 from '../assets/images/van3.jpg';
 import Seo from './Seo';
-import { buildBreadcrumbSchema, buildWebPageSchema, localBusinessSchema } from '../lib/seo';
+import { buildBreadcrumbSchema, buildFaqSchema, buildWebPageSchema, localBusinessSchema } from '../lib/seo';
 
-const GALLERY_TITLE = 'LED Van Advertising Gallery & Case Studies | B2P International Kerala';
+const GALLERY_TITLE = 'LED Van & Event Display Gallery | B2P Kerala';
 const GALLERY_DESCRIPTION =
-    'Explore B2P International’s LED van advertising gallery. View our successful campaign visuals from Thrissur and across Kerala featuring roadshows and outdoor branding.';
+    'Explore campaign photos and case studies of LED van roadshows, LED wall installations, and lookwalker promotions across Thrissur, Kochi, and all of Kerala.';
 
 const Gallery = () => {
     const images = [
@@ -59,6 +59,7 @@ const Gallery = () => {
                     { name: 'Home', path: '/' },
                     { name: 'Gallery', path: '/gallery' },
                 ]),
+                buildFaqSchema(faqs.map((item) => ({ question: item.q, answer: item.a }))),
             ]}
         />
         <section id="gallery-hero" className="py-24 bg-slate-50 relative">

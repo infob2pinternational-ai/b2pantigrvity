@@ -7,7 +7,9 @@ export const BUSINESS_DETAILS = {
   name: SITE_NAME,
   telephone: '+91 85899 09034',
   email: 'info@b2pinternational.com',
-  priceRange: '$$',
+  priceRange: '₹₹',
+  currenciesAccepted: 'INR',
+  paymentAccepted: 'Cash, Credit Card, UPI, Bank Transfer',
   foundingDate: '2012',
   address: {
     '@type': 'PostalAddress',
@@ -60,7 +62,7 @@ const toAreaServedEntity = (name) => {
 
 export const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': ['LocalBusiness', 'AdvertisingAgency'],
   '@id': `${SITE_URL}/#localbusiness`,
   additionalType: 'https://schema.org/AdvertisingAgency',
   name: BUSINESS_DETAILS.name,
@@ -70,6 +72,8 @@ export const localBusinessSchema = {
   telephone: BUSINESS_DETAILS.telephone,
   email: BUSINESS_DETAILS.email,
   priceRange: BUSINESS_DETAILS.priceRange,
+  currenciesAccepted: BUSINESS_DETAILS.currenciesAccepted,
+  paymentAccepted: BUSINESS_DETAILS.paymentAccepted,
   foundingDate: BUSINESS_DETAILS.foundingDate,
   hasOfferCatalog: {
     '@type': 'OfferCatalog',

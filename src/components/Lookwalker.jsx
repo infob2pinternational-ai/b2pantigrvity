@@ -29,8 +29,8 @@ const FaqItem = ({ question, answer }) => {
     );
 };
 
-const TITLE = 'Lookwalker Advertising in Kerala | LED iWalker on Rent | B2P International';
-const DESCRIPTION = 'B2P International offers LED lookwalker advertising across Kerala. Hire iWalkers for product launches, mall activations & brand promotions in Thrissur, Kochi & Kerala.';
+const TITLE = 'Lookwalker Advertising Kerala | LED iWalker on Rent | B2P';
+const DESCRIPTION = 'Hire LED lookwalkers & iWalkers across Kerala. Eye-level human billboards for mall activations, store openings, and street promotions in Thrissur & Kochi.';
 
 const Lookwalker = () => {
     const [heroImageLoaded, setHeroImageLoaded] = useState(false);
@@ -124,7 +124,7 @@ const Lookwalker = () => {
                 buildFaqSchema(faqItems),
                 buildBreadcrumbSchema([
                     { name: 'Home', path: '/' },
-                    { name: 'Lookwalker Advertising', path: '/lookwalker-advertising' },
+                    { name: 'Lookwalker Advertising', path: '/lookwalker' },
                 ]),
             ]}
         />
@@ -309,7 +309,9 @@ const Lookwalker = () => {
                             <div className="aspect-[4/5] relative overflow-hidden">
                                 <img 
                                     src="/lookwalker-gallery-1.png" 
-                                    alt="Lookwalker on the street" 
+                                    alt="LED lookwalker promoter executing street campaign in Kerala" 
+                                    loading="lazy"
+                                    decoding="async"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -329,7 +331,9 @@ const Lookwalker = () => {
                             <div className="aspect-[4/5] relative overflow-hidden">
                                 <img 
                                     src="/lookwalker-gallery-2.png" 
-                                    alt="Lookwalker in shopping mall" 
+                                    alt="Lookwalker brand activation inside shopping mall in Kochi Kerala" 
+                                    loading="lazy"
+                                    decoding="async"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -349,7 +353,9 @@ const Lookwalker = () => {
                             <div className="aspect-[4/5] relative overflow-hidden">
                                 <img 
                                     src="/lookwalker-gallery-3.jpg" 
-                                    alt="Lookwalker at public event" 
+                                    alt="Lookwalker human billboard promotional event in Thrissur Kerala" 
+                                    loading="lazy"
+                                    decoding="async"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -369,7 +375,9 @@ const Lookwalker = () => {
                             <div className="aspect-[4/5] relative overflow-hidden">
                                 <img 
                                     src="/lookwalker-gallery-4.jpg" 
-                                    alt="Lookwalker team campaign" 
+                                    alt="Lookwalker brand ambassador team deployment across Kerala" 
+                                    loading="lazy"
+                                    decoding="async"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">

@@ -27,8 +27,8 @@ const FaqItem = ({ question, answer }) => {
     );
 };
 
-const TITLE = 'WhatsApp Bulk Messaging Service Kerala | Bulk WhatsApp Marketing | B2P International';
-const DESCRIPTION = 'Reach thousands of customers instantly with WhatsApp bulk messaging in Kerala. B2P International offers affordable bulk WhatsApp marketing for product launches, events, and political campaigns across all 14 Kerala districts.';
+const TITLE = 'WhatsApp Bulk Messaging Service Kerala | B2P International';
+const DESCRIPTION = 'Deliver instant promotions, catalogues, and alerts with WhatsApp bulk messaging in Kerala. Reach targeted customer segments across all 14 districts fast.';
 
 const WhatsAppBulk = () => {
 

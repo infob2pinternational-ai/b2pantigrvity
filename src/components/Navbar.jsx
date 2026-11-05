@@ -31,7 +31,7 @@ const Navbar = () => {
                     <Link to="/" className="flex items-center shrink-0">
                         <img
                             src="/B2P_logo_trimmed.png"
-                            alt="B2P International"
+                            alt="B2P International - LED Advertising & Marketing Agency Kerala"
                             className="h-12 md:h-14 lg:h-16 w-auto object-contain drop-shadow-sm"
                         />
                     </Link>
@@ -41,8 +41,8 @@ const Navbar = () => {
                         <Link to="/about" className={`font-medium transition-colors ${location.pathname === '/about' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>About Us</Link>
                         <Link to="/services" className={`font-medium transition-colors ${location.pathname === '/services' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>Services</Link>
                         <Link to="/led-van-advertising" className={`font-medium transition-colors ${location.pathname === '/led-van-advertising' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>LED Vans</Link>
-                        <Link to="/led-wall-rental" className={`font-medium transition-colors ${location.pathname === '/led-wall-rental' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>LED Wall</Link>
-                        <Link to="/lookwalker-advertising" className={`font-medium transition-colors ${location.pathname === '/lookwalker-advertising' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>Lookwalkers</Link>
+                        <Link to="/led-wall" className={`font-medium transition-colors ${location.pathname === '/led-wall' || location.pathname === '/led-wall-rental' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>LED Wall</Link>
+                        <Link to="/lookwalker" className={`font-medium transition-colors ${location.pathname === '/lookwalker' || location.pathname === '/lookwalker-advertising' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>Lookwalkers</Link>
                         <Link to="/vehicle-branding" className={`font-medium transition-colors ${location.pathname === '/vehicle-branding' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>Vehicle Branding</Link>
                         <Link to="/gallery" className={`font-medium transition-colors ${location.pathname === '/gallery' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>Gallery</Link>
                         <Link to="/blog" className={`font-medium transition-colors ${location.pathname === '/blog' ? 'text-brand-primary' : 'text-slate-600 hover:text-slate-900'}`}>Blog</Link>
@@ -73,8 +73,8 @@ const Navbar = () => {
                 <Link to="/about" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/about' ? 'text-brand-primary' : 'text-slate-900'}`}>About Us</Link>
                 <Link to="/services" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/services' ? 'text-brand-primary' : 'text-slate-900'}`}>Services</Link>
                 <Link to="/led-van-advertising" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/led-van-advertising' ? 'text-brand-primary' : 'text-slate-900'}`}>LED Vans</Link>
-                <Link to="/led-wall-rental" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/led-wall-rental' ? 'text-brand-primary' : 'text-slate-900'}`}>LED Wall</Link>
-                <Link to="/lookwalker-advertising" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/lookwalker-advertising' ? 'text-brand-primary' : 'text-slate-900'}`}>Lookwalkers</Link>
+                <Link to="/led-wall" onClick={() => setMobileMenuOpen(false)} className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/led-wall' || location.pathname === '/led-wall-rental' ? 'text-brand-primary' : 'text-slate-900'}`}>LED Wall</Link>
+                <Link to="/lookwalker" onClick={() => setMobileMenuOpen(false)} className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/lookwalker' || location.pathname === '/lookwalker-advertising' ? 'text-brand-primary' : 'text-slate-900'}`}>Lookwalkers</Link>
                 <Link to="/vehicle-branding" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/vehicle-branding' ? 'text-brand-primary' : 'text-slate-900'}`}>Vehicle Branding</Link>
                 <Link to="/gallery" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/gallery' ? 'text-brand-primary' : 'text-slate-900'}`}>Gallery</Link>
                 <Link to="/blog" className={`text-2xl sm:text-3xl font-bold ${location.pathname === '/blog' ? 'text-brand-primary' : 'text-slate-900'}`}>Blog</Link>
