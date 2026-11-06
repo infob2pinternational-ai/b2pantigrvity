@@ -139,11 +139,9 @@ function App() {
             <Contact />
           </Suspense>
         </DeferredSection>
-        <DeferredSection height="min-h-[280px]">
-          <Suspense fallback={<LoadingBlock height="min-h-[280px]" />}>
-            <Footer />
-          </Suspense>
-        </DeferredSection>
+        <Suspense fallback={<LoadingBlock height="min-h-[280px]" />}>
+          <Footer />
+        </Suspense>
         <FloatButtons />
       </div>
     </BrowserRouter>
