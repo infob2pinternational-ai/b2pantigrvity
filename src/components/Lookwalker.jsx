@@ -37,7 +37,7 @@ const Lookwalker = () => {
 
     useEffect(() => {
         const heroImage = new Image();
-        heroImage.src = "/lookwalker-gallery-1.png";
+        heroImage.src = "/lookwalker-gallery-1.webp";
         heroImage.onload = () => setHeroImageLoaded(true);
     }, []);
 
@@ -134,12 +134,14 @@ const Lookwalker = () => {
                 <div className="absolute inset-0 w-full h-full z-0">
                     <div className="absolute inset-0 bg-[#050914]"></div>
                     <img
-                        src="/lookwalker-gallery-1.png"
+                        src="/lookwalker-gallery-1.webp"
                         alt="Lookwalker advertising campaign"
                         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${heroImageLoaded ? 'opacity-[0.65]' : 'opacity-0'}`}
                         loading="eager"
                         fetchPriority="high"
                         decoding="async"
+                        width="1200"
+                        height="600"
                         onLoad={() => setHeroImageLoaded(true)}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-transparent to-[#050914]/60"></div>
@@ -225,8 +227,12 @@ const Lookwalker = () => {
                         >
                             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 bg-slate-50">
                                 <img 
-                                    src="/lookwalker-demo.jpg" 
+                                    src="/lookwalker-demo.webp" 
                                     alt="Lookwalker advertising unit demonstration" 
+                                    loading="lazy"
+                                    decoding="async"
+                                    width="1024"
+                                    height="1536"
                                     className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" 
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent pointer-events-none"></div>
@@ -308,10 +314,12 @@ const Lookwalker = () => {
                         >
                             <div className="aspect-[4/5] relative overflow-hidden">
                                 <img 
-                                    src="/lookwalker-gallery-1.png" 
+                                    src="/lookwalker-gallery-1.webp" 
                                     alt="LED lookwalker promoter executing street campaign in Kerala" 
                                     loading="lazy"
                                     decoding="async"
+                                    width="1200"
+                                    height="600"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -330,10 +338,12 @@ const Lookwalker = () => {
                         >
                             <div className="aspect-[4/5] relative overflow-hidden">
                                 <img 
-                                    src="/lookwalker-gallery-2.png" 
+                                    src="/lookwalker-gallery-2.webp" 
                                     alt="Lookwalker brand activation inside shopping mall in Kochi Kerala" 
                                     loading="lazy"
                                     decoding="async"
+                                    width="1200"
+                                    height="600"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -352,10 +362,12 @@ const Lookwalker = () => {
                         >
                             <div className="aspect-[4/5] relative overflow-hidden">
                                 <img 
-                                    src="/lookwalker-gallery-3.jpg" 
+                                    src="/lookwalker-gallery-3.webp" 
                                     alt="Lookwalker human billboard promotional event in Thrissur Kerala" 
                                     loading="lazy"
                                     decoding="async"
+                                    width="696"
+                                    height="522"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -374,10 +386,12 @@ const Lookwalker = () => {
                         >
                             <div className="aspect-[4/5] relative overflow-hidden">
                                 <img 
-                                    src="/lookwalker-gallery-4.jpg" 
+                                    src="/lookwalker-gallery-4.webp" 
                                     alt="Lookwalker brand ambassador team deployment across Kerala" 
                                     loading="lazy"
                                     decoding="async"
+                                    width="1024"
+                                    height="585"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">

@@ -29,11 +29,17 @@ const Navbar = () => {
             >
                 <div className="container mx-auto px-6 max-w-7xl flex justify-between items-center">
                     <Link to="/" className="flex items-center shrink-0">
-                        <img
-                            src="/B2P_logo_trimmed.png"
-                            alt="B2P International - LED Advertising & Marketing Agency Kerala"
-                            className="h-12 md:h-14 lg:h-16 w-auto object-contain drop-shadow-sm"
-                        />
+                        <picture>
+                            <source srcSet="/B2P_logo_trimmed.webp" type="image/webp" />
+                            <img
+                                src="/B2P_logo_trimmed.png"
+                                alt="B2P International - LED Advertising & Marketing Agency Kerala"
+                                width="127"
+                                height="86"
+                                decoding="async"
+                                className="h-12 md:h-14 lg:h-16 w-auto object-contain drop-shadow-sm"
+                            />
+                        </picture>
                     </Link>
 
                     <div className="hidden md:flex items-center gap-10">

@@ -50,22 +50,22 @@ const LedVanAdvertising = () => {
 
     const banners = [
         {
-            src: "/led-van-gallery-1.png",
+            src: "/led-van-gallery-1.webp",
             title: "High Brightness Displays"
         },
         {
-            src: "/led-van-gallery-2.png",
+            src: "/led-van-gallery-2.webp",
             title: "Night Campaigns"
         },
         {
-            src: "/led-van-gallery-3.png",
+            src: "/led-van-gallery-3.webp",
             title: "City Wide Reach"
         }
     ];
 
     useEffect(() => {
         const heroImage = new Image();
-        heroImage.src = "/led-van-advertising.png";
+        heroImage.src = "/led-van-advertising.webp";
         heroImage.onload = () => setHeroImageLoaded(true);
     }, []);
 
@@ -118,11 +118,14 @@ const LedVanAdvertising = () => {
                 <div className="absolute inset-0 w-full h-full z-0">
                     <div className="absolute inset-0 bg-[#050914]"></div>
                     <img
-                        src="/led-van-advertising.png"
+                        src="/led-van-advertising.webp"
                         alt="LED van advertising campaign in Kerala city street"
                         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${heroImageLoaded ? 'opacity-[0.65]' : 'opacity-0'}`}
                         loading="eager"
                         fetchPriority="high"
+                        decoding="async"
+                        width="1200"
+                        height="800"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-[#050914]/40 to-[#050914]/80"></div>
                 </div>
@@ -301,7 +304,7 @@ const LedVanAdvertising = () => {
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                            <img src="/led-van-gallery-1.png" alt="Mobile LED van advertising route planning and campaign strategy by B2P International" loading="lazy" decoding="async" className="rounded-[2.5rem] shadow-xl w-full" />
+                            <img src="/led-van-gallery-1.webp" alt="Mobile LED van advertising route planning and campaign strategy by B2P International" loading="lazy" decoding="async" width="1200" height="800" className="rounded-[2.5rem] shadow-xl w-full" />
                         </motion.div>
                         <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                             <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-8">How We Plan Your Campaign</h2>

@@ -7,7 +7,7 @@ const testimonials = [
         company: 'Tanishq',
         person: 'Stinju John',
         role: 'Marketing Director',
-        logo: '/tanishq.png',
+        logo: '/tanishq.webp',
         summary: 'Luxury retail visibility campaigns built to increase festive footfall, premium brand recall, and local market buzz.',
         accent: 'Festive retail impact',
     },
@@ -103,6 +103,10 @@ const SocialProof = () => {
                                         <img
                                             src={testimonial.logo}
                                             alt={`${testimonial.company} logo`}
+                                            loading="lazy"
+                                            decoding="async"
+                                            width="112"
+                                            height="64"
                                             className="max-h-full max-w-full object-contain"
                                         />
                                     </div>

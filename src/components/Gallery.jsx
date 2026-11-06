@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import van1 from '../assets/images/van1.jpg';
-import van2 from '../assets/images/van2.jpg';
-import van3 from '../assets/images/van3.jpg';
+import van1 from '../assets/images/van1.webp';
+import van2 from '../assets/images/van2.webp';
+import van3 from '../assets/images/van3.webp';
 import Seo from './Seo';
 import { buildBreadcrumbSchema, buildFaqSchema, buildWebPageSchema, localBusinessSchema } from '../lib/seo';
 
@@ -98,8 +98,11 @@ const Gallery = () => {
                             <img
                                 src={img.src}
                                 alt={img.alt}
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 loading="lazy"
+                                decoding="async"
+                                width="1024"
+                                height="682"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-brand-secondary mix-blend-overlay opacity-0 group-hover:opacity-60 transition-opacity duration-500 pointer-events-none"></div>

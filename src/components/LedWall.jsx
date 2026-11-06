@@ -37,9 +37,9 @@ const LedWall = () => {
     const [currentBgIndex, setCurrentBgIndex] = useState(0);
 
     const bgImages = [
-        "/led-wall-1.jpg",
-        "/led-wall-2.jpg",
-        "/led-wall-3.jpg"
+        "/led-wall-1.webp",
+        "/led-wall-2.webp",
+        "/led-wall-3.webp"
     ];
 
     useEffect(() => {
@@ -158,6 +158,8 @@ const LedWall = () => {
                             loading={index === 0 ? "eager" : "lazy"}
                             fetchPriority={index === 0 ? "high" : "auto"}
                             decoding="async"
+                            width="1024"
+                            height="682"
                         />
                     ))}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-[#050914]/40 to-[#050914]/80"></div>
@@ -442,14 +444,14 @@ const LedWall = () => {
                             >
                                 <div className="flex flex-col gap-1 border-b border-slate-200">
                                     <div className="aspect-video bg-slate-100 relative overflow-hidden">
-                                        <img src="/adat-1.jpg" alt="B2P LED wall setup for Adat Farmers Bank meeting in Thrissur" className="w-full h-full object-cover" />
+                                        <img src="/adat-1.webp" alt="B2P LED wall setup for Adat Farmers Bank meeting in Thrissur" loading="lazy" decoding="async" width="485" height="1024" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="grid grid-cols-2 gap-1">
                                         <div className="aspect-video bg-slate-100 relative overflow-hidden">
-                                            <img src="/adat-2.jpg" alt="LED wall installation by B2P International at Adat Farmers Bank event" className="w-full h-full object-cover" />
+                                            <img src="/adat-2.webp" alt="LED wall installation by B2P International at Adat Farmers Bank event" loading="lazy" decoding="async" width="485" height="1024" className="w-full h-full object-cover" />
                                         </div>
                                         <div className="aspect-video bg-slate-100 relative overflow-hidden">
-                                            <img src="/adat-3.jpg" alt="B2P technician installing LED wall for Adat Farmers Bank event in Thrissur" className="w-full h-full object-cover" />
+                                            <img src="/adat-3.webp" alt="B2P technician installing LED wall for Adat Farmers Bank event in Thrissur" loading="lazy" decoding="async" width="485" height="1024" className="w-full h-full object-cover" />
                                         </div>
                                     </div>
                                 </div>

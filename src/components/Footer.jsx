@@ -10,11 +10,18 @@ const Footer = () => {
 
                     <div className="md:col-span-2">
                         <Link to="/" className="flex items-center mb-5">
-                            <img
-                                src="/B2P_logo_trimmed.png"
-                                alt="B2P International - LED Van Advertising and Mobile LED Marketing Agency"
-                                className="h-20 md:h-24 w-auto object-contain drop-shadow-sm"
-                            />
+                            <picture>
+                                <source srcSet="/B2P_logo_trimmed.webp" type="image/webp" />
+                                <img
+                                    src="/B2P_logo_trimmed.png"
+                                    alt="B2P International - LED Van Advertising and Mobile LED Marketing Agency"
+                                    width="127"
+                                    height="86"
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="h-20 md:h-24 w-auto object-contain drop-shadow-sm"
+                                />
+                            </picture>
                         </Link>
                         <p className="text-slate-600 max-w-sm leading-relaxed">
                             Our company specializes in LED Van Advertising, mobile LED marketing, and large LED wall displays designed to help brands capture attention in crowded markets. With advanced LED technology and strategic campaign planning, we deliver advertising solutions that drive real results.

@@ -6,17 +6,17 @@ const TrustBar = () => {
     const clients = [
         { id: 1, name: "Asset Homes", image: "/asset.png" },
         { id: 2, name: "Swiggy", image: "/swiggy.png" },
-        { id: 3, name: "LIC", image: "/lic.jpg" },
-        { id: 4, name: "VSTAR", image: "/vstar.jpg" },
+        { id: 3, name: "LIC", image: "/lic.webp" },
+        { id: 4, name: "VSTAR", image: "/vstar.webp" },
         { id: 5, name: "KSFE", image: "/ksfe.png" },
-        { id: 6, name: "Josco", image: "/josco.png" },
+        { id: 6, name: "Josco", image: "/josco.webp" },
         { id: 7, name: "Nesto Hypermarket", image: "/nesto.png" },
         { id: 8, name: "RBI", image: "/rbi.webp" },
-        { id: 9, name: "Tata Motors", image: "/tata-motors.png" },
-        { id: 10, name: "Tata", image: "/tata.png" },
-        { id: 11, name: "Vasan", image: "/vasan.jpg" },
+        { id: 9, name: "Tata Motors", image: "/tata-motors.webp" },
+        { id: 10, name: "Tata", image: "/tata.webp" },
+        { id: 11, name: "Vasan", image: "/vasan.webp" },
         { id: 12, name: "Renault", image: "/renault.png" },
-        { id: 13, name: "Tanishq", image: "/tanishq.png" },
+        { id: 13, name: "Tanishq", image: "/tanishq.webp" },
     ];
 
     // Duplicate list to make infinite scroll completely seamless
@@ -55,6 +55,10 @@ const TrustBar = () => {
                                 <img
                                     src={client.image}
                                     alt={`${client.name} logo`}
+                                    loading="lazy"
+                                    decoding="async"
+                                    width="160"
+                                    height="80"
                                     className="max-w-full max-h-full object-contain"
                                     title={client.name}
                                 />

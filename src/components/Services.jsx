@@ -78,7 +78,7 @@ const services = [
         category: "outdoor",
         desc: "Dynamic moving billboards with ultra-bright LED screens, audio system, and GPS tracking to dominate city streets.",
         icon: <Truck size={32} className="text-brand-primary" />,
-        image: "/led-van-advertising.png",
+        image: "/led-van-advertising.webp",
         badge: "🔥 High Demand",
         highlights: [
             "14 Kerala Districts Coverage",
@@ -94,7 +94,7 @@ const services = [
         category: "outdoor",
         desc: "High-resolution indoor and outdoor modular LED video screens for concerts, corporate events, and rallies.",
         icon: <Zap size={32} className="text-brand-secondary" />,
-        image: "/led-wall-1.jpg",
+        image: "/led-wall-1.webp",
         badge: "⚡ Event Favorite",
         highlights: [
             "Indoor & Outdoor Event Screens",
@@ -110,7 +110,7 @@ const services = [
         category: "outdoor",
         desc: "Illuminated mobile backpack displays carried by trained promoters into high-footfall markets, malls, and events.",
         icon: <PersonStanding size={32} className="text-brand-primary" />,
-        image: "/lookwalker-demo.jpg",
+        image: "/lookwalker-demo.webp",
         badge: "🚶 Hyper-Local",
         highlights: [
             "Front & Back Lit Displays",
@@ -126,7 +126,7 @@ const services = [
         category: "outdoor",
         desc: "Professional vehicle wraps for commercial trucks, cars, taxis, and autos using weatherproof, fade-resistant vinyl.",
         icon: <Car size={32} className="text-brand-secondary" />,
-        image: "/vehicle-branding-hero-1.jpg",
+        image: "/vehicle-branding-hero-1.webp",
         badge: "🚗 Long Lasting",
         highlights: [
             "Full & Partial Vinyl Wraps",
@@ -142,7 +142,7 @@ const services = [
         category: "video",
         desc: "End-to-end commercial ad shoots, corporate films, product launch videos, and social media reels filmed in crisp 4K.",
         icon: <Video size={32} className="text-brand-primary" />,
-        image: "/video-production-preview.jpg",
+        image: "/video-production-preview.webp",
         badge: "🎬 4K Cinematic",
         highlights: [
             "Corporate & Brand Ad Shoots",
@@ -171,7 +171,7 @@ const services = [
         category: "design_print",
         desc: "High-speed offset & digital printing for flyers, brochures, dangles, visiting cards, pamphlets, and letterheads.",
         icon: <Printer size={32} className="text-brand-primary" />,
-        image: "/printing-preview.jpg",
+        image: "/printing-preview.webp",
         badge: "🖨️ Premium Finish",
         highlights: [
             "Flyers, Pamphlets & Brochures",
@@ -186,7 +186,7 @@ const services = [
         category: "signage",
         desc: "Custom 3D illuminated acrylic LED letters, glow sign boards, shopfront nameplates, and directional signs.",
         icon: <Monitor size={32} className="text-brand-secondary" />,
-        image: "/signage-preview.jpg",
+        image: "/signage-preview.webp",
         badge: "✨ Illuminated 3D",
         highlights: [
             "3D Acrylic & LED Channel Letters",
@@ -230,7 +230,7 @@ const services = [
         category: "digital",
         desc: "Automated customer acquisition, AI chatbots, data analytics, and digital lead engines for modern businesses.",
         icon: <Bot size={32} className="text-brand-primary" />,
-        image: "/ai-growth.png",
+        image: "/ai-growth.webp",
         badge: "🤖 Next-Gen AI",
         highlights: [
             "Lead Generation Automation",
@@ -259,7 +259,7 @@ const services = [
         category: "digital",
         desc: "Strategic multi-channel advertising campaigns tailored to enterprise clients seeking regional market leadership.",
         icon: <Megaphone size={32} className="text-brand-secondary" />,
-        image: "/global-marketing.png",
+        image: "/global-marketing.webp",
         badge: "📊 Enterprise 360°",
         highlights: [
             "Multi-Media Strategy",
@@ -287,17 +287,17 @@ const services = [
 const Services = () => {
     const heroImages = [
         {
-            src: "/services-hero-1.jpg",
+            src: "/services-hero-1.webp",
             title: "Your Brand. Our Solutions. Maximum Impact.",
             tag: "Moving Vans to Mega Screens"
         },
         {
-            src: "/services-hero-2.jpg",
+            src: "/services-hero-2.webp",
             title: "Big Screen. Bigger Impact. LED Wall & Signage Solutions",
             tag: "Outdoor & Event Solutions"
         },
         {
-            src: "/services-hero-3.jpg",
+            src: "/services-hero-3.webp",
             title: "360° Advertising, Printing, Video Production & Signage",
             tag: "Kerala Wide 360° Reach"
         }
@@ -376,6 +376,10 @@ const Services = () => {
                                 alt={img.title}
                                 className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${idx === currentHeroIndex ? 'opacity-[0.70]' : 'opacity-0'}`}
                                 loading={idx === 0 ? "eager" : "lazy"}
+                                fetchPriority={idx === 0 ? "high" : "auto"}
+                                decoding="async"
+                                width="1024"
+                                height="545"
                             />
                         ))}
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-[#0B0F19]/40 to-[#0B0F19]/80"></div>
@@ -538,6 +542,8 @@ const Services = () => {
                                                             alt={`${service.title} - B2P International Advertising Services Kerala`}
                                                             loading="lazy"
                                                             decoding="async"
+                                                            width="1024"
+                                                            height="576"
                                                             className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-700 ease-out"
                                                         />
                                                         <div className="absolute inset-0 bg-gradient-to-t from-[#131B2C] via-[#131B2C]/40 to-transparent"></div>

@@ -159,7 +159,11 @@ const About = () => {
                         {/* Placeholder for an office or team image */}
                         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/80 to-brand-secondary/80 mix-blend-multiply z-10 transition-opacity duration-500 group-hover:opacity-70"></div>
                         <img
-                            src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+                            src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+                            srcSet="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop 1200w"
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                            width="1200"
+                            height="500"
                             alt="B2P International marketing team and campaign operations in Kerala"
                             loading="lazy"
                             decoding="async"

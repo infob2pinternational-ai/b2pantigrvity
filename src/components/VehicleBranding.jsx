@@ -33,17 +33,17 @@ const DESCRIPTION = 'Professional vehicle branding and commercial fleet wraps in
 const VehicleBranding = () => {
     const heroImages = [
         {
-            src: "/vehicle-branding-hero-1.jpg",
+            src: "/vehicle-branding-hero-1.webp",
             title: "Commercial Fleets, Cars, Autos & Trucks",
             tag: "Fleet Wrap Advertising"
         },
         {
-            src: "/vehicle-branding-hero-2.jpg",
+            src: "/vehicle-branding-hero-2.webp",
             title: "B2P Professional Installation Center & Design Studio",
             tag: "Expert Vinyl Installation"
         },
         {
-            src: "/vehicle-branding-hero-3.jpg",
+            src: "/vehicle-branding-hero-3.webp",
             title: "Multi-Vehicle Highway & City Brand Coverage",
             tag: "Kerala-Wide Reach"
         }
@@ -173,6 +173,10 @@ const VehicleBranding = () => {
                                 alt={`${img.title} - B2P Vehicle Branding Kerala`}
                                 className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${idx === currentImageIndex ? 'opacity-[0.70]' : 'opacity-0'}`}
                                 loading={idx === 0 ? "eager" : "lazy"}
+                                fetchPriority={idx === 0 ? "high" : "auto"}
+                                decoding="async"
+                                width="1024"
+                                height="562"
                             />
                         ))}
                         <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-[#050914]/40 to-[#050914]/80"></div>

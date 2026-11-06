@@ -9,16 +9,21 @@ const Hero = () => {
             id="home"
             className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-[#050914]"
         >
-            {/* Background Image with 85% Opacity */}
-            <div 
-                className="absolute inset-0 w-full h-full z-0 opacity-[0.85]"
-                style={{ 
-                    backgroundImage: `url('/led-van-hero-bg.png')`, 
-                    backgroundSize: 'cover', 
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat'
-                }}
-            ></div>
+            {/* Background Image with 85% Opacity - Optimized Picture element for LCP */}
+            <picture className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+                <source media="(max-width: 768px)" srcSet="/led-van-hero-bg-mobile.webp" type="image/webp" />
+                <source srcSet="/led-van-hero-bg.webp" type="image/webp" />
+                <img 
+                    src="/led-van-hero-bg.webp" 
+                    alt="B2P International LED Advertising Van Kerala"
+                    width="1920"
+                    height="1080"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    className="w-full h-full object-cover opacity-[0.85]"
+                />
+            </picture>
 
             {/* Animated elements (No dark overlay) */}
             <div className="absolute inset-0 w-full h-full z-0">
