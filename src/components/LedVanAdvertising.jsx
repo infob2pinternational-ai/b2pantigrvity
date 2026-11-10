@@ -32,40 +32,62 @@ import TrustBar from './TrustBar';
 import Seo from './Seo';
 import { buildBreadcrumbSchema, buildServiceSchema, buildWebPageSchema, buildFaqSchema, localBusinessSchema } from '../lib/seo';
 
-const LED_SERVICE_TITLE = 'LED Van Advertising & Rentals in Kerala | B2P International';
+const LED_SERVICE_TITLE = 'LED Van Advertising in Kerala & Thrissur | B2P';
 const LED_SERVICE_DESCRIPTION =
-    'Book mobile LED van advertising in Kerala. High-definition video screens for brand launches, roadshows, and promotions across Kochi, Calicut, and Thrissur.';
+    'Looking for an LED van advertisement near you? Based in Thrissur, B2P International provides mobile LED video vans for roadshows and events across Kerala.';
 
 const LedVanAdvertising = () => {
     const faqItems = [
-        { question: "What is the average cost of LED van advertising in Kerala?", answer: "The LED van advertising cost in Kerala varies based on campaign duration and routing. On average, daily rates range from ₹8,000 to ₹15,000 depending on screen size, fuel requirements, and operational hours. We offer substantial discounts for monthly bookings." },
-        { question: "Can we change the video content during the campaign?", answer: "Yes. One of the greatest advantages of digital LED vans is flexibility. You can update the video content mid-campaign to feature a new daily offer, a different product line, or a localized message for a specific town." },
-        { question: "Do the vans operate in the rain?", answer: "Our LED screens are outdoor-rated, waterproof, and built to withstand Kerala's heavy monsoons. However, during extreme weather conditions or severe storms, operations might be temporarily paused for safety reasons." },
-        { question: "How do we verify the van's location and operations?", answer: "We believe in complete transparency. Our vans are GPS-enabled, and we provide daily progress reports, route logs, and geo-tagged photographs/videos of the van operating in the agreed-upon locations." },
-        { question: "Is audio permitted along with the video display?", answer: "Yes, our vans are equipped with high-quality public address systems. We can play synchronized audio, jingles, or live announcements. However, audio usage is subject to local municipal noise regulations, especially near hospitals, schools, and late at night." },
-        { question: "What video format is required for the LED screen?", answer: "We accept standard video formats like MP4, AVI, and MOV. Our technical team will provide you with the exact aspect ratio and resolution guidelines based on the specific van assigned to your campaign to ensure the content looks sharp and professional." },
+        { 
+            question: "How do I book an LED van advertisement near me in Kerala?", 
+            answer: "You can book an LED advertising van directly with B2P International by calling or messaging +91 85899 09034. Based in Thrissur, our fleet serves all 14 districts in Kerala, including Kochi, Kozhikode, and Trivandrum, with custom route planning tailored to your target audience." 
+        },
+        { 
+            question: "What is the average cost of LED van advertising in Kerala?", 
+            answer: "The LED van advertising cost in Kerala typically ranges between ₹8,000 and ₹15,000 per day, depending on operational hours, screen size, fuel, and campaign duration. We also provide customized discounted packages for weekly and monthly roadshow campaigns." 
+        },
+        { 
+            question: "Can we change the video content during the campaign?", 
+            answer: "Yes. Digital LED video vans offer complete flexibility. You can update video creatives mid-campaign to highlight new offers, announce daily promotions, or tailor localized messages for specific towns." 
+        },
+        { 
+            question: "Do the vans operate during the Kerala monsoon?", 
+            answer: "Yes. Our outdoor LED displays are weather-resistant and IP-rated to operate safely in rain. During extreme monsoon downpours or severe weather alerts, operations may be briefly paused to ensure road safety." 
+        },
+        { 
+            question: "How do we verify the van's location and route coverage?", 
+            answer: "All our vehicles are GPS-enabled. We provide clients with transparent daily route reports, live location access during campaign hours, and geo-tagged photo/video verification from scheduled stops and junctions." 
+        },
+        { 
+            question: "Is audio permitted along with the video display?", 
+            answer: "Yes, our vans are fitted with professional PA sound systems for synchronized jingles, speeches, and announcements, operated in full compliance with local municipal and noise regulations." 
+        },
+        { 
+            question: "What video format is required for the LED screen?", 
+            answer: "We accept standard video formats such as MP4, MOV, and AVI. Our technical team assists with aspect ratio formatting and resolution checks to ensure sharp playback on our outdoor screens." 
+        },
     ];
     const [heroImageLoaded, setHeroImageLoaded] = useState(false);
     const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
 
     const banners = [
         {
-            src: "/led-van-gallery-1.webp",
+            src: "/led-van-gallery-1.png",
             title: "High Brightness Displays"
         },
         {
-            src: "/led-van-gallery-2.webp",
+            src: "/led-van-gallery-2.png",
             title: "Night Campaigns"
         },
         {
-            src: "/led-van-gallery-3.webp",
+            src: "/led-van-gallery-3.png",
             title: "City Wide Reach"
         }
     ];
 
     useEffect(() => {
         const heroImage = new Image();
-        heroImage.src = "/led-van-advertising.webp";
+        heroImage.src = "/led-van-advertising.png";
         heroImage.onload = () => setHeroImageLoaded(true);
     }, []);
 
@@ -89,7 +111,7 @@ const LedVanAdvertising = () => {
         <Seo
             title={LED_SERVICE_TITLE}
             description={LED_SERVICE_DESCRIPTION}
-            keywords="LED van advertising Kerala, mobile LED van Kerala, video van advertising, roadshow marketing Kerala, LED screen on rent"
+            keywords="led van advertisement near me, LED van advertising Kerala, mobile LED van Thrissur, video van hire Kerala, roadshow marketing Kerala, mobile billboard advertising"
             path="/led-van-advertising"
             schema={[
                 localBusinessSchema,
@@ -100,10 +122,10 @@ const LedVanAdvertising = () => {
                     type: 'WebPage',
                 }),
                 buildServiceSchema({
-                    name: 'LED Van Advertising Services in Kerala',
+                    name: 'LED Van Advertising Services in Kerala & Thrissur',
                     description: LED_SERVICE_DESCRIPTION,
                     path: '/led-van-advertising',
-                    areaServed: ['Kerala', 'Kochi', 'Trivandrum', 'Kozhikode', 'Thrissur']
+                    areaServed: ['Thrissur', 'Kerala', 'Kochi', 'Trivandrum', 'Kozhikode', 'Palakkad', 'Malappuram']
                 }),
                 buildBreadcrumbSchema([
                     { name: 'Home', path: '/' },
@@ -118,14 +140,11 @@ const LedVanAdvertising = () => {
                 <div className="absolute inset-0 w-full h-full z-0">
                     <div className="absolute inset-0 bg-[#050914]"></div>
                     <img
-                        src="/led-van-advertising.webp"
+                        src="/led-van-advertising.png"
                         alt="LED van advertising campaign in Kerala city street"
                         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${heroImageLoaded ? 'opacity-[0.65]' : 'opacity-0'}`}
                         loading="eager"
                         fetchPriority="high"
-                        decoding="async"
-                        width="1200"
-                        height="800"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#050914] via-[#050914]/40 to-[#050914]/80"></div>
                 </div>
@@ -137,7 +156,7 @@ const LedVanAdvertising = () => {
                         className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-brand-primary/30 bg-brand-primary/10 backdrop-blur-md mb-8"
                     >
                         <Sparkles size={16} className="text-brand-secondary" />
-                        <span className="text-sm font-bold tracking-[0.2em] text-white uppercase">Mobile Outdoor Marketing</span>
+                        <span className="text-sm font-bold tracking-[0.2em] text-white uppercase">Based in Thrissur • Serving All Kerala</span>
                     </motion.div>
                     
                     <motion.h1 
@@ -146,7 +165,7 @@ const LedVanAdvertising = () => {
                         transition={{ delay: 0.1 }}
                         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tight leading-tight max-w-5xl mx-auto"
                     >
-                        Dominate the Streets with <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">LED Van Advertising</span>
+                        Mobile LED Van Advertising in <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Kerala & Thrissur</span>
                     </motion.h1>
                     
                     <motion.p 
@@ -155,7 +174,7 @@ const LedVanAdvertising = () => {
                         transition={{ delay: 0.2 }}
                         className="text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto mb-12 leading-relaxed font-light"
                     >
-                        Transform your marketing campaigns with high-impact, moving digital billboards. We deliver unparalleled visibility across Kerala through strategic mobile LED roadshows and activations.
+                        Looking for professional mobile LED van advertising near you? Based in Thrissur, B2P International delivers high-visibility video van campaigns and roadshows across all 14 districts in Kerala.
                     </motion.p>
                     
                     <motion.div
@@ -182,13 +201,13 @@ const LedVanAdvertising = () => {
                             <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">What is LED Van Advertising?</h2>
                             <div className="text-lg text-slate-600 leading-relaxed space-y-6">
                                 <p>
-                                    LED Van Advertising—also referred to as Mobile Digital Billboards or Video Vans—is a revolutionary outdoor advertising format where high-resolution LED screens are mounted on commercial vehicles. Unlike traditional static hoardings that require the audience to pass by a specific location, LED vans take your vibrant, full-motion video advertisements directly to your target audience.
+                                    If you are searching for an effective <strong>LED van advertisement near me</strong> or planning an outdoor roadshow across Kerala, mobile digital video vans offer a proven way to engage local audiences. Unlike static billboards that rely on passing footfall, our custom-built LED advertising vans take your video commercials directly to high-traffic junctions, commercial hubs, shopping streets, and community centers.
                                 </p>
                                 <p>
-                                    At B2P International, we equip our fleet with state-of-the-art, daylight-visible LED screens. These screens ensure that whether you are running a campaign under the bright midday Kerala sun or navigating through crowded evening markets, your brand message is crystal clear. 
+                                    Headquartered in <strong>Puranattukara, Thrissur</strong>, B2P International manages a modern fleet of daylight-visible mobile LED vans serving Thrissur, Kochi, Kozhikode, Thiruvananthapuram, Palakkad, and Malappuram. Fitted with high-resolution outdoor screens and synchronized sound systems, our video vans ensure your message stays bright and clear in daytime sunlight as well as during Kerala’s monsoon season.
                                 </p>
                                 <p>
-                                    This medium bridges the gap between digital marketing and outdoor advertising. It allows brands to broadcast TV-commercial-quality content on the streets, accompanied by synchronized audio systems, creating a multi-sensory marketing experience that commands attention and drives immediate consumer action.
+                                    From retail store inaugurations in Thrissur to multi-city brand roadshows across Kerala, mobile video vans combine digital flexibility with substantial outdoor reach. Clients benefit from dynamic content updates, transparent GPS route tracking, and targeted exposure that drives measurable local brand recall.
                                 </p>
                             </div>
                         </motion.div>
@@ -304,7 +323,7 @@ const LedVanAdvertising = () => {
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                            <img src="/led-van-gallery-1.webp" alt="Mobile LED van advertising route planning and campaign strategy by B2P International" loading="lazy" decoding="async" width="1200" height="800" className="rounded-[2.5rem] shadow-xl w-full" />
+                            <img src="/led-van-gallery-1.png" alt="LED Van Planning" className="rounded-[2.5rem] shadow-xl w-full" />
                         </motion.div>
                         <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                             <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-8">How We Plan Your Campaign</h2>
@@ -446,30 +465,13 @@ const LedVanAdvertising = () => {
                         <p className="text-lg text-slate-600">Everything you need to know about booking and executing an LED Van campaign in Kerala.</p>
                     </div>
                     <div className="space-y-4">
-                        <FaqItem 
-                            question="What is the average cost of LED van advertising in Kerala?" 
-                            answer="The LED van advertising cost in Kerala varies based on campaign duration and routing. On average, daily rates range from ₹8,000 to ₹15,000 depending on screen size, fuel requirements, and operational hours. We offer substantial discounts for monthly bookings." 
-                        />
-                        <FaqItem 
-                            question="Can we change the video content during the campaign?" 
-                            answer="Yes. One of the greatest advantages of digital LED vans is flexibility. You can update the video content mid-campaign to feature a new daily offer, a different product line, or a localized message for a specific town." 
-                        />
-                        <FaqItem 
-                            question="Do the vans operate in the rain?" 
-                            answer="Our LED screens are outdoor-rated, waterproof, and built to withstand Kerala's heavy monsoons. However, during extreme weather conditions or severe storms, operations might be temporarily paused for safety reasons." 
-                        />
-                        <FaqItem 
-                            question="How do we verify the van's location and operations?" 
-                            answer="We believe in complete transparency. Our vans are GPS-enabled, and we provide daily progress reports, route logs, and geo-tagged photographs/videos of the van operating in the agreed-upon locations." 
-                        />
-                        <FaqItem 
-                            question="Is audio permitted along with the video display?" 
-                            answer="Yes, our vans are equipped with high-quality public address systems. We can play synchronized audio, jingles, or live announcements. However, audio usage is subject to local municipal noise regulations, especially near hospitals, schools, and late at night." 
-                        />
-                        <FaqItem 
-                            question="What video format is required for the LED screen?" 
-                            answer="We accept standard video formats like MP4, AVI, and MOV. Our technical team will provide you with the exact aspect ratio and resolution guidelines based on the specific van assigned to your campaign to ensure the content looks sharp and professional." 
-                        />
+                        {faqItems.map((item, idx) => (
+                            <FaqItem 
+                                key={idx}
+                                question={item.question} 
+                                answer={item.answer} 
+                            />
+                        ))}
                     </div>
                 </div>
             </section>

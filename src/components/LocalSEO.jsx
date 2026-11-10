@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Megaphone, SearchCheck } from 'lucide-react';
+import { MapPin, Megaphone, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const seoPoints = [
-    'LED van advertising in Thrissur for store launches, exhibitions, and local promotions.',
-    'Mobile LED advertising across Kerala including Kochi, Calicut, Trivandrum, and nearby commercial hubs.',
-    'Outdoor advertising support for hypermarkets, jewelry brands, real estate campaigns, and event marketing.',
+    'Retail & Store Openings: Generate immediate footfall for showroom inaugurations in Thrissur and regional commercial hubs.',
+    'Real Estate & Corporate Roadshows: Showcase video tours in prime residential corridors and high-density business districts.',
+    'Statewide Brand Activations: Coordinate multi-district mobile roadshows across all 14 Kerala districts.',
 ];
 
 const LocalSEO = () => {
@@ -34,10 +34,10 @@ const LocalSEO = () => {
                                 LED Van Advertising Services <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">in Thrissur and across Kerala</span>
                             </h2>
                             <p className="text-base sm:text-lg md:text-xl text-slate-400 leading-relaxed font-light">
-                                B2P International helps brands win attention with mobile LED van advertising, campaign execution, roadshows, launch promotions, and targeted local marketing. If you are searching for LED van advertising near Thrissur, mobile billboard advertising in Kerala, or high-visibility event promotion for retail and real-estate campaigns, our team delivers creative planning and on-ground execution that puts your message directly in front of moving audiences.
+                                Based in Thrissur, B2P International provides mobile LED van advertising, roadshow planning, launch promotions, and targeted outdoor marketing across Kerala. Whether you are looking for an LED van advertisement near Thrissur or planning a high-impact mobile billboard campaign across Kochi, Kozhikode, and Trivandrum, our team delivers strategic route mapping and on-ground execution that connects directly with moving audiences.
                             </p>
                             <p className="mt-5 text-sm sm:text-base md:text-lg text-slate-400 leading-relaxed font-light">
-                                Our campaigns are built for measurable local reach, stronger recall, and better visibility in high-footfall areas such as shopping districts, residential corridors, event venues, and commercial centers.
+                                Our campaigns are designed for measurable local reach, sustained visibility, and higher brand recall in busy retail corridors, event venues, residential hubs, and key transit junctions.
                             </p>
                             <div className="mt-8">
                                 <div className="flex flex-col gap-3 sm:flex-row">
@@ -51,7 +51,7 @@ const LocalSEO = () => {
                                         to="/locations/thrissur"
                                         className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-black text-white transition-all duration-300 hover:border-brand-primary hover:bg-white/10"
                                     >
-                                        Thrissur Location Page
+                                        Thrissur Operations Hub
                                     </Link>
                                 </div>
                             </div>
@@ -60,18 +60,18 @@ const LocalSEO = () => {
                         <div className="grid gap-4">
                             <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
                                 <div className="flex items-center gap-3 text-white">
-                                    <SearchCheck size={22} className="text-brand-secondary" />
-                                    <p className="text-lg font-bold">SEO-focused reach</p>
+                                    <Target size={22} className="text-brand-secondary" />
+                                    <p className="text-lg font-bold">Hyper-Local Route Targeting</p>
                                 </div>
                                 <p className="mt-3 text-sm leading-relaxed text-slate-400">
-                                    Added keyword-rich content around LED van advertising, mobile advertising, and Kerala location intent to improve discoverability.
+                                    Custom daily routes mapped through high-footfall junctions, shopping streets, and commercial corridors in Thrissur and across Kerala towns.
                                 </p>
                             </div>
 
                             <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
                                 <div className="flex items-center gap-3 text-white">
                                     <Megaphone size={22} className="text-brand-primary" />
-                                    <p className="text-lg font-bold">Best-fit campaign types</p>
+                                    <p className="text-lg font-bold">Proven Campaign Formats</p>
                                 </div>
                                 <div className="mt-4 space-y-3">
                                     {seoPoints.map((point) => (
@@ -85,11 +85,10 @@ const LocalSEO = () => {
                             <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
                                 <div className="flex items-center gap-3 text-white">
                                     <MapPin size={22} className="text-brand-secondary" />
-                                    <p className="text-lg font-bold">Location pages for indexing</p>
+                                    <p className="text-lg font-bold">Operations Hub in Thrissur</p>
                                 </div>
                                 <p className="mt-3 text-sm leading-relaxed text-slate-400">
-                                    We now support a dedicated Thrissur landing page and a broader service-area hub to
-                                    strengthen local search relevance and internal linking for Google indexing.
+                                    Centrally headquartered in Puranattukara, Thrissur, we provide prompt fleet deployment, dedicated operators, and reliable campaign coordination across every district in Kerala.
                                 </p>
                                 <div className="mt-4 flex flex-col gap-3">
                                     <Link
