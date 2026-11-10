@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, ChevronDown, CheckCircle2, TrendingUp, MonitorPlay, Users, MapPin, Calculator, ShieldCheck, Target } from 'lucide-react';
+import { ArrowRight, Sparkles, ChevronDown, CheckCircle2, TrendingUp, MonitorPlay, Users, MapPin, Calculator, ShieldCheck, Target, Check, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const FaqItem = ({ question, answer }) => {
@@ -32,26 +32,30 @@ import TrustBar from './TrustBar';
 import Seo from './Seo';
 import { buildBreadcrumbSchema, buildServiceSchema, buildWebPageSchema, buildFaqSchema, localBusinessSchema } from '../lib/seo';
 
-const LED_SERVICE_TITLE = 'LED Van Advertising in Kerala & Thrissur | B2P';
+const LED_SERVICE_TITLE = 'LED Van on Rent in Kerala & Thrissur | B2P International';
 const LED_SERVICE_DESCRIPTION =
-    'Looking for an LED van advertisement near you? Based in Thrissur, B2P International provides mobile LED video vans for roadshows and events across Kerala.';
+    'Hire an LED van on rent in Kerala & Thrissur. B2P International offers Single, Double & Triple-sided mobile LED video vans. Get a rental quote today!';
 
 const LedVanAdvertising = () => {
     const faqItems = [
         { 
-            question: "How do I book an LED van advertisement near me in Kerala?", 
-            answer: "You can book an LED advertising van directly with B2P International by calling or messaging +91 85899 09034. Based in Thrissur, our fleet serves all 14 districts in Kerala, including Kochi, Kozhikode, and Trivandrum, with custom route planning tailored to your target audience." 
+            question: "How do I hire an LED van in Kerala or Thrissur?", 
+            answer: "Simply call or WhatsApp us at +91 85899 09034 with your preferred dates, locations, and campaign type. We handle the rest — vehicle, screen, operator, and route planning." 
+        },
+        { 
+            question: "What is the price difference between Single, Double, and Triple-sided LED vans?", 
+            answer: "Single-sided LED vans are our most budget-friendly rental option, ideal for one-way street promotions and stationary displays. Double-sided vans cost slightly more and offer dual-sided street visibility, making them our most popular choice for city roadshows. Triple-sided vans (left, right, and rear screens) deliver maximum panoramic exposure and are priced for flagship product launches, major festivals, and large-scale public campaigns." 
         },
         { 
             question: "What is the average cost of LED van advertising in Kerala?", 
-            answer: "The LED van advertising cost in Kerala typically ranges between ₹8,000 and ₹15,000 per day, depending on operational hours, screen size, fuel, and campaign duration. We also provide customized discounted packages for weekly and monthly roadshow campaigns." 
+            answer: "Daily LED van rental rates in Kerala typically range between ₹8,000 and ₹15,000 per day depending on the van type (Single, Double, or Triple-sided), operating hours (standard 8-hour shift vs. 12-hour extended shifts), fuel requirements, and campaign duration. B2P International provides significant discounts for multi-day and monthly roadshow bookings." 
         },
         { 
             question: "Can we change the video content during the campaign?", 
             answer: "Yes. Digital LED video vans offer complete flexibility. You can update video creatives mid-campaign to highlight new offers, announce daily promotions, or tailor localized messages for specific towns." 
         },
         { 
-            question: "Do the vans operate during the Kerala monsoon?", 
+            question: "Do the LED advertising vans operate during the Kerala monsoon?", 
             answer: "Yes. Our outdoor LED displays are weather-resistant and IP-rated to operate safely in rain. During extreme monsoon downpours or severe weather alerts, operations may be briefly paused to ensure road safety." 
         },
         { 
@@ -59,7 +63,7 @@ const LedVanAdvertising = () => {
             answer: "All our vehicles are GPS-enabled. We provide clients with transparent daily route reports, live location access during campaign hours, and geo-tagged photo/video verification from scheduled stops and junctions." 
         },
         { 
-            question: "Is audio permitted along with the video display?", 
+            question: "Is audio permitted along with the mobile LED video display?", 
             answer: "Yes, our vans are fitted with professional PA sound systems for synchronized jingles, speeches, and announcements, operated in full compliance with local municipal and noise regulations." 
         },
         { 
@@ -106,12 +110,60 @@ const LedVanAdvertising = () => {
         "Audio-Visual Engagement: Combine striking video with synchronized sound."
     ];
 
+    const rentalTiers = [
+        {
+            name: "Single-Sided LED Van",
+            badge: "Budget Friendly",
+            tagline: "Ideal for focused promotions and budget-friendly campaigns.",
+            features: [
+                "1 High-Brightness Outdoor LED Screen",
+                "Directional display focused on roadside audiences",
+                "Perfect for curb-side parking, market stalls & one-way streets",
+                "Includes generator & synchronized sound system",
+                "Dedicated driver-operator included",
+                "Standard 8-hour daily operational shift"
+            ],
+            highlight: false,
+            ctaText: "Inquire for Single-Sided Van"
+        },
+        {
+            name: "Double-Sided LED Van",
+            badge: "Most Popular",
+            tagline: "Better visibility from both directions — most popular choice for city roadshows.",
+            features: [
+                "2 High-Resolution Outdoor LED Displays (Left & Right)",
+                "Simultaneous dual-direction reach in two-way city traffic",
+                "2x impressions during busy morning & evening peak hours",
+                "Includes generator & synchronized sound system",
+                "Dedicated driver-operator included",
+                "Standard 8-hour or extended 12-hour shifts"
+            ],
+            highlight: true,
+            ctaText: "Book Double-Sided Van"
+        },
+        {
+            name: "Triple-Sided LED Van",
+            badge: "Maximum Impact",
+            tagline: "Maximum impact with screens on three sides. Best for high-traffic routes and major launches.",
+            features: [
+                "3 Ultra-Bright LED Displays (Left, Right & Rear)",
+                "360° panoramic exposure capturing traffic from every angle",
+                "Flagship choice for mega showroom launches & state rallies",
+                "Includes heavy-duty generator & high-power audio",
+                "Dedicated driver-operator & live GPS route tracking",
+                "Customized shifts and multi-district deployment"
+            ],
+            highlight: false,
+            ctaText: "Inquire for Triple-Sided Van"
+        }
+    ];
+
     return (
         <>
         <Seo
             title={LED_SERVICE_TITLE}
             description={LED_SERVICE_DESCRIPTION}
-            keywords="led van advertisement near me, LED van advertising Kerala, mobile LED van Thrissur, video van hire Kerala, roadshow marketing Kerala, mobile billboard advertising"
+            keywords="led van near me, led van on rent, led advertising van rent, hire LED van Thrissur, LED advertising vehicle, mobile LED van rental Kerala, video van hire Kerala"
             path="/led-van-advertising"
             schema={[
                 localBusinessSchema,
@@ -122,10 +174,10 @@ const LedVanAdvertising = () => {
                     type: 'WebPage',
                 }),
                 buildServiceSchema({
-                    name: 'LED Van Advertising Services in Kerala & Thrissur',
+                    name: 'LED Van Advertising & Mobile Video Van Rental in Kerala',
                     description: LED_SERVICE_DESCRIPTION,
                     path: '/led-van-advertising',
-                    areaServed: ['Thrissur', 'Kerala', 'Kochi', 'Trivandrum', 'Kozhikode', 'Palakkad', 'Malappuram']
+                    areaServed: ['Thrissur', 'Kerala', 'Kochi', 'Trivandrum', 'Kozhikode', 'Palakkad', 'Malappuram', 'Kannur', 'Kottayam', 'Kollam']
                 }),
                 buildBreadcrumbSchema([
                     { name: 'Home', path: '/' },
@@ -174,18 +226,25 @@ const LedVanAdvertising = () => {
                         transition={{ delay: 0.2 }}
                         className="text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto mb-12 leading-relaxed font-light"
                     >
-                        Looking for professional mobile LED van advertising near you? Based in Thrissur, B2P International delivers high-visibility video van campaigns and roadshows across all 14 districts in Kerala.
+                        Looking for an LED van on rent near you? Based in Thrissur, B2P International provides high-resolution mobile LED vans for single-day hires, promotional roadshows, and campaigns across all 14 districts in Kerala.
                     </motion.p>
                     
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="flex flex-col sm:flex-row gap-6 justify-center"
+                        className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center"
                     >
                         <a href="/#contact" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-[0_0_20px_rgba(var(--brand-primary-rgb),0.3)]">
                             Book an LED Van Today
                             <ArrowRight size={20} />
+                        </a>
+                        <a 
+                            href="#rental-packages" 
+                            className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-8 py-4 font-bold text-white backdrop-blur-sm transition-all hover:bg-white/20 hover:border-white/40"
+                        >
+                            View Rental Packages
+                            <ChevronDown size={20} />
                         </a>
                     </motion.div>
                 </div>
@@ -201,10 +260,10 @@ const LedVanAdvertising = () => {
                             <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">What is LED Van Advertising?</h2>
                             <div className="text-lg text-slate-600 leading-relaxed space-y-6">
                                 <p>
-                                    If you are searching for an effective <strong>LED van advertisement near me</strong> or planning an outdoor roadshow across Kerala, mobile digital video vans offer a proven way to engage local audiences. Unlike static billboards that rely on passing footfall, our custom-built LED advertising vans take your video commercials directly to high-traffic junctions, commercial hubs, shopping streets, and community centers.
+                                    Whether you need to hire an LED van in Thrissur for a one-day inauguration or require LED advertising vehicles for a multi-week roadshow, our mobile video vans put your message in front of moving audiences across Kerala. Unlike static billboards that rely on passing footfall, our custom-built LED advertising vans take your video commercials directly to high-traffic junctions, commercial hubs, shopping streets, and community centers.
                                 </p>
                                 <p>
-                                    Headquartered in <strong>Puranattukara, Thrissur</strong>, B2P International manages a modern fleet of daylight-visible mobile LED vans serving Thrissur, Kochi, Kozhikode, Thiruvananthapuram, Palakkad, and Malappuram. Fitted with high-resolution outdoor screens and synchronized sound systems, our video vans ensure your message stays bright and clear in daytime sunlight as well as during Kerala’s monsoon season.
+                                    Headquartered in <strong>Puranattukara, Thrissur</strong>, B2P International manages a modern fleet of daylight-visible mobile LED advertising vehicles serving Thrissur, Kochi, Kozhikode, Thiruvananthapuram, Palakkad, and Malappuram. Fitted with high-resolution outdoor screens and synchronized sound systems, our video vans ensure your message stays bright and clear in daytime sunlight as well as during Kerala’s monsoon season.
                                 </p>
                                 <p>
                                     From retail store inaugurations in Thrissur to multi-city brand roadshows across Kerala, mobile video vans combine digital flexibility with substantial outdoor reach. Clients benefit from dynamic content updates, transparent GPS route tracking, and targeted exposure that drives measurable local brand recall.
@@ -282,7 +341,109 @@ const LedVanAdvertising = () => {
                 </div>
             </section>
 
-            {/* SECTION 3: Target Audience & Use Cases */}
+            {/* SECTION 3: Dedicated Rental & Pricing Packages (New Section) */}
+            <section id="rental-packages" className="py-24 bg-white border-b border-slate-100 scroll-mt-24">
+                <div className="container mx-auto px-6 max-w-7xl">
+                    <div className="max-w-3xl mx-auto text-center mb-16">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary font-bold text-sm uppercase tracking-wider mb-4">
+                            Transparent Hire Rates
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">
+                            LED Van on Rent in Kerala – Flexible Packages
+                        </h2>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                            If you are looking for an LED advertising van for rent in Kerala or Thrissur, pricing depends on the type of van you choose. We offer Single-sided, Double-sided, and Triple-sided LED vans. Rates vary based on the number of screens, campaign duration, and route. All packages include the vehicle, daylight-visible LED screens, generator, audio system, and a trained operator.
+                        </p>
+                    </div>
+
+                    {/* 3-Tier Rental Package Cards */}
+                    <div className="grid md:grid-cols-3 gap-8 mb-16">
+                        {rentalTiers.map((tier, idx) => (
+                            <motion.div
+                                key={tier.name}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: idx * 0.15 }}
+                                className={`rounded-[2.5rem] p-8 sm:p-10 transition-all flex flex-col justify-between ${
+                                    tier.highlight
+                                        ? 'bg-slate-900 text-white shadow-2xl ring-2 ring-brand-primary scale-105 z-10'
+                                        : 'bg-slate-50 text-slate-900 border border-slate-200 hover:shadow-lg'
+                                }`}
+                            >
+                                <div>
+                                    <div className="flex items-center justify-between gap-4 mb-4">
+                                        <span className={`text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full ${
+                                            tier.highlight 
+                                                ? 'bg-brand-primary text-white' 
+                                                : 'bg-slate-200 text-slate-700'
+                                        }`}>
+                                            {tier.badge}
+                                        </span>
+                                    </div>
+                                    <h3 className={`text-2xl sm:text-3xl font-black mb-3 ${tier.highlight ? 'text-white' : 'text-slate-900'}`}>
+                                        {tier.name}
+                                    </h3>
+                                    <p className={`text-sm sm:text-base leading-relaxed mb-6 ${tier.highlight ? 'text-slate-300' : 'text-slate-600'}`}>
+                                        {tier.tagline}
+                                    </p>
+                                    <div className="h-px bg-slate-200/50 mb-6" />
+                                    <ul className="space-y-3.5 mb-8">
+                                        {tier.features.map((feature) => (
+                                            <li key={feature} className="flex items-start gap-3 text-sm sm:text-base leading-relaxed">
+                                                <Check className={`w-5 h-5 shrink-0 mt-0.5 ${tier.highlight ? 'text-brand-secondary' : 'text-brand-primary'}`} />
+                                                <span className={tier.highlight ? 'text-slate-200' : 'text-slate-700'}>{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <a
+                                    href="/#contact"
+                                    className={`w-full py-4 rounded-full font-black text-center transition-all inline-flex items-center justify-center gap-2 ${
+                                        tier.highlight
+                                            ? 'bg-gradient-to-r from-brand-primary to-brand-secondary text-white hover:opacity-95 shadow-lg'
+                                            : 'bg-slate-900 text-white hover:bg-brand-primary'
+                                    }`}
+                                >
+                                    {tier.ctaText}
+                                    <ArrowRight size={18} />
+                                </a>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    {/* Pricing Factors Grid */}
+                    <div className="bg-slate-50 border border-slate-200 rounded-[2.5rem] p-8 md:p-12">
+                        <div className="text-center max-w-2xl mx-auto mb-10">
+                            <Calculator className="w-12 h-12 text-brand-primary mx-auto mb-4" />
+                            <h3 className="text-2xl font-black text-slate-900 mb-2">How Rental Rates Are Calculated</h3>
+                            <p className="text-slate-600 text-sm sm:text-base">
+                                Beyond the van configuration, your final quote is customized based on these practical operational variables:
+                            </p>
+                        </div>
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div className="bg-white p-6 rounded-2xl border border-slate-100">
+                                <h4 className="font-bold text-lg text-slate-900 mb-2">Campaign Duration</h4>
+                                <p className="text-slate-600 text-sm">Tiered discounted daily rates apply for weekly and monthly bookings vs. single-day hires.</p>
+                            </div>
+                            <div className="bg-white p-6 rounded-2xl border border-slate-100">
+                                <h4 className="font-bold text-lg text-slate-900 mb-2">Operating Hours</h4>
+                                <p className="text-slate-600 text-sm">Standard shifts run for 8 hours daily. Extended evening shifts or 12-hour schedules are readily supported.</p>
+                            </div>
+                            <div className="bg-white p-6 rounded-2xl border border-slate-100">
+                                <h4 className="font-bold text-lg text-slate-900 mb-2">Distance & Fuel</h4>
+                                <p className="text-slate-600 text-sm">Routes spanning multiple districts involve fuel and driver logistics factored upfront with full transparency.</p>
+                            </div>
+                            <div className="bg-white p-6 rounded-2xl border border-slate-100">
+                                <h4 className="font-bold text-lg text-slate-900 mb-2">Municipal Permits</h4>
+                                <p className="text-slate-600 text-sm">Specific city limits or festival venues may require municipal permissions, which we help coordinate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* SECTION 4: Target Audience & Use Cases */}
             <section className="py-24 bg-slate-50">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="text-center max-w-3xl mx-auto mb-16">
@@ -318,7 +479,7 @@ const LedVanAdvertising = () => {
                 </div>
             </section>
 
-            {/* SECTION 4: Campaign Planning Process */}
+            {/* SECTION 5: Campaign Planning Process */}
             <section className="py-24 bg-white border-y border-slate-100">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -331,29 +492,29 @@ const LedVanAdvertising = () => {
                                 <div className="flex gap-6">
                                     <div className="w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center font-black text-xl shrink-0">1</div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-slate-900 mb-2">Consultation & Objective Setting</h3>
-                                        <p className="text-slate-600">We analyze your target audience, campaign goals (brand awareness vs. direct sales), and determine the optimal duration for the roadshow.</p>
+                                        <h3 className="text-xl font-bold text-slate-900 mb-2">Consultation & Rental Objective</h3>
+                                        <p className="text-slate-600">We analyze your target audience, help select the optimal van configuration (Single, Double, or Triple-sided), and structure the campaign timeline.</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-6">
                                     <div className="w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center font-black text-xl shrink-0">2</div>
                                     <div>
                                         <h3 className="text-xl font-bold text-slate-900 mb-2">Route Mapping & Scheduling</h3>
-                                        <p className="text-slate-600">We don't just drive blindly. We utilize traffic data and local market insights to plot routes that intersect with peak crowd densities at specific times of the day.</p>
+                                        <p className="text-slate-600">We plot custom daily routes based on traffic density data to ensure your hired LED van visits prime intersections, commercial streets, and residential zones during peak hours.</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-6">
                                     <div className="w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center font-black text-xl shrink-0">3</div>
                                     <div>
                                         <h3 className="text-xl font-bold text-slate-900 mb-2">Content Verification</h3>
-                                        <p className="text-slate-600">Our technical team ensures your video content is formatted correctly for optimal brightness, contrast, and aspect ratio on our outdoor screens.</p>
+                                        <p className="text-slate-600">Our technical team ensures your video content is formatted correctly for optimal brightness, contrast, aspect ratio, and audio clarity on our outdoor screens.</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-6">
                                     <div className="w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center font-black text-xl shrink-0">4</div>
                                     <div>
                                         <h3 className="text-xl font-bold text-slate-900 mb-2">Execution & Live Tracking</h3>
-                                        <p className="text-slate-600">The van is deployed with a trained operator. We provide regular updates and photo/video proofs of the campaign in action.</p>
+                                        <p className="text-slate-600">The van is deployed with a trained operator. We provide regular updates, live GPS tracking, and geo-tagged photo/video proofs of the campaign in action.</p>
                                     </div>
                                 </div>
                             </div>
@@ -362,61 +523,36 @@ const LedVanAdvertising = () => {
                 </div>
             </section>
 
-            {/* SECTION 5: Kerala Coverage & Deep Links */}
+            {/* SECTION 6: Kerala Coverage & Deep Links */}
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container mx-auto px-6 max-w-7xl text-center">
                     <h2 className="text-3xl md:text-5xl font-black mb-6">Unrivaled Coverage Across Kerala</h2>
                     <p className="text-lg text-slate-300 max-w-3xl mx-auto mb-16">
-                        We operate a dedicated and well-maintained fleet of LED advertising vans in Kerala. While we cover all 14 districts, we have specialized route knowledge and dedicated teams in the major urban centers.
+                        We operate a dedicated and well-maintained fleet of LED advertising vans in Kerala. While we cover all 14 districts, we maintain dedicated teams and central route hubs in the major urban centers.
                     </p>
                     
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <Link to="/locations/kochi" className="block p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:border-brand-primary/50 hover:bg-white/10 transition-all group">
-                            <h3 className="text-2xl font-bold mb-4 group-hover:text-brand-primary transition-colors">Kochi & Ernakulam</h3>
-                            <p className="text-slate-400 mb-6">Targeting Lulu Mall, MG Road, and the Kakkanad IT corridor for maximum corporate and retail exposure.</p>
-                            <span className="text-brand-secondary font-bold flex items-center justify-center gap-2">Explore Kochi Campaigns <ArrowRight size={16} /></span>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <Link to="/locations/thrissur" className="block p-8 rounded-[2rem] bg-white/5 border border-brand-primary/40 hover:border-brand-primary hover:bg-white/10 transition-all group text-left relative overflow-hidden">
+                            <span className="inline-block text-[11px] font-black uppercase tracking-wider text-brand-secondary bg-brand-primary/20 px-3 py-1 rounded-full mb-3">Headquarters</span>
+                            <h3 className="text-2xl font-bold mb-3 group-hover:text-brand-primary transition-colors text-white">Thrissur Hub</h3>
+                            <p className="text-slate-400 text-sm mb-6 leading-relaxed">Immediate vehicle dispatch for Swaraj Round, East Fort, Guruvayur Road, and central Kerala campaigns.</p>
+                            <span className="text-brand-secondary font-bold text-sm flex items-center gap-2">Explore Thrissur Hub <ArrowRight size={14} /></span>
                         </Link>
-                        <Link to="/locations/kozhikode" className="block p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:border-brand-primary/50 hover:bg-white/10 transition-all group">
-                            <h3 className="text-2xl font-bold mb-4 group-hover:text-brand-primary transition-colors">Kozhikode & Malabar</h3>
-                            <p className="text-slate-400 mb-6">Dominating the bustling streets of SM Street and the Kozhikode Bypass for high-frequency retail visibility.</p>
-                            <span className="text-brand-secondary font-bold flex items-center justify-center gap-2">Explore Kozhikode Campaigns <ArrowRight size={16} /></span>
+                        <Link to="/locations/kochi" className="block p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:border-brand-primary/50 hover:bg-white/10 transition-all group text-left">
+                            <h3 className="text-2xl font-bold mb-3 group-hover:text-brand-primary transition-colors text-white">Kochi & Ernakulam</h3>
+                            <p className="text-slate-400 text-sm mb-6 leading-relaxed">Targeting Lulu Mall, MG Road, and the Kakkanad IT corridor for maximum corporate and retail exposure.</p>
+                            <span className="text-brand-secondary font-bold text-sm flex items-center gap-2">Explore Kochi Campaigns <ArrowRight size={14} /></span>
                         </Link>
-                        <Link to="/locations/trivandrum" className="block p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:border-brand-primary/50 hover:bg-white/10 transition-all group">
-                            <h3 className="text-2xl font-bold mb-4 group-hover:text-brand-primary transition-colors">Trivandrum Capital</h3>
-                            <p className="text-slate-400 mb-6">Strategic placements near the Secretariat, Technopark, and major institutional hubs in the capital city.</p>
-                            <span className="text-brand-secondary font-bold flex items-center justify-center gap-2">Explore Trivandrum Campaigns <ArrowRight size={16} /></span>
+                        <Link to="/locations/kozhikode" className="block p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:border-brand-primary/50 hover:bg-white/10 transition-all group text-left">
+                            <h3 className="text-2xl font-bold mb-3 group-hover:text-brand-primary transition-colors text-white">Kozhikode & Malabar</h3>
+                            <p className="text-slate-400 text-sm mb-6 leading-relaxed">Dominating the bustling streets of SM Street and the Kozhikode Bypass for high-frequency retail visibility.</p>
+                            <span className="text-brand-secondary font-bold text-sm flex items-center gap-2">Explore Kozhikode Campaigns <ArrowRight size={14} /></span>
                         </Link>
-                    </div>
-                </div>
-            </section>
-
-            {/* SECTION 6: Pricing Factors */}
-            <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-6 max-w-7xl">
-                    <div className="max-w-3xl mx-auto text-center mb-16">
-                        <Calculator className="w-16 h-16 text-brand-primary mx-auto mb-6" />
-                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">Understanding LED Van Pricing</h2>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                            A common question we receive is, "What is the LED Van advertising cost in Kerala?" We believe in transparent pricing. Our rates are calculated based on several core factors, ensuring you only pay for the exact exposure you need.
-                        </p>
-                    </div>
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                            <h4 className="font-bold text-xl text-slate-900 mb-3">Duration</h4>
-                            <p className="text-slate-600">Pricing scales based on the number of days. We offer discounted rates for long-term monthly campaigns versus single-day rentals.</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                            <h4 className="font-bold text-xl text-slate-900 mb-3">Operating Hours</h4>
-                            <p className="text-slate-600">Standard campaigns run for 8 hours a day. Extended evening operations or 12-hour shifts incur adjusted operational costs.</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                            <h4 className="font-bold text-xl text-slate-900 mb-3">Distance & Fuel</h4>
-                            <p className="text-slate-600">Campaigns spanning multiple districts involve higher fuel and transit costs compared to hyper-local single-city roadshows.</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                            <h4 className="font-bold text-xl text-slate-900 mb-3">Permissions</h4>
-                            <p className="text-slate-600">Certain municipal limits, festivals, or election zones require specific local authority permits, which are factored into the final quote.</p>
-                        </div>
+                        <Link to="/locations/trivandrum" className="block p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:border-brand-primary/50 hover:bg-white/10 transition-all group text-left">
+                            <h3 className="text-2xl font-bold mb-3 group-hover:text-brand-primary transition-colors text-white">Trivandrum Capital</h3>
+                            <p className="text-slate-400 text-sm mb-6 leading-relaxed">Strategic placements near the Secretariat, Technopark, and major institutional hubs in the capital city.</p>
+                            <span className="text-brand-secondary font-bold text-sm flex items-center gap-2">Explore Trivandrum Campaigns <ArrowRight size={14} /></span>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -432,7 +568,7 @@ const LedVanAdvertising = () => {
                                 <h3 className="text-2xl font-bold text-slate-900">Jewelry Brand Expansion</h3>
                             </div>
                             <p className="text-slate-600 leading-relaxed mb-6">
-                                A premier jewelry brand launching a massive showroom in Thrissur required an immediate buzz. We deployed 3 LED Vans for 7 days leading up to the inauguration. The vans circled key arterial roads and parked at prominent junctions during evening rush hours playing a high-quality video teaser.
+                                A premier jewelry brand launching a massive showroom in Thrissur required an immediate buzz. We deployed 3 LED advertising vans for 7 days leading up to the inauguration. The vans circled key arterial roads and parked at prominent junctions during evening rush hours playing a high-quality video teaser.
                             </p>
                             <div className="bg-white p-6 rounded-2xl border border-slate-100">
                                 <span className="text-sm font-bold text-slate-400 uppercase tracking-wider">Result</span>
@@ -462,7 +598,7 @@ const LedVanAdvertising = () => {
                     <div className="text-center mb-16">
                         <ShieldCheck className="w-16 h-16 text-brand-primary mx-auto mb-6" />
                         <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">Frequently Asked Questions</h2>
-                        <p className="text-lg text-slate-600">Everything you need to know about booking and executing an LED Van campaign in Kerala.</p>
+                        <p className="text-lg text-slate-600">Everything you need to know about booking, hiring, and executing an LED Van campaign in Kerala.</p>
                     </div>
                     <div className="space-y-4">
                         {faqItems.map((item, idx) => (
@@ -478,18 +614,32 @@ const LedVanAdvertising = () => {
             
             <LocalSEO />
 
-            {/* CTA */}
+            {/* Final CTA */}
             <section className="py-24 bg-white text-center">
                 <div className="mx-auto max-w-4xl px-6">
-                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6">Ready to Drive Your Brand Forward?</h2>
-                    <p className="text-xl text-slate-600 mb-10 leading-relaxed">Join hundreds of successful brands who have dominated the Kerala market using our mobile LED advertising solutions. Let's build a campaign that moves people.</p>
-                    <a
-                        href="/#contact"
-                        className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-primary px-10 py-5 text-lg font-black text-white transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-primary/40"
-                    >
-                        Contact Our Planning Team
-                        <ArrowRight size={20} />
-                    </a>
+                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6">Ready to Book Your LED Advertising Van?</h2>
+                    <p className="text-xl text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto">
+                        Whether you need a Single-sided van for a local store launch in Thrissur or a high-impact Triple-sided vehicle for a statewide roadshow across Kerala, get in touch for custom rental quotes and immediate fleet availability.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a
+                            href="/#contact"
+                            className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-primary px-10 py-5 text-lg font-black text-white transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-primary/40"
+                        >
+                            Get a Free Rental Quote
+                            <ArrowRight size={20} />
+                        </a>
+                        <a
+                            href="tel:+918589909034"
+                            className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-slate-100 px-8 py-5 text-lg font-bold text-slate-800 transition-all hover:bg-slate-200"
+                        >
+                            <Phone size={18} />
+                            +91 85899 09034
+                        </a>
+                    </div>
+                    <p className="mt-8 text-sm text-slate-500 font-medium">
+                        📍 Central Operations Hub: Marathakam Centre, Puranattukara, Thrissur, Kerala
+                    </p>
                 </div>
             </section>
         </div>
