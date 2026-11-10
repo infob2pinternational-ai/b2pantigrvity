@@ -79,10 +79,12 @@ const Hero = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row items-start gap-5">
+                        <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-4 sm:gap-5 w-full sm:w-auto">
                             <a
-                                href="#services"
-                                className="group relative px-8 py-4 rounded-full bg-white text-[#050914] font-black overflow-hidden flex items-center gap-3 transition-transform hover:scale-105 active:scale-95"
+                                href="https://wa.me/918589909034?text=Hi%20B2P%20International%2C%20I%20came%20from%20your%20website%20and%20I%20want%20to%20start%20a%20project."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative px-8 py-4 rounded-full bg-white text-[#050914] font-black overflow-hidden flex items-center justify-center gap-3 transition-transform hover:scale-105 active:scale-95 text-center shadow-lg"
                             >
                                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-brand-primary to-brand-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 <span className="relative z-10 group-hover:text-white transition-colors duration-300">Start Project</span>
@@ -90,7 +92,7 @@ const Hero = () => {
                             </a>
                             <Link
                                 to="/led-van-advertising"
-                                className="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-8 py-4 font-black text-white backdrop-blur-md transition-all hover:border-brand-primary hover:bg-white/10"
+                                className="group inline-flex items-center justify-center gap-3 rounded-full border border-white/15 bg-white/5 px-8 py-4 font-black text-white backdrop-blur-md transition-all hover:border-brand-primary hover:bg-white/10 active:scale-95 text-center"
                             >
                                 View LED Van Advertising Service
                                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
