@@ -107,7 +107,7 @@ const CompanyProfile = () => {
             {/* Print Header (Only visible when printing) */}
             <div className="hidden print:block text-center py-8 border-b-4 border-brand-primary mb-8">
                 <img src="/B2P_logo_trimmed.webp" alt="B2P International Advertising & Marketing Agency Logo" width="127" height="86" className="h-24 mx-auto mb-4" />
-                <h1 className="text-4xl font-black text-black uppercase tracking-widest">Company Profile</h1>
+                <p className="text-4xl font-black text-black uppercase tracking-widest">Company Profile</p>
                 <p className="text-lg text-slate-600 mt-2">Pioneering Mobile LED Advertising in Kerala</p>
             </div>
 

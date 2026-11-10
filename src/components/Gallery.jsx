@@ -120,16 +120,16 @@ const Gallery = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Elevate Your Brand Visibility</h2>
-                        <div className="prose prose-lg text-slate-600 max-w-none">
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Plan a Campaign Like These</h2>
+                        <div className="space-y-4 text-slate-600 leading-relaxed">
                             <p>
-                                At B2P International, we understand that standing out in today's highly competitive market requires innovative and eye-catching advertising solutions. Our LED Van Advertising services provide exactly that—a dynamic, mobile platform that brings your message directly to your target audience on the streets of Thrissur, Kochi, Kozhikode, and beyond.
+                                When you browse the photos, look at where the audience would see the screen. At a roadside stop, the screen should face the main flow of pedestrians or traffic. At a stage event, check whether parked vehicles or the front rows could block the view from farther back.
                             </p>
                             <p>
-                                Traditional static billboards have their place, but the modern consumer is drawn to motion, vibrant colors, and high-resolution visuals. Our mobile LED screens deliver crystal-clear video and imagery that is impossible to ignore. Whether you are launching a new product, promoting a grand opening, or running a political campaign, our LED vans ensure maximum visibility and engagement.
+                                Keep roadshow videos easy to understand in a few seconds. Lead with the brand and the main message, use lettering that reads from a distance, and include a location or event date when it matters. For a stationary display, the audience may have more time to read the details.
                             </p>
                             <p>
-                                Beyond just LED vans, we offer a comprehensive suite of outdoor marketing tools. Our LED lookwalkers and normal look walkers provide a personalized, street-level interaction that humanizes your brand and drives direct engagement in crowded areas like malls, exhibitions, and busy streets.
+                                If a setup in the gallery looks right for your event, share the example along with your venue or route, dates, and the kind of audience you want to reach. Those details help us choose between a mobile LED vehicle, a stage screen, or a lookwalker team.
                             </p>
                         </div>
                     </motion.div>

@@ -1,6 +1,27 @@
-
 {
   "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "b2pinternational.com"
+        }
+      ],
+      "destination": "https://www.b2pinternational.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path((?!api(?:/|$)|billing(?:/|$)|doc(?:/|$)).+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "b2pinternational.com"
+        }
+      ],
+      "destination": "https://www.b2pinternational.com/:path",
+      "permanent": true
+    },
     {
       "source": "/lookwalker",
       "destination": "/lookwalker-advertising",
@@ -40,10 +61,7 @@
     {
       "source": "/doc/:path*",
       "destination": "https://document-gen-ten.vercel.app/doc/:path*"
-    },
-    {
-      "source": "/((?!assets/|static/|api/|.*\\..*$).*)",
-      "destination": "/index.html"
     }
-  ]
+  ],
+  "cleanUrls": true
 }

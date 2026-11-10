@@ -23,7 +23,6 @@ import {
     PhoneCall,
     ChevronDown,
     SlidersHorizontal,
-    Star,
     Layers
 } from 'lucide-react';
 import Seo from './Seo';

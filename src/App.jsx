@@ -8,29 +8,13 @@ import SocialProof from './components/SocialProof';
 import FloatButtons from './components/FloatButtons';
 import WhyChooseUs from './components/WhyChooseUs';
 import LocalSEO from './components/LocalSEO';
+import { pageLoaders } from './pageLoaders';
 
-const About = lazy(() => import('./components/About'));
-const Services = lazy(() => import('./components/Services'));
-const Gallery = lazy(() => import('./components/Gallery'));
-const Blog = lazy(() => import('./components/Blog'));
 const Contact = lazy(() => import('./components/Contact'));
-const Footer = lazy(() => import('./components/Footer'));
-const LedVanAdvertising = lazy(() => import('./components/LedVanAdvertising'));
-const Lookwalker = lazy(() => import('./components/Lookwalker'));
-const LedWall = lazy(() => import('./components/LedWall'));
-const Locations = lazy(() => import('./components/Locations'));
-const ThrissurLocation = lazy(() => import('./components/ThrissurLocation'));
-const KochiLocation = lazy(() => import('./components/KochiLocation'));
-const KozhikodeLocation = lazy(() => import('./components/KozhikodeLocation'));
-const TrivandrumLocation = lazy(() => import('./components/TrivandrumLocation'));
-const MalappuramLocation = lazy(() => import('./components/MalappuramLocation'));
-const KannurLocation = lazy(() => import('./components/KannurLocation'));
-const PalakkadLocation = lazy(() => import('./components/PalakkadLocation'));
-const KottayamLocation = lazy(() => import('./components/KottayamLocation'));
-const CompanyProfile = lazy(() => import('./components/CompanyProfile'));
-const WhatsAppBulk = lazy(() => import('./components/WhatsAppBulk'));
-const VehicleBranding = lazy(() => import('./components/VehicleBranding'));
-const NotFound = lazy(() => import('./components/NotFound'));
+
+const lazyPages = Object.fromEntries(
+  Object.entries(pageLoaders).map(([name, load]) => [name, lazy(load)]),
+);
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -99,9 +83,9 @@ const RouteElement = ({ children, height = 'min-h-[70vh]' }) => (
   </Suspense>
 );
 
-function App() {
+function App({ router: Router = BrowserRouter, routerProps, pages = lazyPages } = {}) {
   return (
-    <BrowserRouter>
+    <Router {...routerProps}>
       <ScrollToTop />
       <div className="font-outfit text-slate-900 bg-slate-50 antialiased selection:bg-brand-primary selection:text-white overflow-x-hidden flex flex-col min-h-screen">
         <Navbar />
@@ -109,28 +93,28 @@ function App() {
         <main className="flex-grow flex flex-col">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<RouteElement><PageWrapper><About /></PageWrapper></RouteElement>} />
-            <Route path="/services" element={<RouteElement><PageWrapper><Services /></PageWrapper></RouteElement>} />
-            <Route path="/gallery" element={<RouteElement><PageWrapper><Gallery /></PageWrapper></RouteElement>} />
-            <Route path="/blog" element={<RouteElement><PageWrapper><Blog /></PageWrapper></RouteElement>} />
-            <Route path="/company-profile" element={<RouteElement><CompanyProfile /></RouteElement>} />
-            <Route path="/led-van-advertising" element={<RouteElement><LedVanAdvertising /></RouteElement>} />
+            <Route path="/about" element={<RouteElement><PageWrapper><pages.About /></PageWrapper></RouteElement>} />
+            <Route path="/services" element={<RouteElement><PageWrapper><pages.Services /></PageWrapper></RouteElement>} />
+            <Route path="/gallery" element={<RouteElement><PageWrapper><pages.Gallery /></PageWrapper></RouteElement>} />
+            <Route path="/blog" element={<RouteElement><PageWrapper><pages.Blog /></PageWrapper></RouteElement>} />
+            <Route path="/company-profile" element={<RouteElement><pages.CompanyProfile /></RouteElement>} />
+            <Route path="/led-van-advertising" element={<RouteElement><pages.LedVanAdvertising /></RouteElement>} />
             <Route path="/lookwalker" element={<Navigate to="/lookwalker-advertising" replace />} />
-            <Route path="/lookwalker-advertising" element={<RouteElement><Lookwalker /></RouteElement>} />
+            <Route path="/lookwalker-advertising" element={<RouteElement><pages.Lookwalker /></RouteElement>} />
             <Route path="/led-wall" element={<Navigate to="/led-wall-rental" replace />} />
-            <Route path="/led-wall-rental" element={<RouteElement><LedWall /></RouteElement>} />
-            <Route path="/whatsapp-bulk-messaging" element={<RouteElement><WhatsAppBulk /></RouteElement>} />
-            <Route path="/vehicle-branding" element={<RouteElement><VehicleBranding /></RouteElement>} />
-            <Route path="/locations" element={<RouteElement><PageWrapper><Locations /></PageWrapper></RouteElement>} />
-            <Route path="/locations/thrissur" element={<RouteElement><PageWrapper><ThrissurLocation /></PageWrapper></RouteElement>} />
-            <Route path="/locations/kochi" element={<RouteElement><PageWrapper><KochiLocation /></PageWrapper></RouteElement>} />
-            <Route path="/locations/kozhikode" element={<RouteElement><PageWrapper><KozhikodeLocation /></PageWrapper></RouteElement>} />
-            <Route path="/locations/trivandrum" element={<RouteElement><PageWrapper><TrivandrumLocation /></PageWrapper></RouteElement>} />
-            <Route path="/locations/malappuram" element={<RouteElement><PageWrapper><MalappuramLocation /></PageWrapper></RouteElement>} />
-            <Route path="/locations/kannur" element={<RouteElement><PageWrapper><KannurLocation /></PageWrapper></RouteElement>} />
-            <Route path="/locations/palakkad" element={<RouteElement><PageWrapper><PalakkadLocation /></PageWrapper></RouteElement>} />
-            <Route path="/locations/kottayam" element={<RouteElement><PageWrapper><KottayamLocation /></PageWrapper></RouteElement>} />
-            <Route path="*" element={<RouteElement><PageWrapper><NotFound /></PageWrapper></RouteElement>} />
+            <Route path="/led-wall-rental" element={<RouteElement><pages.LedWall /></RouteElement>} />
+            <Route path="/whatsapp-bulk-messaging" element={<RouteElement><pages.WhatsAppBulk /></RouteElement>} />
+            <Route path="/vehicle-branding" element={<RouteElement><pages.VehicleBranding /></RouteElement>} />
+            <Route path="/locations" element={<RouteElement><PageWrapper><pages.Locations /></PageWrapper></RouteElement>} />
+            <Route path="/locations/thrissur" element={<RouteElement><PageWrapper><pages.ThrissurLocation /></PageWrapper></RouteElement>} />
+            <Route path="/locations/kochi" element={<RouteElement><PageWrapper><pages.KochiLocation /></PageWrapper></RouteElement>} />
+            <Route path="/locations/kozhikode" element={<RouteElement><PageWrapper><pages.KozhikodeLocation /></PageWrapper></RouteElement>} />
+            <Route path="/locations/trivandrum" element={<RouteElement><PageWrapper><pages.TrivandrumLocation /></PageWrapper></RouteElement>} />
+            <Route path="/locations/malappuram" element={<RouteElement><PageWrapper><pages.MalappuramLocation /></PageWrapper></RouteElement>} />
+            <Route path="/locations/kannur" element={<RouteElement><PageWrapper><pages.KannurLocation /></PageWrapper></RouteElement>} />
+            <Route path="/locations/palakkad" element={<RouteElement><PageWrapper><pages.PalakkadLocation /></PageWrapper></RouteElement>} />
+            <Route path="/locations/kottayam" element={<RouteElement><PageWrapper><pages.KottayamLocation /></PageWrapper></RouteElement>} />
+            <Route path="*" element={<RouteElement><PageWrapper><pages.NotFound /></PageWrapper></RouteElement>} />
           </Routes>
         </main>
 
@@ -140,11 +124,11 @@ function App() {
           </Suspense>
         </DeferredSection>
         <Suspense fallback={<LoadingBlock height="min-h-[280px]" />}>
-          <Footer />
+          <pages.Footer />
         </Suspense>
         <FloatButtons />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

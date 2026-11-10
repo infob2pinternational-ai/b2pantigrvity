@@ -1,58 +1,5 @@
-import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { DEFAULT_OG_IMAGE, SITE_NAME, toAbsoluteUrl } from '../lib/seo';
-
-const ensureMetaTag = (attribute, key, content) => {
-  const selector = `meta[${attribute}="${key}"]`;
-  let tag = document.head.querySelector(selector);
-
-  if (!content) {
-    tag?.remove();
-    return null;
-  }
-
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute(attribute, key);
-    document.head.appendChild(tag);
-  }
-
-  tag.setAttribute('content', content);
-  return tag;
-};
-
-const ensureLinkTag = (rel, href, hreflang = null) => {
-  const selector = hreflang 
-    ? `link[rel="${rel}"][hreflang="${hreflang}"]` 
-    : `link[rel="${rel}"]:not([hreflang])`;
-  let link = document.head.querySelector(selector);
-
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', rel);
-    if (hreflang) {
-      link.setAttribute('hreflang', hreflang);
-    }
-    document.head.appendChild(link);
-  }
-
-  link.setAttribute('href', href);
-  return link;
-};
-
-const removeDynamicSchemas = () => {
-  document
-    .querySelectorAll('script[data-b2p-seo-schema="true"]')
-    .forEach((script) => script.remove());
-};
-
-const normalizeSchemas = (schema) => {
-  if (!schema) {
-    return [];
-  }
-
-  return Array.isArray(schema) ? schema.filter(Boolean) : [schema];
-};
 
 const Seo = ({
   title,
@@ -64,56 +11,39 @@ const Seo = ({
   path,
   schema,
 }) => {
-  const location = useLocation();
-  const schemaSignature = JSON.stringify(normalizeSchemas(schema));
+  const { pathname } = useLocation();
+  const canonicalUrl = toAbsoluteUrl(path ?? pathname);
+  const ogImage = toAbsoluteUrl(image) || DEFAULT_OG_IMAGE;
+  const schemas = (Array.isArray(schema) ? schema : [schema]).filter(Boolean);
 
-  useEffect(() => {
-    const resolvedPath = path ?? location.pathname ?? '/';
-    const canonicalUrl = toAbsoluteUrl(resolvedPath);
-    const ogImage = toAbsoluteUrl(image) || DEFAULT_OG_IMAGE;
-    const schemas = JSON.parse(schemaSignature);
-
-    document.title = title;
-
-    ensureLinkTag('canonical', canonicalUrl);
-    ensureLinkTag('alternate', canonicalUrl, 'en-in');
-    ensureLinkTag('alternate', canonicalUrl, 'en');
-    ensureLinkTag('alternate', canonicalUrl, 'x-default');
-
-    ensureMetaTag('name', 'description', description);
-    ensureMetaTag('name', 'keywords', keywords);
-    ensureMetaTag('name', 'robots', robots);
-    ensureMetaTag('name', 'author', SITE_NAME);
-    ensureMetaTag('name', 'twitter:card', 'summary_large_image');
-    ensureMetaTag('name', 'twitter:title', title);
-    ensureMetaTag('name', 'twitter:description', description);
-    ensureMetaTag('name', 'twitter:image', ogImage);
-
-    ensureMetaTag('property', 'og:title', title);
-    ensureMetaTag('property', 'og:description', description);
-    ensureMetaTag('property', 'og:url', canonicalUrl);
-    ensureMetaTag('property', 'og:image', ogImage);
-    ensureMetaTag('property', 'og:type', type);
-    ensureMetaTag('property', 'og:site_name', SITE_NAME);
-    ensureMetaTag('property', 'og:locale', 'en_IN');
-
-    removeDynamicSchemas();
-
-    schemas.forEach((entry, index) => {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.dataset.b2pSeoSchema = 'true';
-      script.dataset.b2pSeoSchemaIndex = String(index);
-      script.textContent = JSON.stringify(entry);
-      document.head.appendChild(script);
-    });
-
-    return () => {
-      removeDynamicSchemas();
-    };
-  }, [description, image, keywords, location.pathname, path, robots, schemaSignature, title, type]);
-
-  return null;
+  return (
+    <>
+      <title>{title}</title>
+      <link rel="canonical" href={canonicalUrl} />
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="robots" content={robots} />
+      <meta name="author" content={SITE_NAME} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:locale" content="en_IN" />
+      {schemas.map((entry, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(entry).replace(/</g, '\\u003c') }}
+        />
+      ))}
+    </>
+  );
 };
 
 export default Seo;

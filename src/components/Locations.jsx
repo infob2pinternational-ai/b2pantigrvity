@@ -105,11 +105,19 @@ const Locations = () => {
               LED Van Advertising Coverage for <span className="text-brand-primary">Thrissur and Kerala</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-slate-600 md:text-xl">
-              B2P International plans mobile LED campaigns for brands that need city-specific reach, better
-              route targeting, and stronger recall in busy commercial areas. This hub helps Google and visitors
-              understand where we operate and where local campaign planning matters most.
+              Planning a showroom launch, a district roadshow, or a campaign across several towns? Explore the local pages below for examples of routes and campaign stops in Kerala. When requesting a quote, share your dates, the neighbourhoods you want to cover, and whether the vehicle should travel between locations or spend time at selected stops.
             </p>
           </motion.div>
+
+          <div className="mx-auto mb-12 max-w-4xl rounded-[2rem] border border-slate-200 bg-white p-6 sm:p-8">
+            <h2 className="text-xl font-black text-slate-900 sm:text-2xl">Choose the right format for your route</h2>
+            <p className="mt-3 leading-relaxed text-slate-600">
+              For a single shop opening, start with the streets customers use to reach the shop and identify a stop where people can see the screen. For a multi-town roadshow, list the priority towns and the time you want to spend in each. If your campaign centres on a stage or a crowded venue, share the proposed vehicle position so we can discuss the viewing angle and screen height.
+            </p>
+            <a href="/led-van-advertising" className="mt-4 inline-flex items-center gap-2 font-bold text-brand-primary">
+              Compare LED vehicle packages <ArrowRight size={16} />
+            </a>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {coverageAreas.map((area, index) => (

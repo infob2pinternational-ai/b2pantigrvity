@@ -167,6 +167,7 @@ export const buildServiceSchema = ({
   description,
   path,
   serviceType = 'LED Van Advertising',
+  hasOfferCatalog,
   areaServed = ['Thrissur', 'Kerala'],
 }) => {
   const url = toAbsoluteUrl(path);
@@ -178,6 +179,7 @@ export const buildServiceSchema = ({
     name,
     description,
     serviceType,
+    ...(hasOfferCatalog && { hasOfferCatalog }),
     url,
     provider: { '@id': `${SITE_URL}/#localbusiness` },
     areaServed: areaServed.map(toAreaServedEntity).filter(Boolean),

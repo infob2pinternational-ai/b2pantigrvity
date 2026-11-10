@@ -1,28 +1,40 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { execFileSync } from 'node:child_process';
 
-const root = new URL('../', import.meta.url);
-const config = JSON.parse(readFileSync(new URL('vercel.json', root), 'utf8'));
-const base = JSON.parse(execFileSync('git', [
-  'show', 'b8e12948331f09af8a265a13d19e0aefefd40dc1:vercel.json',
-], { cwd: root, encoding: 'utf8' }));
+const config = JSON.parse(readFileSync(new URL('../vercel.json', import.meta.url), 'utf8'));
+const crm = 'https://document-gen-ten.vercel.app';
 
-test('WhatsApp root API is proxied to the existing CRM handler, before fallback routes', () => {
-  const routes = config.rewrites.filter(route => route.source === '/api/whatsapp');
-  assert.equal(routes.length, 1);
-  assert.deepEqual(routes[0], {
-    source: '/api/whatsapp',
-    destination: 'https://document-gen-ten.vercel.app/api/whatsapp',
-  });
-  assert.equal(config.rewrites.indexOf(routes[0]), 0);
-  // Exact path only: no wildcard API exposure, query substitution, auth override,
-  // method override, token or client/provider configuration is introduced.
+test('CRM routes preserve their exact existing proxy destinations', () => {
+  const paths = [
+    '/api/email',
+    '/api/followup-review',
+    '/api/whatsapp',
+    '/api/detailed-staff-report',
+    '/billing',
+    '/billing/:path*',
+    '/doc/:path*',
+  ];
+  assert.deepEqual(config.rewrites, paths.map((source) => ({ source, destination: crm + source })));
 });
 
-test('billing, documents, reports, redirects and all other configuration are unchanged', () => {
-  const rest = structuredClone(config);
-  rest.rewrites = rest.rewrites.filter(route => route.source !== '/api/whatsapp');
-  assert.deepEqual(rest, base);
+test('public HTML is served with clean URLs and the host redirect excludes CRM routes', () => {
+  assert.equal(config.cleanUrls, true);
+  const [homepageRedirect, hostRedirect] = config.redirects;
+  assert.deepEqual(homepageRedirect, {
+    source: '/',
+    has: hostRedirect.has,
+    destination: 'https://www.b2pinternational.com/',
+    permanent: true,
+  });
+  assert.deepEqual(hostRedirect.has, [{ type: 'host', value: 'b2pinternational.com' }]);
+  assert.equal(hostRedirect.destination, 'https://www.b2pinternational.com/:path');
+  assert.equal(hostRedirect.permanent, true);
+  const publicPath = new RegExp(`^/${hostRedirect.source.slice('/:path('.length, -1)}$`);
+  for (const path of ['/led-van-advertising', '/locations/kochi', '/robots.txt']) {
+    assert.match(path, publicPath);
+  }
+  for (const path of ['/api/whatsapp', '/billing', '/billing/invoice', '/doc/example']) {
+    assert.doesNotMatch(path, publicPath);
+  }
 });

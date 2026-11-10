@@ -34,7 +34,12 @@ import { buildBreadcrumbSchema, buildServiceSchema, buildWebPageSchema, buildFaq
 
 const LED_SERVICE_TITLE = 'LED Van on Rent in Kerala & Thrissur | B2P International';
 const LED_SERVICE_DESCRIPTION =
-    'Hire an LED van on rent in Kerala & Thrissur. B2P International offers Single, Double & Triple-sided mobile LED video vans. Get a rental quote today!';
+    'Compare five LED vehicle rentals in Kerala, including single-, double- and triple-sided LED vans, a 3-Side LED Truck and a 3-Side Hydraulic LED Van.';
+
+const packageInquiryLink = (vehicle) =>
+    `https://wa.me/918589909034?text=${encodeURIComponent(
+        `Hi B2P International, I want to inquire about a ${vehicle}. I found this package on your LED Van Advertising page.`
+    )}`;
 
 const LedVanAdvertising = () => {
     const faqItems = [
@@ -46,9 +51,13 @@ const LedVanAdvertising = () => {
             question: "What is the price difference between Single, Double, and Triple-sided LED vans?", 
             answer: "Single-sided LED vans are our most budget-friendly rental option, ideal for one-way street promotions and stationary displays. Double-sided vans cost slightly more and offer dual-sided street visibility, making them our most popular choice for city roadshows. Triple-sided vans (left, right, and rear screens) deliver maximum panoramic exposure and are priced for flagship product launches, major festivals, and large-scale public campaigns." 
         },
+        {
+            question: "When should I choose a 3-Side LED Truck or a 3-Side Hydraulic LED Van?",
+            answer: "Choose the 3-Side LED Truck for a larger presence on major roadshows, political campaigns, and busy city routes. Choose the 3-Side Hydraulic LED Van when an elevated screen can help people see over crowds or traffic, such as at a stage event or a busy campaign stop."
+        },
         { 
             question: "What is the average cost of LED van advertising in Kerala?", 
-            answer: "Daily LED van rental rates in Kerala typically range between ₹8,000 and ₹15,000 per day depending on the van type (Single, Double, or Triple-sided), operating hours (standard 8-hour shift vs. 12-hour extended shifts), fuel requirements, and campaign duration. B2P International provides significant discounts for multi-day and monthly roadshow bookings." 
+            answer: "Daily LED van rental rates in Kerala typically range between ₹8,000 and ₹15,000 per day depending on the van type (Single, Double, or Triple-sided), operating hours (standard 8-hour shift vs. 12-hour extended shifts), fuel requirements, and campaign duration. B2P International provides discounts for multi-day and monthly roadshow bookings. Request a separate quote for the 3-Side LED Truck or 3-Side Hydraulic LED Van."
         },
         { 
             question: "Can we change the video content during the campaign?", 
@@ -158,6 +167,28 @@ const LedVanAdvertising = () => {
             highlight: false,
             ctaText: "Inquire Triple-Sided Van",
             whatsappLink: "https://wa.me/918589909034?text=Hi%20B2P%20International%2C%20I%20want%20to%20inquire%20about%20a%20Triple-Sided%20LED%20Van%20on%20rent."
+        },
+        {
+            name: "3-Side LED Truck",
+            badge: "Large-Scale Roadshows",
+            tagline: "A larger vehicle with a strong street presence for major roadshows, political campaigns, and high-visibility city routes.",
+            features: [
+                "Three-sided LED display for audiences approaching from different directions",
+                "Larger vehicle format for prominent campaign stops"
+            ],
+            ctaText: "Inquire About LED Truck",
+            whatsappLink: packageInquiryLink("3-Side LED Truck")
+        },
+        {
+            name: "3-Side Hydraulic LED Van",
+            badge: "Elevated Display",
+            tagline: "A hydraulic lift raises the screen for better visibility over dense crowds and traffic, including at stage events.",
+            features: [
+                "Three-sided display for audiences around the vehicle",
+                "Elevated viewing for stage events and busy campaign stops"
+            ],
+            ctaText: "Inquire About Hydraulic Van",
+            whatsappLink: packageInquiryLink("3-Side Hydraulic LED Van")
         }
     ];
 
@@ -180,6 +211,14 @@ const LedVanAdvertising = () => {
                     name: 'LED Van Advertising & Mobile Video Van Rental in Kerala',
                     description: LED_SERVICE_DESCRIPTION,
                     path: '/led-van-advertising',
+                    hasOfferCatalog: {
+                        '@type': 'OfferCatalog',
+                        name: 'LED Vehicle Rental Packages',
+                        itemListElement: rentalTiers.map(({ name, tagline }) => ({
+                            '@type': 'Offer',
+                            itemOffered: { '@type': 'Service', name, description: tagline },
+                        })),
+                    },
                     areaServed: ['Thrissur', 'Kerala', 'Kochi', 'Trivandrum', 'Kozhikode', 'Palakkad', 'Malappuram', 'Kannur', 'Kottayam', 'Kollam']
                 }),
                 buildBreadcrumbSchema([
@@ -360,12 +399,12 @@ const LedVanAdvertising = () => {
                             LED Van on Rent in Kerala – Flexible Packages
                         </h2>
                         <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-                            If you are looking for an LED advertising van for rent in Kerala or Thrissur, pricing depends on the type of van you choose. We offer Single-sided, Double-sided, and Triple-sided LED vans. Rates vary based on the number of screens, campaign duration, and route. All packages include the vehicle, daylight-visible LED screens, generator, audio system, and a trained operator.
+                            If you are looking for an LED advertising van for rent in Kerala or Thrissur, pricing depends on the type of van you choose. Choose from Single-Sided, Double-Sided, and Triple-Sided LED Vans, the 3-Side LED Truck, and the 3-Side Hydraulic LED Van. Rates vary based on the number of screens, campaign duration, and route. All packages include the vehicle, daylight-visible LED screens, generator, audio system, and a trained operator.
                         </p>
                     </div>
 
-                    {/* 3-Tier Rental Package Cards (Clean stacking on mobile, scale-105 on md only) */}
-                    <div className="grid md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+                    {/* Rental Package Cards */}
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
                         {rentalTiers.map((tier, idx) => (
                             <motion.div
                                 key={tier.name}
@@ -373,9 +412,9 @@ const LedVanAdvertising = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.15 }}
-                                className={`rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-8 md:p-10 transition-all flex flex-col justify-between ${
+                                className={`rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-8 xl:p-10 transition-all flex flex-col justify-between ${
                                     tier.highlight
-                                        ? 'bg-slate-900 text-white shadow-2xl ring-2 ring-brand-primary scale-100 md:scale-105 z-10'
+                                        ? 'bg-slate-900 text-white shadow-2xl ring-2 ring-brand-primary scale-100 lg:scale-105 z-10'
                                         : 'bg-slate-50 text-slate-900 border border-slate-200 hover:shadow-lg'
                                 }`}
                             >
@@ -416,7 +455,7 @@ const LedVanAdvertising = () => {
                                     }`}
                                 >
                                     {tier.ctaText}
-                                    <ArrowRight size={18} />
+                                    <ArrowRight size={18} className="shrink-0" />
                                 </a>
                             </motion.div>
                         ))}
@@ -503,7 +542,7 @@ const LedVanAdvertising = () => {
                                     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-brand-primary text-white flex items-center justify-center font-black text-lg sm:text-xl shrink-0">1</div>
                                     <div>
                                         <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-1.5">Consultation & Rental Objective</h3>
-                                        <p className="text-slate-600 text-sm sm:text-base">We analyze your target audience, help select the optimal van configuration (Single, Double, or Triple-sided), and structure the campaign timeline.</p>
+                                        <p className="text-slate-600 text-sm sm:text-base">We analyze your target audience, help select the vehicle configuration for your route, audience, and screen-height needs, and structure the campaign timeline.</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-4 sm:gap-6">
@@ -629,7 +668,7 @@ const LedVanAdvertising = () => {
                 <div className="mx-auto max-w-4xl px-4 sm:px-6">
                     <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-slate-900 mb-4 sm:mb-6">Ready to Book Your LED Advertising Van?</h2>
                     <p className="text-base sm:text-xl text-slate-600 mb-8 sm:mb-10 leading-relaxed max-w-3xl mx-auto font-light">
-                        Whether you need a Single-sided van for a local store launch in Thrissur or a high-impact Triple-sided vehicle for a statewide roadshow across Kerala, get in touch for custom rental quotes and immediate fleet availability.
+                        Planning a store launch in Thrissur, a statewide truck roadshow, or a stage event that needs a raised screen? Share your dates and route or venue so we can confirm vehicle availability and prepare a quote.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 justify-center items-stretch sm:items-center max-w-md sm:max-w-none mx-auto">
                         <a

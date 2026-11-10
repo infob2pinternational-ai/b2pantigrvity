@@ -9,9 +9,9 @@ import {
   buildSiteNavigationSchema,
 } from '../lib/seo';
 
-const HOME_TITLE = 'LED Van Advertising & LED Wall Rental in Kerala | B2P';
+const HOME_TITLE = 'LED Van Advertising & LED Wall Rental in Kerala | B2P International';
 const HOME_DESCRIPTION =
-  'Book high-impact LED van advertising and modular LED wall rentals across Thrissur and Kerala. Perfect for brand roadshows, events, stage shows & store launches.';
+  'Hire LED vans and LED walls in Thrissur and across Kerala. Choose single-, double- or triple-sided vans, 3-Side LED Trucks or hydraulic LED vans.';
 
 const homeFaqs = [
   {

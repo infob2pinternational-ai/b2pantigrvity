@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Primary XML sitemap for Google Search Console
 Sitemap: https://www.b2pinternational.com/sitemap.xml
